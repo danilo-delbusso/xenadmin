@@ -31,6 +31,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml;
 using XenAdmin.Core;
 using System.Resources;
@@ -85,21 +86,20 @@ namespace XenAdmin.Plugins
             ContextMenu = Helpers.GetEnumXmlAttribute(node, ATT_CONTEXT_MENU, GetContextMenuFromMenu(Menu));
             Serialized = Helpers.GetEnumXmlAttribute(node, ATT_SERIALIZED, PluginSerializationLevel.none);
 
-            foreach (XmlNode child in node.ChildNodes)
-            {   
-                switch (child.Name)
-                {
-                    case TYPE_SHELL:
-                        ShellCmd = new ShellCmd(child, paramsFromXML(child));
-                        break;
-                    case TYPE_POWERSHELL:
-                        ShellCmd = new PowerShellCmd(child, paramsFromXML(child));
-                        break;
-                    case TYPE_XENSERVER_POWERSHELL:
-                        ShellCmd = new XenServerPowershellCmd(child, paramsFromXML(child));
-                        break;
-                }
-                return;
+            if (node.ChildNodes.Count <= 0) return;
+
+            var child = node.ChildNodes[0];
+            switch (child.Name)
+            {
+                case TYPE_SHELL:
+                    ShellCmd = new ShellCmd(child, paramsFromXML(child));
+                    break;
+                case TYPE_POWERSHELL:
+                    ShellCmd = new PowerShellCmd(child, paramsFromXML(child));
+                    break;
+                case TYPE_XENSERVER_POWERSHELL:
+                    ShellCmd = new XenServerPowershellCmd(child, paramsFromXML(child));
+                    break;
             }
         }
 
