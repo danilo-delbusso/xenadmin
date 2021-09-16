@@ -137,8 +137,10 @@ namespace XenAdmin.Dialogs
         {
             var multipleAction = action as MultipleAction;
             labelSubActionStatus.Visible = multipleAction != null && multipleAction.ShowSubActionsDetails;
-            if (labelSubActionStatus.Visible)
-                UpdateLabel(labelSubActionStatus, multipleAction.SubActionDescription, multipleAction.SubActionTitle);
+            if (!labelSubActionStatus.Visible) return;
+            if (multipleAction != null)
+                UpdateLabel(labelSubActionStatus, multipleAction.SubActionDescription,
+                    multipleAction.SubActionTitle);
         }
 
         private void action_Completed(ActionBase sender)

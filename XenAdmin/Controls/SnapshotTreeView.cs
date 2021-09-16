@@ -340,7 +340,7 @@ namespace XenAdmin.Controls
 
         public override Size GetPreferredSize(Size proposedSize)
         {
-            if (root == null && Parent != null)
+            if (root == null || Parent != null)
             {
                 return DefaultSize;
             }
