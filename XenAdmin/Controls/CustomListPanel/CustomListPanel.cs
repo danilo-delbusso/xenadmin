@@ -103,7 +103,7 @@ namespace XenAdmin.Controls
         {
             foreach (CustomListRow row in Rows)
             {
-                row.Dispose();
+                row.DisposeAll();
             }
             Rows.Clear();
         }

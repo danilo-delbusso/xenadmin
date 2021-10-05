@@ -256,7 +256,7 @@ namespace XenAdmin.Controls
             }
         }
 
-        public void Dispose()
+        public void DisposeAll()
         {
             if (ForePen != null)
                 ForePen.Dispose();
@@ -269,7 +269,7 @@ namespace XenAdmin.Controls
 
             foreach (CustomListRow r in Children)
             {
-                r.Dispose();
+                r.DisposeAll();
             }
         }
 
