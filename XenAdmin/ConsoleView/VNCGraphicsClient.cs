@@ -216,7 +216,7 @@ namespace XenAdmin.ConsoleView
 
                 if (RemoteCursor != null)
                 {
-                    RemoteCursor.Dispose();
+                    RemoteCursor.Remove();
                     RemoteCursor = null;
                 }
             }
@@ -449,16 +449,16 @@ namespace XenAdmin.ConsoleView
 
             ~CustomCursor()
             {
-                Dispose(false);
+                Remove(false);
             }
 
-            public void Dispose()
+            public void Remove()
             {
                 GC.SuppressFinalize(this);
-                Dispose(true);
+                Remove(true);
             }
 
-            protected virtual void Dispose(bool disposing)
+            protected virtual void Remove(bool disposing)
             {
                 try
                 {
@@ -485,7 +485,7 @@ namespace XenAdmin.ConsoleView
             Program.AssertOffEventThread();
 
             if (RemoteCursor != null)
-                RemoteCursor.Dispose();
+                RemoteCursor.Remove();
             RemoteCursor = new CustomCursor(image, x, y);
 
             Program.Invoke(this, delegate()
