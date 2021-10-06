@@ -261,10 +261,10 @@ namespace XenAdmin.TabPages
             }
 
             var action = (from ActionBase act in ConnectionsManager.History
-                let async = act as AsyncAction
-                where async != null && !async.IsCompleted && !async.Cancelled && async.Connection == _connection
-                      && (async is EnableAdAction || async is DisableAdAction)
-                select async).FirstOrDefault();
+                let asyncAction = act as AsyncAction
+                where asyncAction != null && !asyncAction.IsCompleted && !asyncAction.Cancelled && asyncAction.Connection == _connection
+                      && (asyncAction is EnableAdAction || asyncAction is DisableAdAction)
+                select asyncAction).FirstOrDefault();
 
             if (action != null)
             {
