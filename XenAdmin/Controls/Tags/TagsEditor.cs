@@ -55,11 +55,11 @@ namespace XenAdmin.Controls
             _tagsList.DrawSelf(null, new Rectangle(0, 0, Width, Height), false);
         }
 
-        protected override void OnDrawToBuffer(PaintEventArgs e)
+        protected override void OnDrawToBuffer(PaintEventArgs paintEventArgs)
         {
             // Hack.  See Program.TransparentUsually.
-            e.Graphics.TextContrast = 5;
-            _tagsList.DrawSelf(e.Graphics, new Rectangle(0, 0, Width, Height), false);
+            paintEventArgs.Graphics.TextContrast = 5;
+            _tagsList.DrawSelf(paintEventArgs.Graphics, new Rectangle(0, 0, Width, Height), false);
         }
 
         protected override void OnMouseMove(MouseEventArgs e)

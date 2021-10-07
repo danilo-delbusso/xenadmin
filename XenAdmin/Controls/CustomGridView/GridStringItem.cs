@@ -234,19 +234,19 @@ namespace XenAdmin.Controls.CustomGridView
             Row.GridView.Refresh();
         }
 
-        public override int CompareTo(GridItemBase gridItem)
+        public override int CompareTo(GridItemBase other)
         {
-            GridStringItem other = gridItem as GridStringItem;
+            var gridStringItem = other as GridStringItem;
 
-            Object otherdata = other == null ? null : other.sortdata;
+            var otherData = gridStringItem?.sortdata;
 
             if (sortdata == null)
-                return otherdata == null ? 0 : 1;
+                return otherData == null ? 0 : 1;
             
-            if (otherdata == null)
+            if (otherData == null)
                 return -1;
 
-            return StringUtility.NaturalCompare(sortdata.ToString(), other.sortdata.ToString());
+            return StringUtility.NaturalCompare(sortdata.ToString(), gridStringItem.sortdata.ToString());
         }
     }
 }

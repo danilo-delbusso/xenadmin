@@ -93,9 +93,9 @@ namespace XenCenterLib.Archive
             zipFile.ExtractProgress += zipFile_ExtractProgress;
         }
 
-        public override void SetBaseStream(Stream inputStream)
+        public override void SetBaseStream(Stream stream)
         {
-            Initialise(inputStream);
+            Initialise(stream);
             disposed = false;
         }
 

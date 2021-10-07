@@ -654,22 +654,22 @@ namespace XenAdmin.Wizards.PatchingWizard
                 }
             }
 
-            public override void CheckBoxChange(int RowIndex, int ColumnIndex)
+            public override void CheckBoxChange(int rowIndex, int columnIndex)
             {
-                if (RowIndex < 0 || Rows.Count == 0)
+                if (rowIndex < 0 || Rows.Count == 0)
                     return;
 
-                var currentRow = Rows[RowIndex] as PatchingHostsDataGridViewRow;
+                var currentRow = Rows[rowIndex] as PatchingHostsDataGridViewRow;
                 if (currentRow == null || !currentRow.Enabled)
                     return;
 
                 if (currentRow.Tag is Host)
                 {
-                    if (ColumnIndex == POOL_ICON_HOST_CHECKBOX_COL && currentRow.Cells[ColumnIndex] is DataGridViewCheckBoxCell)
+                    if (columnIndex == POOL_ICON_HOST_CHECKBOX_COL && currentRow.Cells[columnIndex] is DataGridViewCheckBoxCell)
                     {
-                        int hostNewValue = ClickCheckBox(RowIndex, ColumnIndex);
+                        int hostNewValue = ClickCheckBox(rowIndex, columnIndex);
 
-                        PatchingHostsDataGridViewRow poolRow = FindPoolRow(RowIndex);
+                        PatchingHostsDataGridViewRow poolRow = FindPoolRow(rowIndex);
                         bool allHostSameValue = true;
                         bool atLeastOneHostChecked = false;
                         for (int i = poolRow.Index + 1; i < Rows.Count; i++)
@@ -697,21 +697,21 @@ namespace XenAdmin.Wizards.PatchingWizard
                             poolRow.Cells[POOL_CHECKBOX_COL].Value = INDETERMINATE;
                         }
                     }
-                    else if (ColumnIndex == POOL_CHECKBOX_COL)
+                    else if (columnIndex == POOL_CHECKBOX_COL)
                     {
-                        ClickCheckBox(RowIndex, ColumnIndex);
+                        ClickCheckBox(rowIndex, columnIndex);
                     }
                 }
                 else if (currentRow.Tag is Pool)
                 {
-                    if (ColumnIndex == POOL_CHECKBOX_COL)
+                    if (columnIndex == POOL_CHECKBOX_COL)
                     {
-                        ClickCheckBox(RowIndex, ColumnIndex);
-                        for (int i = RowIndex + 1; i < Rows.Count; i++)
+                        ClickCheckBox(rowIndex, columnIndex);
+                        for (int i = rowIndex + 1; i < Rows.Count; i++)
                         {
                             if (Rows[i].Tag is Host && ((PatchingHostsDataGridViewRow)Rows[i]).HasPool)
                             {
-                                var value = (int)currentRow.Cells[ColumnIndex].Value;
+                                var value = (int)currentRow.Cells[columnIndex].Value;
 
                                 if (value == UNCHECKED || value == CHECKED)
                                     Rows[i].Cells[POOL_ICON_HOST_CHECKBOX_COL].Value = value;
@@ -764,12 +764,12 @@ namespace XenAdmin.Wizards.PatchingWizard
         {
             private class DataGridViewNameCell : DataGridViewTextBoxCell
             {
-                protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
+                protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates elementState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
                 {
                     Pool pool = value as Pool;
 
                     if (pool != null)
-                        base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, value, formattedValue, errorText, cellStyle, advancedBorderStyle, paintParts);
+                        base.Paint(graphics, clipBounds, cellBounds, rowIndex, elementState, value, formattedValue, errorText, cellStyle, advancedBorderStyle, paintParts);
                     else
                     {
                         Host host = value as Host;
@@ -781,10 +781,10 @@ namespace XenAdmin.Wizards.PatchingWizard
                                 Image hostIcon = Images.GetImage16For(host);
                                 base.Paint(graphics, clipBounds,
                                            new Rectangle(cellBounds.X + 16, cellBounds.Y, cellBounds.Width - 16,
-                                                         cellBounds.Height), rowIndex, cellState, value, formattedValue,
+                                                         cellBounds.Height), rowIndex, elementState, value, formattedValue,
                                            errorText, cellStyle, advancedBorderStyle, paintParts);
 
-                                if ((cellState & DataGridViewElementStates.Selected) != 0 && row.Enabled)
+                                if ((elementState & DataGridViewElementStates.Selected) != 0 && row.Enabled)
                                 {
                                     using (var brush = new SolidBrush(DataGridView.DefaultCellStyle.SelectionBackColor))
                                         graphics.FillRectangle(
@@ -810,7 +810,7 @@ namespace XenAdmin.Wizards.PatchingWizard
                             }
                             else
                             {
-                                base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, value, formattedValue,
+                                base.Paint(graphics, clipBounds, cellBounds, rowIndex, elementState, value, formattedValue,
                                            errorText, cellStyle, advancedBorderStyle, paintParts);
                             }
                         }

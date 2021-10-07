@@ -178,12 +178,11 @@ namespace XenAPI
         /// This method can be overridden by the derived classes. This is why the implementation is here and the typed 
         /// equals calls this one.
         /// </summary>
-        /// <param name="other"></param>
+        /// <param name="obj"></param>
         /// <returns></returns>
-        public override bool Equals(object other)
+        public override bool Equals(object obj)
         {
-            IXenObject otherIXenObject = other as IXenObject;
-            if (otherIXenObject != null)
+            if (obj is IXenObject otherIXenObject)
                 return opaque_ref == otherIXenObject.opaque_ref;
             return false;
         }

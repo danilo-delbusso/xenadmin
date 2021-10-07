@@ -590,21 +590,21 @@ namespace XenAdmin.Dialogs.ScheduledSnapshots
                 _direction = direction;
             }
 
-            public int Compare(object first, object second)
+            public int Compare(object x, object y)
             {
-                var row1 = first as HistoryRow;
-                var row2 = second as HistoryRow;
+                var rowX = x as HistoryRow;
+                var rowY = y as HistoryRow;
                 int result = 0;
 
-                if (row1 != null && row2 != null)
+                if (rowX != null && rowY != null)
                 {
-                    result = row1.Alert.Type.CompareTo(row2.Alert.Type);
+                    result = rowX.Alert.Type.CompareTo(rowY.Alert.Type);
                     if (result == 0)
-                        result = Alert.CompareOnDate(row1.Alert, row2.Alert);
+                        result = Alert.CompareOnDate(rowX.Alert, rowY.Alert);
                 }
-                else if (row1 != null)
+                else if (rowX != null)
                     result = -1;
-                else if (row2 != null)
+                else if (rowY != null)
                     result = 1;
 
                 if (_direction == ListSortDirection.Descending)

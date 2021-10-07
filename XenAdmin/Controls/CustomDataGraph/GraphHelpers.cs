@@ -101,20 +101,17 @@ namespace XenAdmin.Controls.CustomDataGraph
 
     public class DesignedGraphEqualityComparer : EqualityComparer<DesignedGraph>
     {
-        public override bool Equals(DesignedGraph graph1, DesignedGraph graph2)
+        public override bool Equals(DesignedGraph x, DesignedGraph y)
         {
-            if (Object.ReferenceEquals(graph1, null))
-                return false;
-
-            return graph1.IsSame(graph2);
+            return !ReferenceEquals(x, null) && x.IsSame(y);
         }
 
-        public override int GetHashCode(DesignedGraph graph)
+        public override int GetHashCode(DesignedGraph obj)
         {
-            if (Object.ReferenceEquals(graph, null))
+            if (Object.ReferenceEquals(obj, null))
                 return 0;
 
-            return graph.DisplayName.GetHashCode();
+            return obj.DisplayName.GetHashCode();
         }
     }
 

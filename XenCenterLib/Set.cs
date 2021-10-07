@@ -74,9 +74,9 @@ namespace XenCenterLib
             return false;
         }
 
-        public bool Equals(Set<T> set)
+        public bool Equals(Set<T> other)
         {
-            return set.IsSubsetOf(this) && this.IsSubsetOf(set);
+            return other.IsSubsetOf(this) && this.IsSubsetOf(other);
         }
 
         public override int GetHashCode()

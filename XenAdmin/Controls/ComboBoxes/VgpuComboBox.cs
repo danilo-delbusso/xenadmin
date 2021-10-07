@@ -97,9 +97,9 @@ namespace XenAdmin.Controls
             return obj is GpuTuple tuple && tuple.IsGpuHeaderItem;
         }
 
-        protected override bool IsItemNonSelectable(object obj)
+        protected override bool IsItemNonSelectable(object o)
         {
-            return obj is GpuTuple tuple && (tuple.IsGpuHeaderItem || !tuple.Enabled);
+            return o is GpuTuple tuple && (tuple.IsGpuHeaderItem || !tuple.Enabled);
         }
 
     }

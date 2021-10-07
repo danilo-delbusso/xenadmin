@@ -385,26 +385,26 @@ namespace XenAdmin
             Clip.RegisterClipboardViewer();
         }
 
-        protected override void WndProc(ref System.Windows.Forms.Message e)
+        protected override void WndProc(ref System.Windows.Forms.Message m)
         {
             //System.Console.WriteLine(Win32.GetWindowsMessageName(e.Msg));
-            switch (e.Msg)
+            switch (m.Msg)
             {
                 case Win32.WM_CHANGECBCHAIN: // Clipboard chain has changed.
-                    Clip.ProcessWMChangeCBChain(e);
+                    Clip.ProcessWMChangeCBChain(m);
                     break;
 
                 case Win32.WM_DRAWCLIPBOARD: // Content of clipboard has changed.
-                    Clip.ProcessWMDrawClipboard(e);
+                    Clip.ProcessWMDrawClipboard(m);
                     break;
 
                 case Win32.WM_DESTROY:
                     Clip.UnregisterClipboardViewer();
-                    base.WndProc(ref e);
+                    base.WndProc(ref m);
                     break;
 
                 default:
-                    base.WndProc(ref e);
+                    base.WndProc(ref m);
                     break;
             }
         }

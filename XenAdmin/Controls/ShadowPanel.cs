@@ -145,10 +145,10 @@ namespace XenAdmin.Controls
         }
 
         // Correct resizing
-        protected override void OnResize(EventArgs e)
+        protected override void OnResize(EventArgs eventargs)
         {
             base.Invalidate();
-            base.OnResize(e);
+            base.OnResize(eventargs);
         }
     }
 }

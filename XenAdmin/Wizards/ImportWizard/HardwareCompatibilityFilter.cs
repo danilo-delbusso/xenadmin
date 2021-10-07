@@ -54,7 +54,7 @@ namespace XenAdmin.Wizards.ImportWizard.Filters
                 _hosts.AddRange(pool.Connection.Cache.Hosts);
         }
     
-        public override bool FailureFoundFor(IXenObject itemToFilterOn)
+        public override bool FailureFoundFor(IXenObject xenObject)
         {
             foreach (var setting in _hardwarePlatformSettings)
             {

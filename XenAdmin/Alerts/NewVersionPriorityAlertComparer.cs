@@ -35,21 +35,21 @@ namespace XenAdmin.Alerts
 {
     public class NewVersionPriorityAlertComparer : IComparer<Alert>
     {
-        public int Compare(Alert alert1, Alert alert2)
+        public int Compare(Alert x, Alert y)
         {
-            if (alert1 == null || alert2 == null)
+            if (x == null || y == null)
                 return 0;
 
-            int sortResult = 0;
+            var sortResult = 0;
 
-            if (IsVersionOrVersionUpdateAlert(alert1) && !IsVersionOrVersionUpdateAlert(alert2))
+            if (IsVersionOrVersionUpdateAlert(x) && !IsVersionOrVersionUpdateAlert(y))
                 sortResult = 1;
 
-            if (!IsVersionOrVersionUpdateAlert(alert1) && IsVersionOrVersionUpdateAlert(alert2))
+            if (!IsVersionOrVersionUpdateAlert(x) && IsVersionOrVersionUpdateAlert(y))
                 sortResult = -1;
 
             if (sortResult == 0)
-                sortResult = Alert.CompareOnDate(alert1, alert2);
+                sortResult = Alert.CompareOnDate(x, y);
 
             return -sortResult;
         }

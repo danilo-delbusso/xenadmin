@@ -49,7 +49,7 @@ namespace XenAdmin.Controls
             }
         }
 
-        protected override void OnPaintBackground(PaintEventArgs pevent)
+        protected override void OnPaintBackground(PaintEventArgs e)
         {
         }
     }

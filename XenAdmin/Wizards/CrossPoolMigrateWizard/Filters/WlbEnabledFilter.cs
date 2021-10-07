@@ -50,12 +50,12 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard.Filters
             this.preSelectedVMs = preSelectedVMs;
         }
 
-        public override bool FailureFoundFor(IXenObject itemToFilterOn)
+        public override bool FailureFoundFor(IXenObject xenObject)
         {
             bool targetWlb = false;
 
-            if(itemToFilterOn != null)
-                targetWlb = Helpers.CrossPoolMigrationRestrictedWithWlb(itemToFilterOn.Connection);
+            if(xenObject != null)
+                targetWlb = Helpers.CrossPoolMigrationRestrictedWithWlb(xenObject.Connection);
 
             bool sourceWlb = preSelectedVMs.Any(vm => Helpers.CrossPoolMigrationRestrictedWithWlb(vm.Connection));
 

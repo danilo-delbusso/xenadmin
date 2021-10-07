@@ -65,19 +65,19 @@ namespace XenAdmin.Controls
         public WndProcCancelDelegate CancelWndProc = new WndProcCancelDelegate(delegate(Message msg) { return false; });
 
 
-        protected override void WndProc(ref Message msg)
+        protected override void WndProc(ref Message m)
         {
-            if (msg.Msg == Win32.WM_HSCROLL)
+            if (m.Msg == Win32.WM_HSCROLL)
             {
                 // Store the handle for use in Invalidate()
-                _hScrollbarHandle = msg.HWnd;
+                _hScrollbarHandle = m.HWnd;
                 // Collect info about the position of the horizontal scrollbar
                 Win32.ScrollInfo si = new Win32.ScrollInfo();
                 si.fMask = (int)Win32.ScrollInfoMask.SIF_ALL;
                 si.cbSize = (uint)Marshal.SizeOf(si);
-                Win32.GetScrollInfo(msg.HWnd, 0, ref si);
+                Win32.GetScrollInfo(m.HWnd, 0, ref si);
 
-                if ((msg.WParam.ToInt32() & 0xFF) == Win32.SB_THUMBTRACK)
+                if ((m.WParam.ToInt32() & 0xFF) == Win32.SB_THUMBTRACK)
                 {
                     // If the user is in the middle of dragging the scrollbar, we're interested in
                     // the 'track' position
@@ -92,8 +92,8 @@ namespace XenAdmin.Controls
                 base.Invalidate();
             }
 
-            if(!CancelWndProc(msg))
-                base.WndProc(ref msg);
+            if(!CancelWndProc(m))
+                base.WndProc(ref m);
         }
 
         public new void Invalidate()

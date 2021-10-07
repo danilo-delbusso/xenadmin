@@ -68,14 +68,14 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard.Filters
             canceled = true;
         }
 
-        public override bool FailureFoundFor(IXenObject itemToFilterOn)
+        public override bool FailureFoundFor(IXenObject xenObject)
         {
             Pool targetPool;
-            List<Host> targets = CollateHosts(itemToFilterOn, out targetPool);
+            List<Host> targets = CollateHosts(xenObject, out targetPool);
 
             foreach (VM vm in preSelectedVMs)
             {
-                log.InfoFormat("Asserting can migrate VM {0} to {1}...", vm.Name(), itemToFilterOn);
+                log.InfoFormat("Asserting can migrate VM {0} to {1}...", vm.Name(), xenObject);
                 bool vmIsMigratable = false;
                 foreach (Host host in targets)
                 {
@@ -189,7 +189,7 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard.Filters
                     }
                     catch (Exception e)
                     {
-                        log.Error($"There was an error while asserting the VM {vm.Name()} can be migrated to {itemToFilterOn.Name()}:", e);
+                        log.Error($"There was an error while asserting the VM {vm.Name()} can be migrated to {xenObject.Name()}:", e);
                         disableReason = Messages.HOST_MENU_UNKNOWN_ERROR;
                         vmIsMigratable = false;
                     }

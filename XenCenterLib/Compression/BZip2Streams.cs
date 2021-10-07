@@ -71,9 +71,9 @@ namespace XenCenterLib.Compression
             zipStream = new BZip2InputStream(outputStream);
         }
 
-        public override void SetBaseStream(Stream outputStream)
+        public override void SetBaseStream(Stream baseStream)
         {
-            zipStream = new BZip2InputStream(outputStream);
+            zipStream = new BZip2InputStream(baseStream);
         }
 
     }

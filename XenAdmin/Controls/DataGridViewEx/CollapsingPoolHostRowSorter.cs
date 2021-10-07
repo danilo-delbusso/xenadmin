@@ -50,19 +50,19 @@ namespace XenAdmin.Controls.DataGridViewEx
             StableSorter = new CollapsingPoolHostDataGridViewRowDefaultSorter(Direction);
         }
 
-        protected override int SortRowByColumnDetails(T leftSide, T rightSide)
+        protected override int SortRowByColumnDetails(T rowLhs, T rowRhs)
         {
-            if (leftSide.IsPoolOrStandaloneHost && !rightSide.IsPoolOrStandaloneHost)
+            if (rowLhs.IsPoolOrStandaloneHost && !rowRhs.IsPoolOrStandaloneHost)
                 return -1;
 
-            if (!leftSide.IsPoolOrStandaloneHost && rightSide.IsPoolOrStandaloneHost)
+            if (!rowLhs.IsPoolOrStandaloneHost && rowRhs.IsPoolOrStandaloneHost)
                 return 1;
 
-            if ((leftSide.IsPoolOrStandaloneHost && rightSide.IsPoolOrStandaloneHost) ||
-                (!leftSide.IsPoolOrStandaloneHost && !rightSide.IsPoolOrStandaloneHost))
+            if ((rowLhs.IsPoolOrStandaloneHost && rowRhs.IsPoolOrStandaloneHost) ||
+                (!rowLhs.IsPoolOrStandaloneHost && !rowRhs.IsPoolOrStandaloneHost))
             {
-                return StringUtility.NaturalCompare(leftSide.Cells[columnClicked].Value.ToString(),
-                    rightSide.Cells[columnClicked].Value.ToString());
+                return StringUtility.NaturalCompare(rowLhs.Cells[columnClicked].Value.ToString(),
+                    rowRhs.Cells[columnClicked].Value.ToString());
             }
 
             return 0;

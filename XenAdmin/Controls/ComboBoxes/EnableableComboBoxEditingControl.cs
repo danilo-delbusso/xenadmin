@@ -59,9 +59,9 @@ namespace XenAdmin.Controls
 
         public int EditingControlRowIndex { get; set; }
 
-        public bool EditingControlWantsInputKey(Keys key, bool dataGridViewWantsInputKey)
+        public bool EditingControlWantsInputKey(Keys keyData, bool dataGridViewWantsInputKey)
         {
-            switch (key & Keys.KeyCode)
+            switch (keyData & Keys.KeyCode)
             {
                 case Keys.Left:
                 case Keys.Up:

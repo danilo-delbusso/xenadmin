@@ -118,7 +118,7 @@ namespace XenAdmin
             get { return Messages.VIEW_OBJECTS; }
         }
 
-        public override Icons GetGroupIcon(object obj)
+        public override Icons GetGroupIcon(object group)
         {
             return Icons.Objects;
         }
@@ -144,7 +144,7 @@ namespace XenAdmin
             get { return Messages.TAGS; }
         }
 
-        public override Icons GetGroupIcon(object obj)
+        public override Icons GetGroupIcon(object group)
         {
             return Icons.Tag;
         }
@@ -175,7 +175,7 @@ namespace XenAdmin
             get { return Messages.CUSTOM_FIELDS; }
         }
 
-        public override Icons GetGroupIcon(object obj)
+        public override Icons GetGroupIcon(object group)
         {
             return Icons.CustomField;
         }
@@ -206,7 +206,7 @@ namespace XenAdmin
             get { return Messages.FOLDERS; }
         }
 
-        public override Icons GetGroupIcon(object obj)
+        public override Icons GetGroupIcon(object group)
         {
             return Icons.Folder;
         }
@@ -239,7 +239,7 @@ namespace XenAdmin
             get { return Messages.VM_APPLIANCES; }
         }
 
-        public override Icons GetGroupIcon(object obj)
+        public override Icons GetGroupIcon(object group)
         {
             return Icons.VmAppliance;
         }

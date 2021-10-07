@@ -121,10 +121,10 @@ namespace XenAdmin.Controls
 
 
 
-        protected override void OnPaint(PaintEventArgs pevent)
+        protected override void OnPaint(PaintEventArgs e)
         {
             //Debug.WriteLine("Painting "+this.Text);
-            Graphics graphics = pevent.Graphics;
+            Graphics graphics = e.Graphics;
 
             graphics.TextRenderingHint = TextRenderingHint.SystemDefault;
             graphics.SmoothingMode = SmoothingMode.AntiAlias;

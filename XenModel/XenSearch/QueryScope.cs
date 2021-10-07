@@ -116,9 +116,9 @@ namespace XenAdmin.XenSearch
             return types == t;
         }
 
-        public bool Equals(QueryScope q)
+        public bool Equals(QueryScope other)
         {
-            return (q != null && Equals(q.ObjectTypes));
+            return (other != null && Equals(other.ObjectTypes));
         }
 
         public override bool Equals(object obj)

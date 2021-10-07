@@ -173,25 +173,24 @@ namespace XenAdmin.Controls.CustomDataGraph
         }
 
         private int toolTipIndex = -1;
-        protected override void OnMouseMove(MouseEventArgs args)
+        protected override void OnMouseMove(MouseEventArgs e)
         {
-            base.OnMouseMove(args);
+            base.OnMouseMove(e);
             if (ignoreMouse)
                 return;
             try
             {
-                int itemIndex = -1;
+                var itemIndex = -1;
                 if (ItemHeight != 0)
                 {
-                    itemIndex = args.Y / ItemHeight;
+                    itemIndex = e.Y / ItemHeight;
                     itemIndex += TopIndex;
                 }
                 if ((itemIndex >= 0) && (itemIndex < Items.Count))
                 {
                     if (itemIndex == toolTipIndex)
                         return;
-                    DataEvent e = Items[itemIndex] as DataEvent;
-                    if (e == null)
+                    if (!(Items[itemIndex] is DataEvent dataEvent))
                     {
                         EventListToolTip.Hide(this);
                         toolTipIndex = -1;
@@ -199,7 +198,7 @@ namespace XenAdmin.Controls.CustomDataGraph
                     else
                     {
                         toolTipIndex = itemIndex;
-                        EventListToolTip.Show(string.Format(XenAPI.Message.FriendlyBody(e.Message.Type.ToString()), Helpers.GetName(e.xo)),
+                        EventListToolTip.Show(string.Format(XenAPI.Message.FriendlyBody(dataEvent.Message.Type.ToString()), Helpers.GetName(dataEvent.xo)),
                             this,
                             -10,
                             (toolTipIndex - TopIndex + 1) * ItemHeight + 2);
@@ -218,25 +217,25 @@ namespace XenAdmin.Controls.CustomDataGraph
             }
         }
 
-        protected override void OnKeyUp(KeyEventArgs args)
+        protected override void OnKeyUp(KeyEventArgs e)
         {
-            base.OnKeyUp(args);
-            if (args.KeyCode == Keys.Enter)
+            base.OnKeyUp(e);
+            if (e.KeyCode == Keys.Enter)
             {
                 DataEventList_MouseDoubleClick(null, null);
                 return;
             }
-            if (args.KeyCode != Keys.Up 
-                    && args.KeyCode != Keys.Down 
-                    && args.KeyCode != Keys.Left 
-                    && args.KeyCode != Keys.Right)
+            if (e.KeyCode != Keys.Up 
+                    && e.KeyCode != Keys.Down 
+                    && e.KeyCode != Keys.Left 
+                    && e.KeyCode != Keys.Right)
                 return;
             toolTipIndex = SelectedIndex;
             if (toolTipIndex < 0)
                 return;
             ignoreMouse = true;
-            DataEvent e = Items[toolTipIndex] as DataEvent;
-            EventListToolTip.Show(string.Format(XenAPI.Message.FriendlyBody(e.Message.Type.ToString()), Helpers.GetName(e.xo)), 
+            var dataEvent = Items[toolTipIndex] as DataEvent;
+            EventListToolTip.Show(string.Format(XenAPI.Message.FriendlyBody(dataEvent.Message.Type.ToString()), Helpers.GetName(dataEvent.xo)), 
                 this, 
                 -10,
                 (toolTipIndex - TopIndex + 1) * ItemHeight + 2);

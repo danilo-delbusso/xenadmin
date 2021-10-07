@@ -174,7 +174,7 @@ namespace XenAdmin.Dialogs
         }
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public void DrawSummaryForHighlightedRow(CheckableDataGridViewRow row, SummaryTextComponent summaryComponent, Action runOnUrlClick)
+        public void DrawSummaryForHighlightedRow(CheckableDataGridViewRow row, SummaryTextComponent component, Action runOnUrlClick)
         {
             Program.Invoke(this, delegate
                                      {
@@ -187,7 +187,7 @@ namespace XenAdmin.Dialogs
                                          summaryPanel.HelperUrlVisible = lRow.HelperUrlRequired && !Controller.ReadOnlyView;
                                          summaryPanel.WarningVisible = lRow.WarningRequired;
                                          summaryPanel.WarningText = lRow.WarningText;
-                                         summaryPanel.SummaryText = summaryComponent;
+                                         summaryPanel.SummaryText = component;
                                          switch (lRow.RowStatus)
                                          {
                                              case LicenseDataGridViewRow.Status.Information:

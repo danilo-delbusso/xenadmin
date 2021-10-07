@@ -796,9 +796,9 @@ namespace XenAdmin.Dialogs
                 return vm.Name();
             }
 
-            public int CompareTo(VmPrecheckRow otherVM)
+            public int CompareTo(VmPrecheckRow other)
             {
-                return vm.CompareTo(otherVM?.vm);
+                return vm.CompareTo(other?.vm);
             }
 
             public void SetError(string message, Solution solution)

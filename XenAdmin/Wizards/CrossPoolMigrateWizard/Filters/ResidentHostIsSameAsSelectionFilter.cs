@@ -49,7 +49,7 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard.Filters
             this.preSelectedVMs = preSelectedVMs;
         }
 
-        public override bool FailureFoundFor(IXenObject itemToFilterOn)
+        public override bool FailureFoundFor(IXenObject xenObject)
         {
             var residentHosts = from VM vm in preSelectedVMs
                 let home = vm.Home()
@@ -57,10 +57,10 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard.Filters
                 select home;
 
 
-            if (itemToFilterOn is Host)
-                return residentHosts.Any(h => h == itemToFilterOn);
+            if (xenObject is Host)
+                return residentHosts.Any(h => h == xenObject);
 
-            Pool tempPool = itemToFilterOn as Pool;
+            Pool tempPool = xenObject as Pool;
             if (tempPool != null)
             {
                 if (tempPool.Connection.Cache.Hosts.Length > 1)

@@ -49,9 +49,9 @@ namespace XenCenterLib.Compression
             zipStream = new GZipStream(outputStream, CompressionMode.Compress);
         }
 
-        public override void SetBaseStream(Stream outputStream)
+        public override void SetBaseStream(Stream baseStream)
         {
-            zipStream = new GZipStream(outputStream, CompressionMode.Compress);
+            zipStream = new GZipStream(baseStream, CompressionMode.Compress);
         }
     }
 
@@ -70,9 +70,9 @@ namespace XenCenterLib.Compression
             zipStream = new GZipStream(inputStream, CompressionMode.Decompress);
         }
 
-        public override void SetBaseStream(Stream inputStream)
+        public override void SetBaseStream(Stream baseStream)
         {
-            zipStream = new GZipStream(inputStream, CompressionMode.Decompress);
+            zipStream = new GZipStream(baseStream, CompressionMode.Decompress);
         }
 
     }

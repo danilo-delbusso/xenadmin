@@ -479,15 +479,15 @@ namespace XenAdmin.XenSearch
         // indeterminate (null) (e.g., the subquery is still "Select a filter...").
         // But if the list is empty we return false (e.g., filter by Server and the
         // item doesn't use a Server).
-        public override bool? MatchProperty(List<T> list)
+        public override bool? MatchProperty(List<T> o)
         {
             bool seenFalse = false;
             bool seenNull = false;
-            foreach (T o in list)
+            foreach (T item in o)
             {
-                if (o != null)
+                if (item != null)
                 {
-                    bool? b = subQuery.Match(o);
+                    bool? b = subQuery.Match(item);
                     if (b == true)
                         return true;
                     else if (b == false)
@@ -538,9 +538,9 @@ namespace XenAdmin.XenSearch
             SearchMarshalling.AddAttribute(doc, node, "type", type.ToString());
         }
 
-        public override bool? MatchProperty(String parameter)
+        public override bool? MatchProperty(string o)
         {
-            return MatchString(parameter, query, type, caseSensitive);
+            return MatchString(o, query, type, caseSensitive);
         }
 
         public static bool MatchString(String candidate, String query,
@@ -651,9 +651,9 @@ namespace XenAdmin.XenSearch
         //    in the matching.
         // 3) "Last week" means the day is between six days ago and today inclusive.
         // 4) "Before" and "after" include the day itself.
-        public override bool? MatchProperty(DateTime value)
+        public override bool? MatchProperty(DateTime o)
         {
-            return MatchDate(value, query, type, Now);
+            return MatchDate(o, query, type, Now);
         }
 
         public static bool? MatchDate(DateTime value, DateTime query, PropertyQueryType type, DateTime now)
@@ -773,9 +773,9 @@ namespace XenAdmin.XenSearch
             SearchMarshalling.AddAttribute(doc, node, "query", query.ToString());
         }
 
-        public override bool? MatchProperty(T value)
+        public override bool? MatchProperty(T o)
         {
-            return value.Equals(query) == equals;
+            return o.Equals(query) == equals;
         }
 
         public override bool Equals(object obj)
@@ -823,9 +823,9 @@ namespace XenAdmin.XenSearch
             SearchMarshalling.AddAttribute(doc, node, "query", query.ToString());
         }
 
-        public override bool? MatchProperty(String value)
+        public override bool? MatchProperty(string o)
         {
-            return value.Equals(query) == equals;
+            return o.Equals(query) == equals;
         }
 
         public override bool Equals(object obj)
@@ -891,12 +891,12 @@ namespace XenAdmin.XenSearch
             return query == null ? "invalid" : Helpers.GetUuid(query);
         }
 
-        public override bool? MatchProperty(T value)
+        public override bool? MatchProperty(T o)
         {
             if (query == null)
                 return false;
 
-            return (Helpers.GetUuid(value) == Helpers.GetUuid(query)) == equals;
+            return (Helpers.GetUuid(o) == Helpers.GetUuid(query)) == equals;
         }
 
         public override bool Equals(object obj)
@@ -940,9 +940,9 @@ namespace XenAdmin.XenSearch
             SearchMarshalling.AddAttribute(doc, node, "contains", contains);
         }
 
-        public override sealed bool? MatchProperty(List<T> value)
+        public override sealed bool? MatchProperty(List<T> o)
         {
-            return contains == value.Exists(delegate(T t)
+            return contains == o.Exists(delegate(T t)
                 {
                     return MatchItem(t);
                 });
@@ -1040,9 +1040,9 @@ namespace XenAdmin.XenSearch
             SearchMarshalling.AddAttribute(doc, node, "type", type.ToString());
         }
 
-        protected override bool MatchItem(T value)
+        protected override bool MatchItem(T t)
         {
-            return StringPropertyQuery.MatchString(Helpers.GetName(value), query, type, false);
+            return StringPropertyQuery.MatchString(Helpers.GetName(t), query, type, false);
         }
 
         public override bool Equals(object obj)
@@ -1087,9 +1087,9 @@ namespace XenAdmin.XenSearch
             SearchMarshalling.AddAttribute(doc, node, "query", query);
         }
 
-        protected override bool MatchItem(String value)
+        protected override bool MatchItem(string t)
         {
-            return value != null && value.Equals(query);
+            return t != null && t.Equals(query);
         }
 
         public override bool Equals(object obj)
@@ -1133,9 +1133,9 @@ namespace XenAdmin.XenSearch
             SearchMarshalling.AddAttribute(doc, node, "empty", empty);
         }
 
-        public override sealed bool? MatchProperty(List<T> value)
+        public override sealed bool? MatchProperty(List<T> o)
         {
-            return ((value.Count == 0) == empty);
+            return ((o.Count == 0) == empty);
         }
 
         public override bool Equals(object obj)

@@ -58,11 +58,11 @@ namespace XenAdmin.Controls
             Height = _folderListItem.PreferredSize.Height;
         }
 
-        protected override void OnDrawToBuffer(PaintEventArgs e)
+        protected override void OnDrawToBuffer(PaintEventArgs paintEventArgs)
         {
             // Hack.  See Program.TransparentUsually.
-            e.Graphics.TextContrast = 5;
-            _folderListItem.DrawSelf(e.Graphics, new Rectangle(0, 0, Width, Height), false);
+            paintEventArgs.Graphics.TextContrast = 5;
+            _folderListItem.DrawSelf(paintEventArgs.Graphics, new Rectangle(0, 0, Width, Height), false);
         }
 
         protected override void OnMouseMove(MouseEventArgs e)

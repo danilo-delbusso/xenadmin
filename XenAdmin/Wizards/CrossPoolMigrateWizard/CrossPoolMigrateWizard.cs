@@ -339,10 +339,10 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard
                         : IsCopyTemplate() ? Messages.COPY_TEMPLATE_WIZARD_TITLE : Messages.COPY_VM_WIZARD_TITLE;
         }
 
-        protected override void UpdateWizardContent(XenTabPage page)
+        protected override void UpdateWizardContent(XenTabPage senderPage)
         {
   
-            Type type = page.GetType();
+            Type type = senderPage.GetType();
  
             if (type == typeof(CrossPoolMigrateDestinationPage))
             {

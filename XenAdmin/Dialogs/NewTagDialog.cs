@@ -316,11 +316,11 @@ namespace XenAdmin.Dialogs
                 CheckState.Unchecked
             };
 
-            public int Compare(CheckState a, CheckState b)
+            public int Compare(CheckState x, CheckState y)
             {
-                var priorityA = Priority.IndexOf(a);
-                var priorityB = Priority.IndexOf(b);
-                return priorityA.CompareTo(priorityB);
+                var priorityX = Priority.IndexOf(x);
+                var priorityY = Priority.IndexOf(y);
+                return priorityX.CompareTo(priorityY);
             }
         }
     }

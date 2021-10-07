@@ -86,9 +86,9 @@ namespace XenAPI
                 }
             }
 
-            public override bool Equals(object other)
+            public override bool Equals(object obj)
             {
-                return other is PowerOnMode o && ToString() == o.ToString();
+                return obj is PowerOnMode o && ToString() == o.ToString();
             }
 
             public override int GetHashCode()

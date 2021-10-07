@@ -723,23 +723,23 @@ namespace XenAdmin.Network
             }
         }
 
-        /// <param name="clearCache">Whether the cache should be cleared (requires invoking onto the GUI thread)</param>
+        /// <param name="resetState">Whether the cache should be cleared (requires invoking onto the GUI thread)</param>
         /// <param name="exiting"></param>
-        public void EndConnect(bool clearCache = true, bool exiting = false)
+        public void EndConnect(bool resetState = true, bool exiting = false)
         {
             ConnectTask t = connectTask;
             connectTask = null;
-            EndConnect(clearCache, t, exiting);
+            EndConnect(resetState, t, exiting);
         }
 
         /// <summary>
         /// Closes the connecting dialog, stops the XenMetricsMonitor thread, marks this.task as Cancelled and
         /// logs out of the task's Session on a background thread.
         /// </summary>
-        /// <param name="clearCache">Whether the cache should be cleared (requires invoking onto the GUI thread)</param>
+        /// <param name="resetState">Whether the cache should be cleared (requires invoking onto the GUI thread)</param>
         /// <param name="task"></param>
         /// <param name="exiting"></param>
-        private void EndConnect(bool clearCache, ConnectTask task, bool exiting)
+        private void EndConnect(bool resetState, ConnectTask task, bool exiting)
         {
             OnBeforeConnectionEnd();
 
@@ -772,7 +772,7 @@ namespace XenAdmin.Network
             }
 
             // Clear the XenAPI object cache
-            if (clearCache)
+            if (resetState)
             {
                 ClearCache();
             }

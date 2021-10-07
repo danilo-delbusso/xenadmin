@@ -168,9 +168,9 @@ namespace XenAdmin.Wizards.ImportWizard
 			}
 		}
 
-        protected override void UpdateWizardContent(XenTabPage page)
+        protected override void UpdateWizardContent(XenTabPage senderPage)
 		{
-			Type type = page.GetType();
+			Type type = senderPage.GetType();
 
 			if (type == typeof(ImportSourcePage))
 			{

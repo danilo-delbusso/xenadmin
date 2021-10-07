@@ -918,11 +918,11 @@ namespace XenAdmin.Controls.CustomGridView
             }
         }
 
-        protected override void OnDragEnter(DragEventArgs e)
+        protected override void OnDragEnter(DragEventArgs drgevent)
         {
             DraggingItems = true;
-            e.Effect = DragDropEffects.None;
-            base.OnDragEnter(e);
+            drgevent.Effect = DragDropEffects.None;
+            base.OnDragEnter(drgevent);
         }
 
         protected override void OnDragLeave(EventArgs e)

@@ -443,14 +443,14 @@ namespace XenAdmin.TabPages
 
     class DataGridViewVms_DefaultSort : System.Collections.IComparer
     {
-        public int Compare(object first, object second)
+        public int Compare(object x, object y)
         {
             // Default sort: Sort by whether caching is enabled (yes before no), using VM name (asc) as tiebreaker
-            DataGridViewRow row1 = (DataGridViewRow)first;
-            DataGridViewRow row2 = (DataGridViewRow)second;
+            DataGridViewRow rowX = (DataGridViewRow)x;
+            DataGridViewRow rowY = (DataGridViewRow)y;
 
-            int cachingEnabled1 = row1.Cells[1].Value.ToString().Equals(Messages.YES) ? 0 : 1;
-            int cachingEnabled2 = row2.Cells[1].Value.ToString().Equals(Messages.YES) ? 0 : 1;
+            int cachingEnabled1 = rowX.Cells[1].Value.ToString().Equals(Messages.YES) ? 0 : 1;
+            int cachingEnabled2 = rowY.Cells[1].Value.ToString().Equals(Messages.YES) ? 0 : 1;
 
             if (cachingEnabled1 != cachingEnabled2)
             {
@@ -459,8 +459,8 @@ namespace XenAdmin.TabPages
             else
             {
                 // VM name as tiebreaker
-                var vm1 = row1.Tag as VM;
-                var vm2 = row2.Tag as VM;
+                var vm1 = rowX.Tag as VM;
+                var vm2 = rowY.Tag as VM;
 
                 return vm1.CompareTo(vm2);
             }

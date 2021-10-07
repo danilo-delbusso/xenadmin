@@ -111,7 +111,7 @@ namespace XenAdmin.Controls.CustomGridView
             UpdateCompareOrder();  // don't just set it to lst in case we had to leave some out
         }
 
-        public override void AddItem(string col, GridItemBase item)
+        public override void AddItem(string colname, GridItemBase item)
         {
             GridHeaderItem headerItem = item as GridHeaderItem;
             if (headerItem == null)
@@ -120,9 +120,9 @@ namespace XenAdmin.Controls.CustomGridView
             if (headerItem.IsDefaultSortColumn)
                 DefaultSortColumn = headerItem;
 
-            Columns.Add(col);
-            headerItem.ColumnName = col;
-            base.AddItem(col, item);
+            Columns.Add(colname);
+            headerItem.ColumnName = colname;
+            base.AddItem(colname, item);
         }
 
         public override void RemoveItem(string colname)

@@ -47,13 +47,13 @@ namespace XenAdmin.Controls
             InitializeComponent();
         }
 
-        protected override void OnPaint(PaintEventArgs pe)
+        protected override void OnPaint(PaintEventArgs e)
         {
             var rect = new Rectangle(0, 0, ClientRectangle.Width - 1, ClientRectangle.Height - 1);
             
-            Drawing.DrawSimpleProgressBar(pe.Graphics, rect, Progress, Color);
+            Drawing.DrawSimpleProgressBar(e.Graphics, rect, Progress, Color);
 
-            base.OnPaint(pe);
+            base.OnPaint(e);
         }
 
         [DefaultValue(Drawing.SimpleProgressBarColor.Green)]

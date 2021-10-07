@@ -221,12 +221,10 @@ namespace XenAdmin.Model
             return _name_label;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object other)
         {
-            DockerContainer other = obj as DockerContainer;
-
-            return other != null &&
-                uuid.Equals(other.uuid);
+            return other is DockerContainer dockerContainer &&
+                   uuid.Equals(dockerContainer.uuid);
         }
 
 
@@ -264,9 +262,9 @@ namespace XenAdmin.Model
             ports = update.ports;
         }
 
-        public override string SaveChanges(Session session, string _serverOpaqueRef, DockerContainer serverObject)
+        public override string SaveChanges(Session session, string serverOpaqueRef, DockerContainer serverObject)
         {
-            return String.Empty;
+            return string.Empty;
         }
 
         public override string Name()

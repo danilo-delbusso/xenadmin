@@ -204,9 +204,9 @@ namespace XenAdmin.Core
                 this.parent = parent;
             }
 
-            public void NavigateError(object pDisp, ref object url, ref object frame, ref object statusCode, ref bool cancel)
+            public void NavigateError(object pDisp, ref object URL, ref object frame, ref object statusCode, ref bool cancel)
             {
-                parent.OnNavigateError(new NavigateErrorEventArgs((string)url, (string)frame, (Int32)statusCode, cancel));
+                parent.OnNavigateError(new NavigateErrorEventArgs((string)URL, (string)frame, (Int32)statusCode, cancel));
             }
         }
 

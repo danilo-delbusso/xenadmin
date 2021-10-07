@@ -78,15 +78,15 @@ namespace XenAdmin.Wizards.ConversionWizard
             Text = Messages.CONVERSION_WIZARD_TEXT;
         }
 
-        protected override void UpdateWizardContent(XenTabPage page)
+        protected override void UpdateWizardContent(XenTabPage senderPage)
         {
-            if (page == pageCredentials)
+            if (senderPage == pageCredentials)
             {
                 pageVmSelection.VMwareVMs = pageCredentials.VMwareVMs;
                 pageVmSelection.VmwareCredInfo = pageCredentials.VmwareCredInfo;
                 pageNetworkOptions.VmwareCredInfo = pageCredentials.VmwareCredInfo;
             }
-            else if (page == pageVmSelection)
+            else if (senderPage == pageVmSelection)
             {
                 pageSrSelection.SelectedVms = pageVmSelection.SelectedVms;
             }

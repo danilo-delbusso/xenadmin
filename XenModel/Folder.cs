@@ -129,12 +129,10 @@ namespace XenAdmin.Model
             }
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object other)
         {
-            Folder other = obj as Folder;
-
-            return other != null &&
-                FullPath().Equals(other.FullPath());
+            return other is Folder folder &&
+                   FullPath().Equals(folder.FullPath());
         }
 
         private string FullPath()
@@ -167,9 +165,9 @@ namespace XenAdmin.Model
         {
         }
 
-        public override string SaveChanges(Session session, string _serverOpaqueRef, Folder serverObject)
+        public override string SaveChanges(Session session, string serverOpaqueRef, Folder serverObject)
         {
-            return String.Empty;
+            return string.Empty;
         }
 
         public bool IsChildOf(IXenObject target)

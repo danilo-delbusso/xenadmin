@@ -529,13 +529,13 @@ namespace XenAdmin.Network
         }
 
         private bool dockerContainersChanged = false;
-        public void UpdateDockerContainersForVM(IList<DockerContainer> containers, VM vm)
+        public void UpdateDockerContainersForVM(IList<DockerContainer> d, VM v)
         {
-            Trace.Assert(vm != null);
+            Trace.Assert(v != null);
 
             //updating existing, adding new containers
-            dockerContainersChanged = dockerContainersChanged || containers.Count > 0;
-            foreach (var c in containers)
+            dockerContainersChanged = dockerContainersChanged || d.Count > 0;
+            foreach (var c in d)
             {
                 _dockerContainers[new XenRef<DockerContainer>(c)] = c;
             }
@@ -544,7 +544,7 @@ namespace XenAdmin.Network
             //removing the ones that are not there anymore on this VM
             lock (_dockerContainers)
             {
-                containersGoneFromThisVM = _dockerContainers.Where(c => c.Value != null && c.Value.Parent.uuid == vm.uuid && !containers.Any(cont => cont.uuid == c.Value.uuid)).ToList();
+                containersGoneFromThisVM = _dockerContainers.Where(c => c.Value != null && c.Value.Parent.uuid == v.uuid && !d.Any(cont => cont.uuid == c.Value.uuid)).ToList();
                 dockerContainersChanged = dockerContainersChanged || containersGoneFromThisVM.Count > 0;
                 foreach (var c in containersGoneFromThisVM)
                 {

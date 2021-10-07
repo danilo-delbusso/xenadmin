@@ -314,7 +314,7 @@ namespace XenAdmin.Controls.XenSearch
             }
         }
 
-        public override void OpenChooseColumnsMenu(Point point)
+        public override void OpenChooseColumnsMenu(Point p)
         {
             ContextMenu contextMenu = new ContextMenu();
 
@@ -341,7 +341,7 @@ namespace XenAdmin.Controls.XenSearch
                 contextMenu.MenuItems.Add(item);
             }
 
-            contextMenu.Show(this, point);
+            contextMenu.Show(this, p);
         }
 
         public List<ToolStripMenuItem> GetChooseColumnsMenu()

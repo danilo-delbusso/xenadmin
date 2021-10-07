@@ -299,14 +299,13 @@ namespace XenAPI
             return rank > otherRank ? 1 : rank < otherRank ? -1 : 0;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object other)
         {
-            Role r = obj as Role;
-            if (r != null)
+            if (other is Role r)
             {
                 return r.opaque_ref == this.opaque_ref;
             }
-            return base.Equals(obj);
+            return base.Equals(other);
         }
 
         public override int GetHashCode()

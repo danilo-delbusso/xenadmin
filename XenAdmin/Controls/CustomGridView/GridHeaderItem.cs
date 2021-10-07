@@ -131,7 +131,7 @@ namespace XenAdmin.Controls.CustomGridView
             g.DrawImageUnscaled(triangle, itemPaintArgs.Rectangle.Right - triangle.Width - 5, itemPaintArgs.Rectangle.Top + ((itemPaintArgs.Rectangle.Height - triangle.Height) / 2), triangle.Width, triangle.Height);
         }
 
-        public override void OnEnter(Point p)
+        public override void OnEnter(Point point)
         {
             if (!Immovable && !string.IsNullOrEmpty(sortdata.ToString()))
             {
@@ -140,9 +140,9 @@ namespace XenAdmin.Controls.CustomGridView
             }
         }
 
-        public override void OnMouseMove(Point p)
+        public override void OnMouseMove(Point point)
         {
-            if ((!UnSizable && (p.X >= CurrentRectangle.Width - ResizeGutter && p.X <= CurrentRectangle.Width)) || (!PreviousUnsizable() && (p.X < ResizeGutter && p.X >= 0)))
+            if ((!UnSizable && (point.X >= CurrentRectangle.Width - ResizeGutter && point.X <= CurrentRectangle.Width)) || (!PreviousUnsizable() && (point.X < ResizeGutter && point.X >= 0)))
                 Row.Cursor = Cursors.SizeWE;
             else
                 Row.Cursor = Cursors.Hand;
@@ -174,7 +174,7 @@ namespace XenAdmin.Controls.CustomGridView
             }
         }
 
-        public override void OnClick(Point p)
+        public override void OnClick(Point point)
         {
             if (!string.IsNullOrEmpty(sortdata.ToString()))
             {

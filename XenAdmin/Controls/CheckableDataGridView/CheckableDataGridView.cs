@@ -200,20 +200,19 @@ namespace XenAdmin.Controls.CheckableDataGridView
         public CheckableDataGridViewController Controller { set; protected get; }
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public void DrawRow(CheckableDataGridViewRow gvRow)
+        public void DrawRow(CheckableDataGridViewRow row)
         {
             SuspendLayout();
             try
             {
-                CheckableDataGridViewRow row = gvRow;
                 if(Rows.Contains(row))
                     Rows.Remove(row);
                 row.Cells.Clear();
-                DataGridViewCheckBoxCell cbCell = new DataGridViewCheckBoxCell { Value = gvRow.Checked };
+                var cbCell = new DataGridViewCheckBoxCell { Value = row.Checked };
                 row.Cells.Add(cbCell);
-                foreach (object cellValue in gvRow.CellText)
+                foreach (var cellValue in row.CellText)
                 {
-                    DataGridViewCellStyle style = row.Disabled ? RowStyle(true) : UpdatingRowStyle(row.CellDataLoaded);
+                    var style = row.Disabled ? RowStyle(true) : UpdatingRowStyle(row.CellDataLoaded);
                     row.Cells.Add(GetCell(style, cellValue));
                 }
 

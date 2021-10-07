@@ -112,9 +112,9 @@ namespace DotNetVnc
             return new KeySet(newKeys);
         }
 
-        public bool Equals(KeySet keySet)
+        public bool Equals(KeySet other)
         {
-            foreach (Keys key in keySet.Keys)
+            foreach (Keys key in other.Keys)
             {
                 if (!keys.Contains(key))
                 {
@@ -124,7 +124,7 @@ namespace DotNetVnc
 
             foreach (Keys key in this.keys)
             {
-                if (!keySet.Keys.Contains(key))
+                if (!other.Keys.Contains(key))
                 {
                     return false;
                 }
