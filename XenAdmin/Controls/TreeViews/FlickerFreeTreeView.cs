@@ -326,10 +326,10 @@ namespace XenAdmin.Controls
                         SelectedNode = node;
                     
                     if (expandNode)
-                    node.Expand();
+                        node.Expand();
                     
                     if (ensureNodeVisible)
-                    node.EnsureVisible();
+                        node.EnsureVisible();
                     
                     return true;
                 }

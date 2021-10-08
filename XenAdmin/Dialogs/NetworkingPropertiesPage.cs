@@ -346,7 +346,7 @@ namespace XenAdmin.Dialogs
             else
                 _nameValid = true;
             if(ValidChanged!=null)
-            ValidChanged(this, null);
+                ValidChanged(this, null);
         }
 
         private void IPAddressTextBox_TextChanged(object sender, EventArgs e)

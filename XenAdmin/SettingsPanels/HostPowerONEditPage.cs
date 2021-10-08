@@ -303,10 +303,12 @@ namespace XenAdmin.SettingsPanels
         private void bgWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             foreach (var kvp in _hostModes)
-            foreach (var mode in kvp.Value)
             {
-                mode.Load(kvp.Key);
-                mode.Active = true;
+                foreach (var mode in kvp.Value)
+                {
+                    mode.Load(kvp.Key);
+                    mode.Active = true;
+                }
             }
         }
 
