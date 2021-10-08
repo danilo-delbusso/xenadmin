@@ -71,7 +71,7 @@ namespace XenAdmin.ConsoleView
 
         private volatile bool useVNC = true;
 
-        private bool autoCaptureKeyboardAndMouse = true;
+        private readonly bool autoCaptureKeyboardAndMouse = true;
 
         private readonly Color focusColor = SystemColors.MenuHighlight;
 

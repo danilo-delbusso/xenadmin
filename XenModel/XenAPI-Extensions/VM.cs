@@ -813,7 +813,7 @@ namespace XenAPI
         /// List of distros that we treat as Linux/Non-Windows (written in the VM.guest_metrics
         /// by the Linux Guest Agent after evaluating xe-linux-distribution)
         /// </summary>
-        private static string[] linuxDistros =
+        private static readonly string[] linuxDistros =
         {
             "debian", "rhel", "fedora", "centos", "scientific", "oracle", "sles",
             "lsb", "boot2docker", "freebsd", "ubuntu", "neokylin", "gooroom", "rocky"

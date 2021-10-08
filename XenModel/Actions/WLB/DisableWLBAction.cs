@@ -40,8 +40,8 @@ namespace XenAdmin.Actions.Wlb
     public class DisableWLBAction : AsyncAction
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private bool _deconfigure = false;
-        private static string OPTIMIZINGPOOL = "wlb_optimizing_pool";
+        private readonly bool _deconfigure = false;
+        private static readonly string OPTIMIZINGPOOL = "wlb_optimizing_pool";
 
         public DisableWLBAction(Pool pool, bool deconfigure)
             : base(pool.Connection, string.Format(Messages.DISABLING_WLB_ON, Helpers.GetName(pool).Ellipsise(50)), Messages.DISABLING_WLB, false)

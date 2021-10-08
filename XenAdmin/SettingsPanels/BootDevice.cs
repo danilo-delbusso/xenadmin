@@ -39,8 +39,8 @@ namespace XenAdmin.SettingsPanels
 
 		public static readonly char[] BootOptions = {HARD_DISK, DVD_DRIVE, NETWORK};
 
-    	private char _type;
-        private string _name;
+    	private readonly char _type;
+        private readonly string _name;
 
         public BootDevice(char type)
         {

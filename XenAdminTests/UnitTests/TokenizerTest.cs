@@ -38,7 +38,7 @@ namespace XenAdminTests.UnitTests
     class TokenizerTest
     {
         private const string SXP = "((\"string ( \\\" foo\")\" foo foo (( )) \\\"\")";
-        private static string[] tokens = {"(", "(", "string ( \" foo", ")", " foo foo (( )) \"", ")"};
+        private static readonly string[] tokens = {"(", "(", "string ( \" foo", ")", " foo foo (( )) \"", ")"};
 
         [Test]
         public void Run()

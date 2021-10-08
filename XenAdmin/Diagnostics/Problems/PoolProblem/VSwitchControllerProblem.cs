@@ -38,7 +38,7 @@ namespace XenAdmin.Diagnostics.Problems.PoolProblem
 {
     class VSwitchControllerProblem : ProblemWithMoreInfo
     {
-        private Pool _pool;
+        private readonly Pool _pool;
 
         public VSwitchControllerProblem(Check check, Pool pool)
             : base(check)

@@ -37,7 +37,7 @@ namespace XenAdmin.Actions
 {
     public class VDIDisableCbtAction : PureAsyncAction
     {
-        private VDI vdi;
+        private readonly VDI vdi;
 
         public VDIDisableCbtAction(VM vm, VDI vdi)
             : base(vm.Connection, String.Format(Messages.ACTION_DISABLE_CHANGED_BLOCK_TRACKING_FOR, vm.Name()))

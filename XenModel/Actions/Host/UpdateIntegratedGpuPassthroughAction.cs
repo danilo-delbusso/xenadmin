@@ -37,7 +37,7 @@ namespace XenAdmin.Actions
 {
     public class UpdateIntegratedGpuPassthroughAction : PureAsyncAction
     {
-        private bool enable;
+        private readonly bool enable;
 
         public UpdateIntegratedGpuPassthroughAction(Host host, bool enableOnNextReboot, bool suppressHistory)
             : base(host.Connection, string.Format(Messages.ACTION_UPDATE_INTEGRATED_GPU_PASSTHROUGH_TITLE, host.Name()), null, suppressHistory)

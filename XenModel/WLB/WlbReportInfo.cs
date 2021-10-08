@@ -43,14 +43,14 @@ namespace XenAdmin.Wlb
 
         #region Variables
 
-        private string _reportName;
-        private string _reportFile;
-        private string _reportDefinition;
-        private bool _displayHosts;
-        private bool _displayFilter;
-        private bool _displayUsers;
-        private bool _displayAuditObjects;
-        private OrderedDictionary _reportQueryParameterNames;
+        private readonly string _reportName;
+        private readonly string _reportFile;
+        private readonly string _reportDefinition;
+        private readonly bool _displayHosts;
+        private readonly bool _displayFilter;
+        private readonly bool _displayUsers;
+        private readonly bool _displayAuditObjects;
+        private readonly OrderedDictionary _reportQueryParameterNames;
 
         #endregion
 

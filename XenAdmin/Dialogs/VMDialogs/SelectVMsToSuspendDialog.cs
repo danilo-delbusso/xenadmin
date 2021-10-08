@@ -45,7 +45,7 @@ namespace XenAdmin.Dialogs.VMDialogs
 {
     public partial class SelectVMsToSuspendDialog : XenDialogBase
     {
-        private Host Server;
+        private readonly Host Server;
         private readonly VMsWhichCanBeMigratedAction VmsToMigrateAction;
         private long PoolMemoryFree = 0;
 
@@ -174,10 +174,10 @@ namespace XenAdmin.Dialogs.VMDialogs
     public class VmGridRow : DataGridViewRow
     {
         public VM Vm;
-        private DataGridViewExImageCell ImageCell = new DataGridViewExImageCell();
-        private DataGridViewTextBoxCell NameCell = new DataGridViewTextBoxCell();
-        private DataGridViewTextBoxCell MemoryCell = new DataGridViewTextBoxCell();
-        private DataGridViewComboBoxCell ActionCell = new DataGridViewComboBoxCell();
+        private readonly DataGridViewExImageCell ImageCell = new DataGridViewExImageCell();
+        private readonly DataGridViewTextBoxCell NameCell = new DataGridViewTextBoxCell();
+        private readonly DataGridViewTextBoxCell MemoryCell = new DataGridViewTextBoxCell();
+        private readonly DataGridViewComboBoxCell ActionCell = new DataGridViewComboBoxCell();
 
         public VmGridRow(VM vm)
         {

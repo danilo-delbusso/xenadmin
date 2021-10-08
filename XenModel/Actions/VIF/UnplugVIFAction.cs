@@ -33,7 +33,7 @@ namespace XenAdmin.Actions
 {
     public class UnplugVIFAction : PureAsyncAction
     {
-        private XenAPI.VIF _vif;
+        private readonly XenAPI.VIF _vif;
         public UnplugVIFAction(XenAPI.VIF vif)
             : base(vif.Connection, string.Format(Messages.ACTION_VIF_UNPLUG_TITLE, vif.Connection.Resolve(vif.VM).Name()))
         {

@@ -124,7 +124,7 @@ namespace XenAdmin
 
         public static bool RunInAutomatedTestMode = false;
         public static string TestExceptionString;  // an exception passed back to the test framework
-        private static log4net.ILog log;
+        private static readonly log4net.ILog log;
 
         public static volatile bool Exiting;
 

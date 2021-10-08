@@ -43,7 +43,7 @@ namespace XenAdmin.TabPages
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private const string XCNS = "XenCenter://";
-        bool initializing = true;
+        readonly bool initializing = true;
 
         public HomePage()
         {

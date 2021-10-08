@@ -40,8 +40,8 @@ namespace XenAdmin.Dialogs.Network
 {
     public partial class CertificateChangedDialog : XenDialogBase
     {
-        private X509Certificate2 _newCertificate;
-        private string _hostname;
+        private readonly X509Certificate2 _newCertificate;
+        private readonly string _hostname;
 
         public CertificateChangedDialog(X509Certificate certificate, string hostname)
         {

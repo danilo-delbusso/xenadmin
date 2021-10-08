@@ -316,7 +316,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
         private class NetAppAggregateRow : DataGridViewRow
         {
-            public NetAppAggregate aggregate;
+            public readonly NetAppAggregate aggregate;
 
             public NetAppAggregateRow(NetAppAggregate aggr)
             {

@@ -44,7 +44,7 @@ namespace XenAdmin.Dialogs.Wlb
 
         #region Private Fields
         
-        private IXenConnection _connection;
+        private readonly IXenConnection _connection;
         private Host[] _hosts;
         private VM[] _vms;
         private string[] _tags;

@@ -50,8 +50,8 @@ namespace XenServerHealthCheck
         private const string INITIATE_UPLOAD_STRING = "{0}bundle/?size={1}&name={2}";
         private const int CHUNK_SIZE = 1 * 1024 * 1024;
         private const int CHUNK_UPLOAD_TRIES = 3;
-        private JavaScriptSerializer serializer;
-        private HttpClient httpClient;
+        private readonly JavaScriptSerializer serializer;
+        private readonly HttpClient httpClient;
 
         private readonly int verbosityLevel;
         private readonly string uploadToken;

@@ -40,7 +40,7 @@ namespace XenAdmin.Diagnostics.Checks
 {
     class PBDsPluggedCheck : HostPostLivenessCheck
     {
-        SR srUploadedUpdates;
+        readonly SR srUploadedUpdates;
 
         public PBDsPluggedCheck(Host host, SR sr = null) : base(host)
         {

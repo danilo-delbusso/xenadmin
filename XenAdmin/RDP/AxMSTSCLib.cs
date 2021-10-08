@@ -877,7 +877,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsTscAxNotSafeForScriptingEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsTscAxNotSafeForScripting parent;
+        private readonly AxMsTscAxNotSafeForScripting parent;
         
         public AxMsTscAxNotSafeForScriptingEventMulticaster(AxMsTscAxNotSafeForScripting parent) {
             this.parent = parent;
@@ -1718,7 +1718,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClientNotSafeForScriptingEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClientNotSafeForScripting parent;
+        private readonly AxMsRdpClientNotSafeForScripting parent;
         
         public AxMsRdpClientNotSafeForScriptingEventMulticaster(AxMsRdpClientNotSafeForScripting parent) {
             this.parent = parent;
@@ -2588,7 +2588,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient2NotSafeForScriptingEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient2NotSafeForScripting parent;
+        private readonly AxMsRdpClient2NotSafeForScripting parent;
         
         public AxMsRdpClient2NotSafeForScriptingEventMulticaster(AxMsRdpClient2NotSafeForScripting parent) {
             this.parent = parent;
@@ -3458,7 +3458,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient2EventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient2 parent;
+        private readonly AxMsRdpClient2 parent;
         
         public AxMsRdpClient2EventMulticaster(AxMsRdpClient2 parent) {
             this.parent = parent;
@@ -4328,7 +4328,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient2aEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient2a parent;
+        private readonly AxMsRdpClient2a parent;
         
         public AxMsRdpClient2aEventMulticaster(AxMsRdpClient2a parent) {
             this.parent = parent;
@@ -5210,7 +5210,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient3NotSafeForScriptingEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient3NotSafeForScripting parent;
+        private readonly AxMsRdpClient3NotSafeForScripting parent;
         
         public AxMsRdpClient3NotSafeForScriptingEventMulticaster(AxMsRdpClient3NotSafeForScripting parent) {
             this.parent = parent;
@@ -6092,7 +6092,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient3EventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient3 parent;
+        private readonly AxMsRdpClient3 parent;
         
         public AxMsRdpClient3EventMulticaster(AxMsRdpClient3 parent) {
             this.parent = parent;
@@ -6974,7 +6974,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient3aEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient3a parent;
+        private readonly AxMsRdpClient3a parent;
         
         public AxMsRdpClient3aEventMulticaster(AxMsRdpClient3a parent) {
             this.parent = parent;
@@ -7868,7 +7868,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient4NotSafeForScriptingEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient4NotSafeForScripting parent;
+        private readonly AxMsRdpClient4NotSafeForScripting parent;
         
         public AxMsRdpClient4NotSafeForScriptingEventMulticaster(AxMsRdpClient4NotSafeForScripting parent) {
             this.parent = parent;
@@ -8762,7 +8762,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient4EventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient4 parent;
+        private readonly AxMsRdpClient4 parent;
         
         public AxMsRdpClient4EventMulticaster(AxMsRdpClient4 parent) {
             this.parent = parent;
@@ -9656,7 +9656,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient4aEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient4a parent;
+        private readonly AxMsRdpClient4a parent;
         
         public AxMsRdpClient4aEventMulticaster(AxMsRdpClient4a parent) {
             this.parent = parent;
@@ -10606,7 +10606,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient5NotSafeForScriptingEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient5NotSafeForScripting parent;
+        private readonly AxMsRdpClient5NotSafeForScripting parent;
         
         public AxMsRdpClient5NotSafeForScriptingEventMulticaster(AxMsRdpClient5NotSafeForScripting parent) {
             this.parent = parent;
@@ -11556,7 +11556,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient5EventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient5 parent;
+        private readonly AxMsRdpClient5 parent;
         
         public AxMsRdpClient5EventMulticaster(AxMsRdpClient5 parent) {
             this.parent = parent;
@@ -12530,7 +12530,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient6NotSafeForScriptingEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient6NotSafeForScripting parent;
+        private readonly AxMsRdpClient6NotSafeForScripting parent;
         
         public AxMsRdpClient6NotSafeForScriptingEventMulticaster(AxMsRdpClient6NotSafeForScripting parent) {
             this.parent = parent;
@@ -13504,7 +13504,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient6EventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient6 parent;
+        private readonly AxMsRdpClient6 parent;
         
         public AxMsRdpClient6EventMulticaster(AxMsRdpClient6 parent) {
             this.parent = parent;
@@ -14534,7 +14534,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient7NotSafeForScriptingEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient7NotSafeForScripting parent;
+        private readonly AxMsRdpClient7NotSafeForScripting parent;
         
         public AxMsRdpClient7NotSafeForScriptingEventMulticaster(AxMsRdpClient7NotSafeForScripting parent) {
             this.parent = parent;
@@ -15564,7 +15564,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient7EventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient7 parent;
+        private readonly AxMsRdpClient7 parent;
         
         public AxMsRdpClient7EventMulticaster(AxMsRdpClient7 parent) {
             this.parent = parent;
@@ -16621,7 +16621,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient8NotSafeForScriptingEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient8NotSafeForScripting parent;
+        private readonly AxMsRdpClient8NotSafeForScripting parent;
         
         public AxMsRdpClient8NotSafeForScriptingEventMulticaster(AxMsRdpClient8NotSafeForScripting parent) {
             this.parent = parent;
@@ -17678,7 +17678,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient8EventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient8 parent;
+        private readonly AxMsRdpClient8 parent;
         
         public AxMsRdpClient8EventMulticaster(AxMsRdpClient8 parent) {
             this.parent = parent;
@@ -18775,7 +18775,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient9NotSafeForScriptingEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient9NotSafeForScripting parent;
+        private readonly AxMsRdpClient9NotSafeForScripting parent;
         
         public AxMsRdpClient9NotSafeForScriptingEventMulticaster(AxMsRdpClient9NotSafeForScripting parent) {
             this.parent = parent;
@@ -19872,7 +19872,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient9EventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient9 parent;
+        private readonly AxMsRdpClient9 parent;
         
         public AxMsRdpClient9EventMulticaster(AxMsRdpClient9 parent) {
             this.parent = parent;
@@ -20981,7 +20981,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient10NotSafeForScriptingEventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient10NotSafeForScripting parent;
+        private readonly AxMsRdpClient10NotSafeForScripting parent;
         
         public AxMsRdpClient10NotSafeForScriptingEventMulticaster(AxMsRdpClient10NotSafeForScripting parent) {
             this.parent = parent;
@@ -22090,7 +22090,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxMsRdpClient10EventMulticaster : MSTSCLib.IMsTscAxEvents {
         
-        private AxMsRdpClient10 parent;
+        private readonly AxMsRdpClient10 parent;
         
         public AxMsRdpClient10EventMulticaster(AxMsRdpClient10 parent) {
             this.parent = parent;
@@ -22625,7 +22625,7 @@ namespace AxMSTSCLib {
     [System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]
     public class AxRemoteDesktopClientEventMulticaster : MSTSCLib.IRemoteDesktopClientEvents {
         
-        private AxRemoteDesktopClient parent;
+        private readonly AxRemoteDesktopClient parent;
         
         public AxRemoteDesktopClientEventMulticaster(AxRemoteDesktopClient parent) {
             this.parent = parent;

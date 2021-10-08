@@ -52,7 +52,7 @@ namespace XenAdmin.Plugins
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private static Regex PlaceholderRegex = new Regex(@"{\$([\w:]+)}");
+        private static readonly Regex PlaceholderRegex = new Regex(@"{\$([\w:]+)}");
         private const string PlaceholderFormat = @"{{${0}}}";
 
         private const string NULL_PLACEHOLDER_KEY = "null";

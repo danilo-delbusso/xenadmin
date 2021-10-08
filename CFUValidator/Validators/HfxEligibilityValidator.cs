@@ -37,7 +37,7 @@ namespace CFUValidator.Validators
 {
     class HfxEligibilityValidator : Validator
     {
-        private List<XenServerVersion> xsversions;
+        private readonly List<XenServerVersion> xsversions;
 
         public HfxEligibilityValidator(List<XenServerVersion> xsversions)
         {

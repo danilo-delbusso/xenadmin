@@ -155,9 +155,9 @@ namespace XenAdmin.Controls.XenSearch
         }
 
         private readonly List<QueryElement> subQueryElements;
-        private QueryElement parentQueryElement;
+        private readonly QueryElement parentQueryElement;
         private Searcher searcher;
-        private QueryScope queryScope;  // Normally null, meaning use the scope from searcher (see WantQueryType). Set for the subquery of a parent-child query.
+        private readonly QueryScope queryScope;  // Normally null, meaning use the scope from searcher (see WantQueryType). Set for the subquery of a parent-child query.
         private QueryFilter lastQueryFilter;
 
         public event Action QueryChanged;
@@ -1540,7 +1540,7 @@ namespace XenAdmin.Controls.XenSearch
             where O : XenObject<O>
             where Q : RecursivePropertyQuery<T>
         {
-            QueryScope subQueryScope;
+            readonly QueryScope subQueryScope;
 
             public RecursiveQueryType(int group, ObjectTypes appliesTo, PropertyNames property, ObjectTypes subQueryScope)
                 : base(group, appliesTo, property)
@@ -2243,7 +2243,7 @@ namespace XenAdmin.Controls.XenSearch
 
         internal class NullQueryType<T> : PropertyQueryType<T> where T : XenObject<T>
         {
-            bool isNull;
+            readonly bool isNull;
 
             public NullQueryType(int group, ObjectTypes appliesTo, PropertyNames property, bool isNull, String i18n) :
                 base(group, appliesTo, property, i18n)
@@ -2272,7 +2272,7 @@ namespace XenAdmin.Controls.XenSearch
 
         internal abstract class MatchQueryType : QueryType
         {
-            private String i18n;
+            private readonly String i18n;
 
             public MatchQueryType(int group, ObjectTypes appliesTo, String i18n)
                 : base(group, appliesTo)
@@ -2372,7 +2372,7 @@ namespace XenAdmin.Controls.XenSearch
 
         public abstract class MatchType
         {
-            private String matchText;
+            private readonly String matchText;
 
             protected MatchType(String matchText)
             {
@@ -2395,10 +2395,10 @@ namespace XenAdmin.Controls.XenSearch
 
         internal class XMOListContains<T> : MatchType where T : XenObject<T>
         {
-            private PropertyNames property;
-            private bool contains;
+            private readonly PropertyNames property;
+            private readonly bool contains;
 
-            private Predicate<T> filter;
+            private readonly Predicate<T> filter;
 
             public XMOListContains(PropertyNames property, bool contains, String matchText,
                 Predicate<T> filter)

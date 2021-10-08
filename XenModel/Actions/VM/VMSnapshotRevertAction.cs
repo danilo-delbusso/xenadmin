@@ -37,8 +37,8 @@ namespace XenAdmin.Actions
 {
     public class VMSnapshotRevertAction : PureAsyncAction
     {
-        private VM m_Snapshot;
-        private Host previousHost; // The host the VM was running on before the snapshot
+        private readonly VM m_Snapshot;
+        private readonly Host previousHost; // The host the VM was running on before the snapshot
 
         public VMSnapshotRevertAction(VM snapshot)
             : base(snapshot.Connection, String.Format(Messages.ACTION_VM_REVERT_SNAPSHOT_TITLE, snapshot.Name()))

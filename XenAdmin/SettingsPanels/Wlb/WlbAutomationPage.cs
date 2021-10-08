@@ -48,9 +48,9 @@ namespace XenAdmin.SettingsPanels
         private XenAdmin.Network.IXenConnection _connection;
         private bool _hasChanged = false;
         private bool _loading = false;
-        private HashSet<string> _uuidSet = new HashSet<string>();
+        private readonly HashSet<string> _uuidSet = new HashSet<string>();
 
-        private int[] minimumColumnWidths = {25, 50, 50, 50 };
+        private readonly int[] minimumColumnWidths = {25, 50, 50, 50 };
 
         public WlbAutomationPage()
         {

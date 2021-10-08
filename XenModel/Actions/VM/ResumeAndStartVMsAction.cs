@@ -43,8 +43,8 @@ namespace XenAdmin.Actions.VMActions
 
         private int ActionCountTotal;
         private int ActionCountCompleted;
-        private Action<VMStartAbstractAction, Failure> _startDiagnosisForm;
-        private Action<VM, bool> _warningDialogHAInvalidConfig;
+        private readonly Action<VMStartAbstractAction, Failure> _startDiagnosisForm;
+        private readonly Action<VM, bool> _warningDialogHAInvalidConfig;
 
         public ResumeAndStartVMsAction(IXenConnection connection, Host host, List<VM> vmsToResume, List<VM> vmsToStart,Action<VM, bool> warningDialogHAInvalidConfig, Action<VMStartAbstractAction, Failure> startDiagnosisForm)
             : base(connection, Messages.ACTION_RESUMEANDSTARTVMS_PREPARING, true)

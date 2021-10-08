@@ -49,7 +49,7 @@ namespace XenAdmin.Actions
         // In 5.5, we used to lock the object being edited in the RunAsync() action. We now lock it in the
         // constructor to avoid a race, but we still throw the exception for trying to lock a locked object
         // in Run() (it no longer goes through RunAsync()) to avoid reworking all the calling code.
-        private bool lockViolation = false;
+        private readonly bool lockViolation = false;
 
         protected SaveChangesAction(IXenObject obj)
             :this(obj, false)

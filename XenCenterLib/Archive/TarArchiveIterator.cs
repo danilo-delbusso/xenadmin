@@ -40,7 +40,7 @@ namespace XenCenterLib.Archive
     public class SharpZipTarArchiveIterator : ArchiveIterator
     {
         private TarInputStream tarStream;
-        private CompressionStream compressionStream;
+        private readonly CompressionStream compressionStream;
         private TarEntry tarEntry;
         private bool disposed;
 

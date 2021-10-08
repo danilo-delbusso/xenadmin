@@ -51,11 +51,11 @@ namespace XenAdmin.Controls
         /// <summary>
         /// Style to use for checkable rows
         /// </summary>
-        private DataGridViewCellStyle regStyle;
+        private readonly DataGridViewCellStyle regStyle;
         /// <summary>
         /// Style to use for non-checkable rows (should appear grayed out)
         /// </summary>
-        private DataGridViewCellStyle dimmedStyle;
+        private readonly DataGridViewCellStyle dimmedStyle;
 
         public event EventHandler ValidChanged;
 

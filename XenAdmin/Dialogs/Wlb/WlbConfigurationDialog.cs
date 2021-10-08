@@ -43,7 +43,7 @@ namespace XenAdmin.Dialogs.Wlb
 {
     public partial class WlbConfigurationDialog : XenAdmin.Dialogs.VerticallyTabbedDialog
     {
-        Pool _pool;
+        readonly Pool _pool;
         WlbPoolConfiguration _poolConfiguration = null;
 
         public WlbConfigurationDialog(Pool pool)

@@ -53,21 +53,21 @@ namespace XenAdmin.Core
         private struct COMBOBOXINFO
         {
             public int cbSize;
-            public RECT rcItem;
-            public RECT rcButton;
-            public IntPtr stateButton;
-            public IntPtr hwndCombo;
-            public IntPtr hwndItem;
-            public IntPtr hwndList;
+            public readonly RECT rcItem;
+            public readonly RECT rcButton;
+            public readonly IntPtr stateButton;
+            public readonly IntPtr hwndCombo;
+            public readonly IntPtr hwndItem;
+            public readonly IntPtr hwndList;
         }
 
         [StructLayout(LayoutKind.Sequential)]
         private struct RECT
         {
-            public int left;
-            public int top;
-            public int right;
-            public int bottom;
+            public readonly int left;
+            public readonly int top;
+            public readonly int right;
+            public readonly int bottom;
         }
 
         public static void SetWatermark(TextBox textBox, string watermarkText)

@@ -51,7 +51,7 @@ namespace XenAdmin.Commands
         public event EventHandler<TakeSnapshotCommandCompletedEventArgs> Completed;
         public event EventHandler<EventArgs> Started;
 
-        private VM _VM;
+        private readonly VM _VM;
 
         /// <summary>
         /// Initializes a new instance of this Command. The parameter-less constructor is required if 

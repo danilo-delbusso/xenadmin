@@ -45,7 +45,7 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard.Filters
         private readonly WizardMode _wizardMode;
         private string disableReason = string.Empty;
         private readonly List<VM> preSelectedVMs;
-        private IDictionary<string, IDictionary<string, string>> cache;
+        private readonly IDictionary<string, IDictionary<string, string>> cache;
         private bool canceled = false;
         private static readonly Object cacheLock = new Object();
 

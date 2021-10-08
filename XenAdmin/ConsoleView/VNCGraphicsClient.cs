@@ -78,7 +78,7 @@ namespace XenAdmin.ConsoleView
         }
 
         private CustomCursor RemoteCursor = null;
-        private CustomCursor LocalCursor = new CustomCursor(Images.StaticImages.vnc_local_cursor, 2, 2);
+        private readonly CustomCursor LocalCursor = new CustomCursor(Images.StaticImages.vnc_local_cursor, 2, 2);
 
         /// <summary>
         /// This field is locked before any drawing is done through backGraphics or frontGraphics.
@@ -106,7 +106,7 @@ namespace XenAdmin.ConsoleView
         /// </summary>
         private Graphics frontGraphics = null;
 
-        private Object mouseEventLock = new Object();
+        private readonly Object mouseEventLock = new Object();
 
         private Rectangle damage = Rectangle.Empty;
 
@@ -431,7 +431,7 @@ namespace XenAdmin.ConsoleView
 
         class CustomCursor
         {
-            private Cursor cursor = null;
+            private readonly Cursor cursor = null;
             private IntPtr handle = IntPtr.Zero;
 
             internal CustomCursor(Bitmap bitmap, int x, int y)

@@ -70,7 +70,7 @@ namespace XenAdmin.Wizards.ImportWizard
         private readonly LunPerVdiImportPage lunPerVdiMappingPage;
         private readonly ImportBootOptionPage m_pageBootOptions;
 
-        private IXenObject m_selectedObject;
+        private readonly IXenObject m_selectedObject;
 		private Dictionary<string, VmMapping> m_vmMappings = new Dictionary<string, VmMapping>();
 		/// <summary>
 		/// Make this nullable and initialize with null so the pages are added correctly to the wizard progress the first time

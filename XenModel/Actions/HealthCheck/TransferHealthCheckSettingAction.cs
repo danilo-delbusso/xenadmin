@@ -106,9 +106,9 @@ namespace XenAdmin.Actions
     public class TransferHealthCheckSettingsAction : TransferDataToHealthCheckAction
     {
         private readonly Pool pool;
-        HealthCheckSettings healthCheckSettings;
-        string username;
-        string password;
+        readonly HealthCheckSettings healthCheckSettings;
+        readonly string username;
+        readonly string password;
 
         public TransferHealthCheckSettingsAction(Pool pool, HealthCheckSettings healthCheckSettings, string username, string password, bool suppressHistory)
             : base(pool.Connection, Messages.ACTION_TRANSFER_HEALTHCHECK_SETTINGS, string.Format(Messages.ACTION_TRANSFER_HEALTHCHECK_SETTINGS, pool.Name()), suppressHistory)

@@ -38,8 +38,8 @@ namespace XenAdmin.Actions
 {
     public class CreateVMApplianceAction: AsyncAction
     {
-        private VM_appliance _record;
-        private List<VM> _vms;
+        private readonly VM_appliance _record;
+        private readonly List<VM> _vms;
         public CreateVMApplianceAction(VM_appliance record, List<VM> vms)
             : base(record.Connection, Messages.CREATE_VM_APPLIANCE)
         {

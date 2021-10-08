@@ -47,13 +47,13 @@ namespace XenAdmin.Dialogs.Wlb
 
         #region Variables
 
-        private Pool _pool;
-        private string _reportDisplayName;
-        private Dictionary<string, string> _rpParams;
+        private readonly Pool _pool;
+        private readonly string _reportDisplayName;
+        private readonly Dictionary<string, string> _rpParams;
         private WlbReportSubscription _subscription;
         private string _subId = String.Empty;
-        
-        ToolTip InvalidParamToolTip = new ToolTip();
+
+        readonly ToolTip InvalidParamToolTip = new ToolTip();
         // Due to localization, changed email regex from @"^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)*[A-Z0-9-]+$" 
         // to match anything with an @ sign in the middle
         private static readonly Regex emailRegex = new Regex(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", RegexOptions.IgnoreCase);

@@ -41,8 +41,8 @@ namespace XenAdmin.Dialogs
 {
     public partial class ControlDomainMemoryDialog : XenDialogBase
     {
-        private Host host;
-        private Host_metrics hostMetrics;
+        private readonly Host host;
+        private readonly Host_metrics hostMetrics;
         private double origMemory;
 
         public const int MAXIMUM_DOM0_MEMORY_GB =  256;

@@ -261,11 +261,11 @@ namespace XenAdmin.Dialogs.WarningDialogs
 
         private class DataGridViewActionRow : DataGridViewRow
         {
-            private DataGridViewImageCell expanderCell = new DataGridViewImageCell();
-            private DataGridViewImageCell statusCell = new DataGridViewImageCell();
-            private DataGridViewTextBoxCell messageCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell locationCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell dateCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewImageCell expanderCell = new DataGridViewImageCell();
+            private readonly DataGridViewImageCell statusCell = new DataGridViewImageCell();
+            private readonly DataGridViewTextBoxCell messageCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell locationCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell dateCell = new DataGridViewTextBoxCell();
 
             public ActionBase Action { get; }
             public bool Expanded { get; set; }

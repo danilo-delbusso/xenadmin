@@ -56,8 +56,8 @@ namespace XenAdmin.Controls.CustomDataGraph
         private ArchiveMaintainer _archiveMaintainer;
         private DataPlotNav _dataPlotNav;
         private DataEventList _dataEventList;
-        private List<DataPlot> Plots = new List<DataPlot>();
-        private List<DataKey> Keys = new List<DataKey>();
+        private readonly List<DataPlot> Plots = new List<DataPlot>();
+        private readonly List<DataKey> Keys = new List<DataKey>();
         private List<DesignedGraph> Graphs = new List<DesignedGraph>();
         private bool showingDefaultGraphs;
         private bool isSettingGraphs = false;

@@ -49,7 +49,7 @@ namespace XenAdmin.Commands
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private RbacMethodList HA_PERMISSION_CHECKS = new RbacMethodList(
+        private readonly RbacMethodList HA_PERMISSION_CHECKS = new RbacMethodList(
             "pool.set_ha_host_failures_to_tolerate",
             "pool.sync_database",
             "vm.set_ha_restart_priority",

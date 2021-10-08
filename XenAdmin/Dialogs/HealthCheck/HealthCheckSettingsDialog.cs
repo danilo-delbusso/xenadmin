@@ -46,13 +46,13 @@ namespace XenAdmin.Dialogs.HealthCheck
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private readonly Pool pool;
-        private HealthCheckSettings healthCheckSettings;
-        private bool authenticationRequired;
+        private readonly HealthCheckSettings healthCheckSettings;
+        private readonly bool authenticationRequired;
         private bool authenticated;
         private string authenticationToken;
         private string diagnosticToken;
-        private string xsUserName;
-        private string xsPassword;
+        private readonly string xsUserName;
+        private readonly string xsPassword;
 
         internal override string HelpName => "HealthCheckSettingsDialog";
 

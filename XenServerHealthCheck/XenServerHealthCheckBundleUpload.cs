@@ -51,13 +51,13 @@ namespace XenServerHealthCheck
             server.Password = connection.Password;
         }
 
-        private IXenConnection connection;
+        private readonly IXenConnection connection;
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public const int TIMEOUT = 24 * 60 * 60 * 1000;
         public const int INTERVAL = 10 * 1000;
         public const int VERBOSITY_LEVEL = 2;
-        private ServerInfo server = new ServerInfo();
+        private readonly ServerInfo server = new ServerInfo();
 
         public void runUpload(System.Threading.CancellationToken serviceStop)
         {

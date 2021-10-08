@@ -56,7 +56,7 @@ namespace XenAdmin.Controls.CustomDataGraph
         public readonly string Id = "";
         public string DataSourceName;
         public string FriendlyName { get; }
-        private int MultiplyingFactor = 1;
+        private readonly int MultiplyingFactor = 1;
         public DataRange CustomYRange = new DataRange(1, 0, 1, Unit.None, RangeScaleMode.Auto);
         public bool Hide { get; }
 

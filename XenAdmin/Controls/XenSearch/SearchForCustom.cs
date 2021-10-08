@@ -138,8 +138,8 @@ namespace XenAdmin.Controls.XenSearch
 
     public class SearchForCustomItem
     {
-        String name;
-        ObjectTypes type;
+        readonly String name;
+        readonly ObjectTypes type;
 
         public SearchForCustomItem(String name, ObjectTypes type)
         {

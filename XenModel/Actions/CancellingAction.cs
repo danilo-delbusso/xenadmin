@@ -341,7 +341,7 @@ namespace XenAdmin.Actions
 
         // _startedRunningLock controls the case that two threads try and Cancel and Run an action
         // at the same time: one of them has to win and prevent the other.
-        private object _startedRunningLock = new object();
+        private readonly object _startedRunningLock = new object();
         
         private bool _startedRunning = false;
         public bool StartedRunning

@@ -151,7 +151,7 @@ namespace XenAdmin.Dialogs
             UpdateOK();
         }
 
-        private Regex invalid_folder = new Regex("^[ /]+$");
+        private readonly Regex invalid_folder = new Regex("^[ /]+$");
 
         private void UpdateOK()
         {

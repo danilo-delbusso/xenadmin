@@ -65,7 +65,7 @@ namespace XenAdmin
         /// <summary>
         /// vm_uuid -> password.  The password may be null if it's been deleted.
         /// </summary>
-        private static Dictionary<string, string> VNCPasswords = new Dictionary<string, string>();
+        private static readonly Dictionary<string, string> VNCPasswords = new Dictionary<string, string>();
 
         /// <summary>
         /// MSDN info regarding the path to the user.config file is somewhat confusing. It turns out

@@ -42,11 +42,11 @@ namespace XenAdmin.Actions
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private readonly Pool pool;
-        HealthCheckSettings healthCheckSettings;
-        private string authenticationToken;
-        private string diagnosticToken;
-        private string username;
-        private string password;
+        readonly HealthCheckSettings healthCheckSettings;
+        private readonly string authenticationToken;
+        private readonly string diagnosticToken;
+        private readonly string username;
+        private readonly string password;
 
         public SaveHealthCheckSettingsAction(Pool pool, HealthCheckSettings healthCheckSettings, string authenticationToken, string diagnosticToken, string userName, string passWord, bool suppressHistory)
             : base(pool.Connection, Messages.ACTION_SAVE_HEALTHCHECK_SETTINGS, string.Format(Messages.ACTION_SAVING_HEALTHCHECK_SETTINGS, pool.Name()), suppressHistory)

@@ -42,7 +42,7 @@ namespace XenAdmin.Wizards.PatchingWizard.PlanActions
     class DownloadPatchPlanAction : PlanActionWithSession
     {
         private readonly XenServerPatch patch;
-        private Dictionary<XenServerPatch, string> AllDownloadedPatches = new Dictionary<XenServerPatch, string>();
+        private readonly Dictionary<XenServerPatch, string> AllDownloadedPatches = new Dictionary<XenServerPatch, string>();
         private KeyValuePair<XenServerPatch, string> patchFromDisk;
         private string tempFileName = null;
 

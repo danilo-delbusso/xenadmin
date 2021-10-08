@@ -40,8 +40,8 @@ namespace XenAdmin.Dialogs
 {
     public partial class ExitMaintenanceModeDialog : XenDialogBase
     {
-        private List<VM> VMsToRestore;
-        private Host TargetHost;
+        private readonly List<VM> VMsToRestore;
+        private readonly Host TargetHost;
 
         /// <summary>
         /// A dialog which shows a list of VMs with their current locations and state,

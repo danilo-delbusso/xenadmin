@@ -50,7 +50,7 @@ namespace XenAdmin.Wizards.DRWizards
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         public event Action<string> NewDrTaskIntroduced;
-        private List<SR> _availableSRs = new List<SR>();
+        private readonly List<SR> _availableSRs = new List<SR>();
 
         public DRFailoverWizardStoragePage()
         {
@@ -243,7 +243,7 @@ namespace XenAdmin.Wizards.DRWizards
 
         #region Scan for SRs
 
-        private Dictionary<string, ScannedDeviceInfo> ScannedDevices = new Dictionary<string, ScannedDeviceInfo>();
+        private readonly Dictionary<string, ScannedDeviceInfo> ScannedDevices = new Dictionary<string, ScannedDeviceInfo>();
 
         private const String LUNSERIAL = "LUNSerial";
         private const String SCSIID = "SCSIid";
@@ -447,7 +447,7 @@ namespace XenAdmin.Wizards.DRWizards
         #endregion
 
         #region Load Pool Metadata
-        private Dictionary<XenRef<VDI>, PoolMetadata> allPoolMetadata = new Dictionary<XenRef<VDI>, PoolMetadata>();
+        private readonly Dictionary<XenRef<VDI>, PoolMetadata> allPoolMetadata = new Dictionary<XenRef<VDI>, PoolMetadata>();
         public Dictionary<XenRef<VDI>, PoolMetadata> AllPoolMetadata { get { return allPoolMetadata; } }
 
         private void LoadMetadata()

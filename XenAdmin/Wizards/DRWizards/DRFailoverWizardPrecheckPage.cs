@@ -572,9 +572,9 @@ namespace XenAdmin.Wizards.DRWizards
         #region PreCheckGridRow
         private abstract class PreCheckGridRow : DataGridViewRow
         {           
-            protected DataGridViewImageCell _iconCell = new DataGridViewImageCell();
-            protected DataGridViewTextBoxCell _descriptionCell = new DataGridViewTextBoxCell();
-            protected DataGridViewCell _solutionCell = new DataGridViewLinkCell();
+            protected readonly DataGridViewImageCell _iconCell = new DataGridViewImageCell();
+            protected readonly DataGridViewTextBoxCell _descriptionCell = new DataGridViewTextBoxCell();
+            protected readonly DataGridViewCell _solutionCell = new DataGridViewLinkCell();
 
             protected PreCheckGridRow()
             {
@@ -596,8 +596,8 @@ namespace XenAdmin.Wizards.DRWizards
 
         private class PreCheckItemRow : PreCheckGridRow
         {
-            private Problem _problem = null;
-            private Check _check = null;
+            private readonly Problem _problem = null;
+            private readonly Check _check = null;
             public PreCheckItemRow(Problem problem)
             {
                 _problem = problem;

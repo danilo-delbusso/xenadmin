@@ -50,10 +50,10 @@ namespace XenOvf.Utilities
         };
 
         private static bool isLoaded = false;
-        private static Dictionary<string, string> MapResourceType = new Dictionary<string, string>();
-        private static Dictionary<string, string> MapConsumerVisibility = new Dictionary<string, string>();
-        private static Dictionary<string, string> MapMappingBehavior = new Dictionary<string, string>();
-        private static Dictionary<string, string> MapOperatingSystem = new Dictionary<string, string>();
+        private static readonly Dictionary<string, string> MapResourceType = new Dictionary<string, string>();
+        private static readonly Dictionary<string, string> MapConsumerVisibility = new Dictionary<string, string>();
+        private static readonly Dictionary<string, string> MapMappingBehavior = new Dictionary<string, string>();
+        private static readonly Dictionary<string, string> MapOperatingSystem = new Dictionary<string, string>();
 
 
         /// <summary>

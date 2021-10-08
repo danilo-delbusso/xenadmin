@@ -262,7 +262,7 @@ namespace XenAdmin.Dialogs
         private class ListViewDeleteDialog:ListView
         {
             private bool _b = false;
-            private string _msg = Messages.EMPTY_LIST_DISK_SNAPSHOTS;
+            private readonly string _msg = Messages.EMPTY_LIST_DISK_SNAPSHOTS;
             protected override void WndProc(ref System.Windows.Forms.Message m)
             {
                 base.WndProc(ref m);

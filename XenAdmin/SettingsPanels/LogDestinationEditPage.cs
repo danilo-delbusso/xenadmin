@@ -46,7 +46,7 @@ namespace XenAdmin.SettingsPanels
         private bool _validToSave;
         private string _origLocation;
 
-        private Regex regex = new Regex(@"^[a-zA-Z0-9]([-a-zA-Z0-9]{0,61}[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]{0,61}[a-zA-Z0-9])?)*$");
+        private readonly Regex regex = new Regex(@"^[a-zA-Z0-9]([-a-zA-Z0-9]{0,61}[a-zA-Z0-9])?(\.[a-zA-Z0-9]([-a-zA-Z0-9]{0,61}[a-zA-Z0-9])?)*$");
 
         private readonly ToolTip InvalidParamToolTip;
 

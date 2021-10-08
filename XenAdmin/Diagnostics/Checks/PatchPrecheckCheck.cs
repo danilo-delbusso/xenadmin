@@ -49,11 +49,11 @@ namespace XenAdmin.Diagnostics.Checks
         private readonly Pool_patch Patch;
         private readonly Pool_update Update;
 
-        private static Regex PrecheckErrorRegex = new Regex("(<error).+(</error>)");
+        private static readonly Regex PrecheckErrorRegex = new Regex("(<error).+(</error>)");
         private static Regex LivePatchResponseRegex = new Regex("(<livepatch).+(</livepatch>)");
 
         private readonly Dictionary<string, livepatch_status> livePatchCodesByHost;
-        private  SR srUploadedUpdates;
+        private readonly SR srUploadedUpdates;
 
         public PatchPrecheckCheck(Host host, Pool_patch patch, Dictionary<string, livepatch_status> livePatchCodesByHost)
             : base(host)

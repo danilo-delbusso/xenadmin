@@ -107,8 +107,8 @@ namespace XenAdmin.Dialogs.HealthCheck
         #region PoolRow
         private class PoolRow : DataGridViewRow
         {
-            private DataGridViewTextAndImageCell _nameCell = new DataGridViewTextAndImageCell();
-            private DataGridViewTextAndImageCell _statusCell = new DataGridViewTextAndImageCell();
+            private readonly DataGridViewTextAndImageCell _nameCell = new DataGridViewTextAndImageCell();
+            private readonly DataGridViewTextAndImageCell _statusCell = new DataGridViewTextAndImageCell();
             public readonly Pool Pool;
             public PoolRow(Pool pool)
             {

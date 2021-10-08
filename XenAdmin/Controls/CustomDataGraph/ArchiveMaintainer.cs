@@ -90,7 +90,7 @@ namespace XenAdmin.Controls.CustomDataGraph
         /// </summary>
         private readonly object WaitUpdates = new object();
 
-        private Thread UpdaterThread;
+        private readonly Thread UpdaterThread;
 
         /// <summary>
         ///  if true UpdaterThread will keep looping

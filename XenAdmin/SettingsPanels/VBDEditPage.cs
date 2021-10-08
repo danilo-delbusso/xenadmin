@@ -53,7 +53,7 @@ namespace XenAdmin.SettingsPanels
         private const int MAXIMUM_PRIORITY = 7;
         private const int MINIMUM_PRIORITY = 0;
 
-        private bool _ValidToSave = true;
+        private readonly bool _ValidToSave = true;
         private readonly ToolTip InvalidParamToolTip;
 
         public VBDEditPage()
@@ -354,8 +354,8 @@ namespace XenAdmin.SettingsPanels
 
         public class DevicePositionComboBoxItem
         {
-            private VBD vbd;
-            private string position;
+            private readonly VBD vbd;
+            private readonly string position;
 
             public VBD VBD { get { return vbd; } }
             public string Position { get { return position; } }

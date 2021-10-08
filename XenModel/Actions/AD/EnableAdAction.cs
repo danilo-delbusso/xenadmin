@@ -69,7 +69,7 @@ namespace XenAdmin.Actions
             this.password = password;
         }
 
-        private static Regex AuthFailedReg = new Regex(@"^([1-9]+) \(0x.*\).*");
+        private static readonly Regex AuthFailedReg = new Regex(@"^([1-9]+) \(0x.*\).*");
 
         protected override void Run()
         {

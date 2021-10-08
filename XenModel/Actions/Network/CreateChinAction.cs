@@ -38,8 +38,8 @@ namespace XenAdmin.Actions
 {
     public class CreateChinAction : PureAsyncAction
     {
-        XenAPI.Network newNetwork;
-        XenAPI.Network theInterface;
+        readonly XenAPI.Network newNetwork;
+        readonly XenAPI.Network theInterface;
 
         public CreateChinAction(IXenConnection connection, XenAPI.Network newNetwork, XenAPI.Network theInterface)
             : base(connection,

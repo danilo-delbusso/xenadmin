@@ -39,7 +39,7 @@ namespace XenAdmin.Controls
 {
     public class CustomTreeNode : IComparable<CustomTreeNode>, IEquatable<CustomTreeNode>
     {
-        private bool selectable = true;
+        private readonly bool selectable = true;
         private bool _expanded = true;
 
         public bool Enabled = true;

@@ -40,7 +40,7 @@ namespace XenAdmin.Actions
 {
     public class DestroyVMApplianceAction : PureAsyncAction
     {
-        private List<VM_appliance> _selectedToDelete;
+        private readonly List<VM_appliance> _selectedToDelete;
         public DestroyVMApplianceAction(IXenConnection connection, List<VM_appliance> deleteVMAppliances)
             : base(connection, Messages.DELETE_VM_APPLIANCES)
         {

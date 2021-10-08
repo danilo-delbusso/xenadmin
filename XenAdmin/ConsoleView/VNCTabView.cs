@@ -71,7 +71,7 @@ namespace XenAdmin.ConsoleView
         private FullScreenHint fullscreenHint;
         private Size LastDesktopSize;
         private bool switchOnTabOpened = false;
-        private Font titleLabelFont = new Font(DefaultFont.FontFamily, DefaultFont.Size + 1f, FontStyle.Bold);
+        private readonly Font titleLabelFont = new Font(DefaultFont.FontFamily, DefaultFont.Size + 1f, FontStyle.Bold);
 
         /// <summary>
         /// Whether to ignore VNC resize events.  We turn this on when changing
@@ -958,7 +958,7 @@ namespace XenAdmin.ConsoleView
             toggleFullscreen();
         }
 
-        private System.Threading.Timer insKeyTimer;
+        private readonly System.Threading.Timer insKeyTimer;
 
         private void waitForInsKey()
         {

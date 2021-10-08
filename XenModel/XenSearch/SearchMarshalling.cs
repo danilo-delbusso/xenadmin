@@ -50,7 +50,7 @@ namespace XenAdmin.XenSearch
 
         private const String xmlns = "http://www.citrix.com/XenCenter/XenSearch/schema";
 
-        private static Dictionary<String, Type> subclasses = new Dictionary<String, Type>();
+        private static readonly Dictionary<String, Type> subclasses = new Dictionary<String, Type>();
 
         static SearchMarshalling()
         {
@@ -185,7 +185,8 @@ namespace XenAdmin.XenSearch
 
         public class SearchVersionException : Exception
         {
-            int majorVersion, currentMajor;
+            readonly int majorVersion;
+            readonly int currentMajor;
 
             public SearchVersionException(int majorVersion, int currentMajor)
             {

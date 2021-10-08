@@ -88,7 +88,7 @@ namespace XenAdmin.Controls.Wlb
         private IEnumerable<Host> _hosts;
 
         private List<string> _selectedCustomFilters; 
-        private static string DELIMITER = ",";
+        private static readonly string DELIMITER = ",";
 
         // for report subscription
         private Dictionary<string, string> _reportParameters;

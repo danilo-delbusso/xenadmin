@@ -37,8 +37,8 @@ namespace XenAdmin.Actions
 {
     public class SetSecondaryManagementPurposeAction : AsyncAction
     {
-        private Pool pool;
-        private List<PIF> pifs;
+        private readonly Pool pool;
+        private readonly List<PIF> pifs;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         public SetSecondaryManagementPurposeAction(IXenConnection connection, Pool pool, List<PIF> pifs)

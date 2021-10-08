@@ -46,7 +46,7 @@ namespace XenAdmin.SettingsPanels
         private bool _hasChanged = false;
         private bool _loading = false;
 
-        private int[] minimumColumnWidths = { 25, 50 };
+        private readonly int[] minimumColumnWidths = { 25, 50 };
 
         //private Pool _pool;
 

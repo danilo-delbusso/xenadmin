@@ -36,7 +36,7 @@ namespace XenAdmin.Actions
 {
     public class DeleteVIFAction : PureAsyncAction
     {
-        private VIF _vif;
+        private readonly VIF _vif;
 
         public DeleteVIFAction(VIF vif, bool suppressHistory = false)
             : base(vif.Connection,

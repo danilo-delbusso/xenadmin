@@ -865,14 +865,14 @@ namespace XenAdmin.Controls.NetworkingTab
 
         class VifRow : DataGridViewExRow
         {
-            public VIF Vif;
-            private DataGridViewExImageCell ImageCell = new DataGridViewExImageCell();
-            private DataGridViewTextBoxCell DeviceCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell MacCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell LimitCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell NetworkCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell IpCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell AttachedCell = new DataGridViewTextBoxCell();
+            public readonly VIF Vif;
+            private readonly DataGridViewExImageCell ImageCell = new DataGridViewExImageCell();
+            private readonly DataGridViewTextBoxCell DeviceCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell MacCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell LimitCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell NetworkCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell IpCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell AttachedCell = new DataGridViewTextBoxCell();
 
             private VIF_metrics Metrics;
 
@@ -929,18 +929,18 @@ namespace XenAdmin.Controls.NetworkingTab
 
         class NetworkRow : DataGridViewExRow
         {
-            public XenAPI.Network Network;
-            private DataGridViewExImageCell ImageCell = new DataGridViewExImageCell();
-            private DataGridViewTextBoxCell NameCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell DescriptionCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell NicCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell VlanCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell AutoCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell LinkStatusCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell MacCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell MtuCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell SriovCell = new DataGridViewTextBoxCell();
-            private IXenObject Xmo;
+            public readonly XenAPI.Network Network;
+            private readonly DataGridViewExImageCell ImageCell = new DataGridViewExImageCell();
+            private readonly DataGridViewTextBoxCell NameCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell DescriptionCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell NicCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell VlanCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell AutoCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell LinkStatusCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell MacCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell MtuCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell SriovCell = new DataGridViewTextBoxCell();
+            private readonly IXenObject Xmo;
             PIF Pif;
 
             public NetworkRow(XenAPI.Network network, IXenObject xmo)

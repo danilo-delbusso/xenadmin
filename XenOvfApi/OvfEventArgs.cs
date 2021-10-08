@@ -61,11 +61,11 @@ namespace XenOvf
     /// </summary>
     public class OvfEventArgs : EventArgs
     {
-        private OvfEventType _type = OvfEventType.Unknown;
-        private ulong _total;
-        private ulong _transfered;
-        private string _target;
-        private string _message;
+        private readonly OvfEventType _type = OvfEventType.Unknown;
+        private readonly ulong _total;
+        private readonly ulong _transfered;
+        private readonly string _target;
+        private readonly string _message;
 
         /// <summary>
         /// Constructor

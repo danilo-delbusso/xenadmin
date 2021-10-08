@@ -77,7 +77,7 @@ namespace XenAdmin.Actions
 
         public class NoLUNsFoundException : Exception
         {
-            private string host;
+            private readonly string host;
 
             public NoLUNsFoundException(string host)
             {

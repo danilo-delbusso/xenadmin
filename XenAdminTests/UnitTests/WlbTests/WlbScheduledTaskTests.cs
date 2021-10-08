@@ -45,7 +45,7 @@ namespace XenAdminTests.UnitTests.WlbTests
         private const int NUMBER_OF_PROPERTIES = 18;
         private WlbScheduledTask task;
 
-        private ScheduledTaskData exampleData = new ScheduledTaskData()
+        private readonly ScheduledTaskData exampleData = new ScheduledTaskData()
         {
             DeleteTask = true,
             Name = "John Doe",

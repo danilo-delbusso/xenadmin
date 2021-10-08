@@ -38,7 +38,7 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard
 {
     public partial class CrossPoolMigrateCopyModePage : XenTabPage
     {
-        private List<VM> selectedVMs;
+        private readonly List<VM> selectedVMs;
 
         public CrossPoolMigrateCopyModePage(List<VM> selectedVMs)
         {

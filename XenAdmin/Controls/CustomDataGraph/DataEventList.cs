@@ -41,7 +41,7 @@ namespace XenAdmin.Controls.CustomDataGraph
     {
         public List<DataEvent> DataEvents = new List<DataEvent>();
         public DataPlot DataPlot;
-        private static int ITEM_PADDING = 3;
+        private static readonly int ITEM_PADDING = 3;
         private DataPlotNav PlotNav;
 
         public DataEventList()

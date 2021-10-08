@@ -62,7 +62,7 @@ namespace XenAdmin.Dialogs
         private volatile bool _updating;
         private volatile bool _updateRequired;
         private VM _conversionVm;
-        private VM[] _conversionVms;
+        private readonly VM[] _conversionVms;
         private ActivateConversionVpxAction _activateAction;
 
         private static readonly string[] DetailHeaders =

@@ -37,7 +37,7 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard
 {
     public partial class CrossPoolMigrateTransferNetworkPage : XenTabPage
     {
-        private List<VM> selectedVMs;
+        private readonly List<VM> selectedVMs;
         private readonly WizardMode wizardMode;
 
         public CrossPoolMigrateTransferNetworkPage(List<VM> selectedVMs, bool templatesOnly, WizardMode wizardMode)

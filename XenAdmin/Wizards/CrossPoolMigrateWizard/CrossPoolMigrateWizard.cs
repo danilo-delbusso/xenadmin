@@ -64,11 +64,11 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard
 
 		private Dictionary<string, VmMapping> m_vmMappings = new Dictionary<string, VmMapping>();
 
-        private Host hostPreSelection = null;
+        private readonly Host hostPreSelection = null;
 
-        private WizardMode wizardMode;
+        private readonly WizardMode wizardMode;
 
-	    private bool _resumeAfterMigrate;
+	    private readonly bool _resumeAfterMigrate;
 
         // Note that resumeAfter is currently only implemented for Migrate mode, used for resume on server functionality
 	    public CrossPoolMigrateWizard(IXenConnection con, SelectedItemCollection selection, Host targetHostPreSelection, WizardMode mode, bool resumeAfterMigrate = false)

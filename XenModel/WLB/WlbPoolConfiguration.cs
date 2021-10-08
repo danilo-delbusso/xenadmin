@@ -114,10 +114,10 @@ namespace XenAdmin.Wlb
         private double _diskWriteMediumWeightFactor = .60;
         private double _diskWriteLowWeightFactor = .30;
 
-        private double _metricGroomingPeriod = 0; //0 indicates grroming disabled (SQLExpress)
+        private readonly double _metricGroomingPeriod = 0; //0 indicates grroming disabled (SQLExpress)
 
-        private WlbHostConfigurations _hostConfigurations;
-        private WlbScheduledTasks _scheduledTasks;
+        private readonly WlbHostConfigurations _hostConfigurations;
+        private readonly WlbScheduledTasks _scheduledTasks;
 #endregion
 
 #region Constructor

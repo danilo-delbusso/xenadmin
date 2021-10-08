@@ -43,8 +43,8 @@ namespace XenAdmin.Controls.XenSearch
     {
         private class ResourceRenderer : ToolStripProfessionalRenderer
         {
-            private static int RIGHT_MARGIN = 2;
-            private static int TOP_MARGIN = 2;
+            private static readonly int RIGHT_MARGIN = 2;
+            private static readonly int TOP_MARGIN = 2;
 
             protected override void OnRenderItemText(ToolStripItemTextRenderEventArgs e)
             {
@@ -65,7 +65,7 @@ namespace XenAdmin.Controls.XenSearch
             }
         }
 
-        private static string INDENT = "       ";
+        private static readonly string INDENT = "       ";
 
         private QueryScope scope = null;
         private FolderListItem folderListItem = null;

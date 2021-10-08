@@ -35,7 +35,7 @@ namespace XenAdmin.Actions
 {
     public class SetSslLegacyAction: PureAsyncAction
     {
-        bool legacyMode;
+        readonly bool legacyMode;
 
         public SetSslLegacyAction(Pool pool, bool legacyMode)
             : base(pool.Connection, Messages.SETTING_SECURITY_SETTINGS)

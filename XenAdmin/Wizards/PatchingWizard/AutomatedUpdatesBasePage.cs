@@ -63,7 +63,7 @@ namespace XenAdmin.Wizards.PatchingWizard
         private List<UpdateProgressBackgroundWorker> backgroundWorkers = new List<UpdateProgressBackgroundWorker>();
         private List<UpdateProgressBackgroundWorker> failedWorkers = new List<UpdateProgressBackgroundWorker>();
 
-        private List<HostUpdateMapping> patchMappings = new List<HostUpdateMapping>();
+        private readonly List<HostUpdateMapping> patchMappings = new List<HostUpdateMapping>();
         protected List<string> hostsThatWillRequireReboot = new List<string>();
         protected Dictionary<string, List<string>> livePatchAttempts = new Dictionary<string, List<string>>();
         public Dictionary<XenServerPatch, string> AllDownloadedPatches = new Dictionary<XenServerPatch, string>();

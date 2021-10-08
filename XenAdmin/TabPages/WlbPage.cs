@@ -340,7 +340,7 @@ namespace XenAdmin.TabPages
 
         }
 
-        private RbacMethodList WLB_PERMISSION_CHECKS = new RbacMethodList(
+        private readonly RbacMethodList WLB_PERMISSION_CHECKS = new RbacMethodList(
             "pool.initialize_wlb",
             "pool.set_wlb_enabled",
             "pool.send_wlb_configuration"

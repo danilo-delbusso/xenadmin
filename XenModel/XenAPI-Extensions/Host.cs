@@ -1496,8 +1496,12 @@ namespace XenAPI
 
         public class SuppPack
         {
-            private string originator, name, description, version, build;
-            private bool homogeneous;
+            private readonly string originator;
+            private readonly string name;
+            private readonly string description;
+            private readonly string version;
+            private readonly string build;
+            private readonly bool homogeneous;
 
             public string Originator { get { return originator; } }
             public string Name { get { return name; } }
@@ -1508,7 +1512,7 @@ namespace XenAPI
 
             public string OriginatorAndName { get { return originator + ":" + name; } }
 
-            private bool parsed = false;
+            private readonly bool parsed = false;
             public bool IsValid { get { return parsed; } }
 
             public string LongDescription { get { return string.Format(Messages.SUPP_PACK_DESCRIPTION, description, version); } }

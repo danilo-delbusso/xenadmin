@@ -42,7 +42,7 @@ namespace XenAdminTests.UnitTests
     [TestFixture, Category(TestCategories.Unit)]
     internal class EncryptionUtilTests
     {
-        private string[] _transformedStrings =
+        private readonly string[] _transformedStrings =
         {
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
             "abcçdefgğhıijklmnoöprsştuüvyz",
@@ -50,7 +50,7 @@ namespace XenAdminTests.UnitTests
             "ÀàÂâÆæ,Çç,ÉéÈèÊêËë,ÎîÏï,ÔôŒœ,ÙùÛûÜü,Ÿÿ"
         };
 
-        private string[] _keys =
+        private readonly string[] _keys =
         {
             "kd385Am£dm*C",
             "j33LZ$89cngA39%",

@@ -41,7 +41,7 @@ namespace XenAdmin.Dialogs
 {
     public partial class VerticallyTabbedDialog : XenDialogBase
     {
-        private Font titleFont = new Font(DefaultFont.FontFamily, DefaultFont.Size + 1.75f, FontStyle.Bold);
+        private readonly Font titleFont = new Font(DefaultFont.FontFamily, DefaultFont.Size + 1.75f, FontStyle.Bold);
 
         // Void constructor for the designer
         public VerticallyTabbedDialog()

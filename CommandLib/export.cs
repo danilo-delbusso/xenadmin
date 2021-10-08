@@ -44,9 +44,9 @@ namespace CommandLib
     /// </summary>
     public class BlockChecksumFailed : ApplicationException
     {
-        private string block;
-        private string recomputed;
-        private string original;
+        private readonly string block;
+        private readonly string recomputed;
+        private readonly string original;
 
         public BlockChecksumFailed(string block, string recomputed, string original)
         {
@@ -72,7 +72,7 @@ namespace CommandLib
         }
 
         private readonly SHA1 sha = new SHA1CryptoServiceProvider();
-        private XXHash64 xxhash = new XXHash64();
+        private readonly XXHash64 xxhash = new XXHash64();
 
         private string checksum_sha1(byte[] data)
         {

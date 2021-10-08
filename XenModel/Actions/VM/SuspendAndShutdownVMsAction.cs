@@ -38,8 +38,8 @@ namespace XenAdmin.Actions.VMActions
 {
     public class SuspendAndShutdownVMsAction : AsyncAction
     {
-        private List<VM> VmsToSuspend;
-        private List<VM> VmsToShutdown;
+        private readonly List<VM> VmsToSuspend;
+        private readonly List<VM> VmsToShutdown;
 
         private int ActionCountTotal;
         private int ActionCountCompleted;

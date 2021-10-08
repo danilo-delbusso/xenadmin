@@ -41,7 +41,7 @@ namespace XenAdmin.Diagnostics.Problems.PoolProblem
 {
     class HealthCheckServiceProblem : PoolProblem
     {
-        private Pool _pool;
+        private readonly Pool _pool;
 
         public HealthCheckServiceProblem(Check check, Pool pool)
             : base(check, pool)

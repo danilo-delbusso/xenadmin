@@ -40,7 +40,7 @@ namespace XenAdmin.Actions.DR
 {
     public class ShutdownAndDestroyVmAppliancesAction : AsyncAction
     {
-        private List<VM_appliance> selectedToDelete;
+        private readonly List<VM_appliance> selectedToDelete;
 
         public ShutdownAndDestroyVmAppliancesAction(IXenConnection connection, List<VM_appliance> deleteVMAppliances)
             : base(connection, Messages.DELETE_VM_APPLIANCES)

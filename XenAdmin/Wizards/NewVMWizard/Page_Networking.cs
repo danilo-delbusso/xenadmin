@@ -47,7 +47,7 @@ namespace XenAdmin.Wizards.NewVMWizard
         /// <summary>
         /// This value is then the lowest possible upper bound for the number of networks on a new vm created from a default template. We only do this for default templates, as custom templates can be tweaked (install tools) for higher values. (See CA-31800)
         /// </summary>
-        private static int MAX_NETWORKS_FOR_DEFAULT_TEMPLATES = 4;
+        private static readonly int MAX_NETWORKS_FOR_DEFAULT_TEMPLATES = 4;
         private VM Template;
         private string VmName;
 

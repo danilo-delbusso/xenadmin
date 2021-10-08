@@ -41,13 +41,13 @@ namespace XenAdmin.Controls
         [Browsable(true)]
         public event Action FilterChanged;
 
-        private ToolStripMenuItem toolStripMenuItemShowAll;
-        private ToolStripMenuItem toolStripMenuItemLast24Hours;
-        private ToolStripMenuItem toolStripMenuItemLast3Days;
-        private ToolStripMenuItem toolStripMenuItemLast7Days;
-        private ToolStripMenuItem toolStripMenuItemLast30Days;
-        private ToolStripMenuItem toolStripMenuItemCustomDate;
-        private DateFilterDialog dateFilterDialog;
+        private readonly ToolStripMenuItem toolStripMenuItemShowAll;
+        private readonly ToolStripMenuItem toolStripMenuItemLast24Hours;
+        private readonly ToolStripMenuItem toolStripMenuItemLast3Days;
+        private readonly ToolStripMenuItem toolStripMenuItemLast7Days;
+        private readonly ToolStripMenuItem toolStripMenuItemLast30Days;
+        private readonly ToolStripMenuItem toolStripMenuItemCustomDate;
+        private readonly DateFilterDialog dateFilterDialog;
 
         public FilterDatesToolStripDropDownButton()
         {

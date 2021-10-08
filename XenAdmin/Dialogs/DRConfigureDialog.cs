@@ -51,7 +51,7 @@ namespace XenAdmin.Dialogs
 		/// </summary>
 		private const int MAX_SR_SELECTED = 8;
 
-        private List<SR> _availableSrs = new List<SR>();
+        private readonly List<SR> _availableSrs = new List<SR>();
 		#endregion
 
 		public DRConfigureDialog(Pool pool)

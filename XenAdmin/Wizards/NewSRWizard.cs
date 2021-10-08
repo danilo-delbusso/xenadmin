@@ -609,7 +609,7 @@ namespace XenAdmin.Wizards
             closeWizard = true;
         }
 
-        private Dictionary<AsyncAction, SrDescriptor> actionSrDescriptorDict = new Dictionary<AsyncAction, SrDescriptor>();
+        private readonly Dictionary<AsyncAction, SrDescriptor> actionSrDescriptorDict = new Dictionary<AsyncAction, SrDescriptor>();
 
         void AddActionToSummary(AsyncAction action)
         {

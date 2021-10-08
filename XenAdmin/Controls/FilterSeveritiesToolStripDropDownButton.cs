@@ -43,13 +43,13 @@ namespace XenAdmin.Controls
 
         private bool internalUpdating;
 
-        private ToolStripMenuItem toolStripMenuItem0;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem toolStripMenuItem3;
-        private ToolStripMenuItem toolStripMenuItem4;
-        private ToolStripMenuItem toolStripMenuItem5;
-        private ToolStripMenuItem toolStripMenuItemAll;
+        private readonly ToolStripMenuItem toolStripMenuItem0;
+        private readonly ToolStripMenuItem toolStripMenuItem1;
+        private readonly ToolStripMenuItem toolStripMenuItem2;
+        private readonly ToolStripMenuItem toolStripMenuItem3;
+        private readonly ToolStripMenuItem toolStripMenuItem4;
+        private readonly ToolStripMenuItem toolStripMenuItem5;
+        private readonly ToolStripMenuItem toolStripMenuItemAll;
 
         public FilterSeveritiesToolStripDropDownButton()
         {

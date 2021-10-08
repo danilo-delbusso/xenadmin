@@ -66,7 +66,7 @@ namespace XenAdmin.Wlb
         /// <summary>
         /// object for locking SetState
         /// </summary>
-        private static Object _lockObject = new Object();
+        private static readonly Object _lockObject = new Object();
 
         /// <summary>
         /// Public method for updating the Wlb Server state when there is no error (Failure).

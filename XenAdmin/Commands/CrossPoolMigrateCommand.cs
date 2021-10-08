@@ -43,7 +43,7 @@ namespace XenAdmin.Commands
 {
     internal class CrossPoolMigrateCommand : VMOperationCommand
     {
-        private bool _resumeAfter;
+        private readonly bool _resumeAfter;
 
         public CrossPoolMigrateCommand(IMainWindow mainWindow, IEnumerable<SelectedItem> selection)
             : base(mainWindow, selection)

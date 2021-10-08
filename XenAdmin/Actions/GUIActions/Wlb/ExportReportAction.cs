@@ -41,8 +41,8 @@ namespace XenAdmin.Actions.Wlb
     class ExportReportAction : AsyncAction
     {
         private byte[] _reportData;
-        private string _format;
-        private ReportViewer _reportViewer;
+        private readonly string _format;
+        private readonly ReportViewer _reportViewer;
 
         public byte[] ReportData
         {

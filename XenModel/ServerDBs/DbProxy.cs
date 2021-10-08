@@ -359,7 +359,7 @@ namespace XenAdmin.ServerDBs
 
         #region Code to create fake asynchronous tasks that just return a known value
 
-        private static Dictionary<string, Proxy_Task> tasks = new Dictionary<string, Proxy_Task>();
+        private static readonly Dictionary<string, Proxy_Task> tasks = new Dictionary<string, Proxy_Task>();
         private readonly Random rand = new Random();
 
         public enum TaskStatus { success, failure, pending }

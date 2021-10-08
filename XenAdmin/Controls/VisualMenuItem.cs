@@ -52,9 +52,9 @@ namespace XenAdmin.Controls
     public class VisualMenuItem : ToolStripMenuItem
     {
 
-        private static int leftMargin = 35;
-        private static int topMargin = 4;
-        private static int imagePadding = 5;
+        private static readonly int leftMargin = 35;
+        private static readonly int topMargin = 4;
+        private static readonly int imagePadding = 5;
 
         public override string Text
         {
@@ -197,7 +197,7 @@ namespace XenAdmin.Controls
             get { return maxCombinedWidth; }
         }
 
-        private static Object locker = new Object();
+        private static readonly Object locker = new Object();
 
         public static void Refresh()
         {

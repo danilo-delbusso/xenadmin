@@ -58,7 +58,7 @@ namespace XenServerHealthCheck
             return v == null ? false : v == "true";
         }
 
-        private static double DueAfterHour = 24;
+        private static readonly double DueAfterHour = 24;
         private static bool CanLock(string UploadLock, bool onDemand)
         {
             if (string.IsNullOrEmpty(UploadLock))
@@ -81,7 +81,7 @@ namespace XenServerHealthCheck
             return false;
         }
 
-        private static int SleepForLockConfirm = 10 * 1000; // 10 seconds
+        private static readonly int SleepForLockConfirm = 10 * 1000; // 10 seconds
         private static bool getLock(IXenConnection connection, Session session)
         {
             Dictionary<string, string> config = Pool.get_health_check_config(session, connection.Cache.Pools[0].opaque_ref);

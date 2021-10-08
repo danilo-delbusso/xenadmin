@@ -104,7 +104,7 @@ namespace XenAdmin.Wizards.DRWizards
         private Dictionary<XenRef<VDI>, PoolMetadata> allPoolMetadata;
         public Dictionary<XenRef<VDI>, PoolMetadata> AllPoolMetadata { set { allPoolMetadata = value; } }
 
-        private Dictionary<XenRef<VDI>, PoolMetadata> selectedPoolMetadata = new Dictionary<XenRef<VDI>, PoolMetadata>();
+        private readonly Dictionary<XenRef<VDI>, PoolMetadata> selectedPoolMetadata = new Dictionary<XenRef<VDI>, PoolMetadata>();
 
         public DRWizardType WizardType { private get; set; }
 
@@ -367,7 +367,7 @@ namespace XenAdmin.Wizards.DRWizards
     {
         public string PoolName; 
         public XenRef<VDI> VdiRef;
-        private string description;
+        private readonly string description;
 
         public PoolNode(XenRef<VDI> vdiRef, string poolName, string description)
             : base(true)

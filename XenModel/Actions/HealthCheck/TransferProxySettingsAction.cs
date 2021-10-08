@@ -40,15 +40,15 @@ namespace XenAdmin.Actions
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private HTTPHelper.ProxyStyle proxyStyle;
-        private string proxyAddress;
-        private int proxyPort;
-        private int timeOut;
-        private bool bypassProxyForServers;
-        private bool provideProxyCredentials;
-        private string protectedProxyUsername;
-        private string protectedProxyPassword;
-        private HTTP.ProxyAuthenticationMethod proxyAuthenticationMethod;
+        private readonly HTTPHelper.ProxyStyle proxyStyle;
+        private readonly string proxyAddress;
+        private readonly int proxyPort;
+        private readonly int timeOut;
+        private readonly bool bypassProxyForServers;
+        private readonly bool provideProxyCredentials;
+        private readonly string protectedProxyUsername;
+        private readonly string protectedProxyPassword;
+        private readonly HTTP.ProxyAuthenticationMethod proxyAuthenticationMethod;
 
         public TransferProxySettingsAction(HTTPHelper.ProxyStyle style, string address, int port, int timeout,
             bool suppressHistory, bool bypassForServer, bool provideCredentials, string protectedProxyUsername,

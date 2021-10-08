@@ -132,10 +132,10 @@ namespace XenAdmin.Wizards.NewVMApplianceWizard
 
         private class VMDataGridViewRow : DataGridViewRow
         {
-            private DataGridViewTextBoxCell _nameCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _descriptionCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _orderCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _startDelayCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _nameCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _descriptionCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _orderCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _startDelayCell = new DataGridViewTextBoxCell();
             public readonly VM Vm;
             public VMStartupOptions Settings;
             public VMDataGridViewRow(VM vm, VMStartupOptions settings)

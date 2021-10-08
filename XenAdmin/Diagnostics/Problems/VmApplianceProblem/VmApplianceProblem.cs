@@ -38,7 +38,7 @@ namespace XenAdmin.Diagnostics.Problems.VmApplianceProblem
 {
     public abstract class VmApplianceProblem : Problem
     {
-        private VM_appliance _vmAppliance;
+        private readonly VM_appliance _vmAppliance;
 
         public VmApplianceProblem(Check check, VM_appliance vmAppliance)
             : base(check)

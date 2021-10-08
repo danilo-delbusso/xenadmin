@@ -54,7 +54,7 @@ namespace XenAdminTests.UnitTests
                 { 2100000000, new[] { "2003", "MB" } }
             };
 
-        private Dictionary<double, string[]> memoryVariousPairs = new Dictionary<double, string[]>
+        private readonly Dictionary<double, string[]> memoryVariousPairs = new Dictionary<double, string[]>
                 {
                     {          0, new[] { "0", "B" } },
                     {       1000, new[] { "1000", "B" } },
@@ -69,7 +69,7 @@ namespace XenAdminTests.UnitTests
                     { 2900000000, new[] { "3", "GB" } }
                 };
 
-        private Dictionary<double, string[]> dataRatePairs = new Dictionary<double, string[]>
+        private readonly Dictionary<double, string[]> dataRatePairs = new Dictionary<double, string[]>
                 {
                     {             0, new[] { "0", "B/s" } },
                     {          1000, new[] { "1", "kB/s" } },
@@ -92,7 +92,7 @@ namespace XenAdminTests.UnitTests
                     { 2900000000000, new[] { "2.9", "TB/s" } }, //2.9*1000*1000*1000*1000
                 };
 
-        private Dictionary<double, string[]> nanoSecPairs = new Dictionary<double, string[]>
+        private readonly Dictionary<double, string[]> nanoSecPairs = new Dictionary<double, string[]>
                 {
                     {          0, new[] { "0", "ns" } },
                     {          1, new[] { "1", "ns" } },
@@ -111,7 +111,7 @@ namespace XenAdminTests.UnitTests
                     { 2900000000, new[] { "3", "s" } }
                 };
 
-        private Dictionary<long, string[]> diskSizeOneDpPairs = new Dictionary<long, string[]>
+        private readonly Dictionary<long, string[]> diskSizeOneDpPairs = new Dictionary<long, string[]>
                 {
                     {          0, new[] { "0", "B" } },
                     {       1000, new[] { "1000", "B" } },

@@ -39,7 +39,7 @@ namespace XenAdmin.Actions
     public class VMSnapshotDeleteAction : PureAsyncAction
     {
 
-        private VM m_Snapshot;
+        private readonly VM m_Snapshot;
         public VMSnapshotDeleteAction(VM snapshot)
             : base(snapshot.Connection, String.Format(Messages.ACTION_VM_DELETE_SNAPSHOT_TITLE, snapshot.Name()))
         {

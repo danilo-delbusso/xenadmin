@@ -43,13 +43,13 @@ namespace XenAdmin.Actions
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private List<PIF> newPIFs;
-        private List<PIF> downPIFs;
-        private PIF downManagement;
-        private PIF newManagement;
-        private bool managementIPChanged;
+        private readonly List<PIF> newPIFs;
+        private readonly List<PIF> downPIFs;
+        private readonly PIF downManagement;
+        private readonly PIF newManagement;
+        private readonly bool managementIPChanged;
 
-        private Host[] Hosts;
+        private readonly Host[] Hosts;
 
         /// <summary>
         /// 

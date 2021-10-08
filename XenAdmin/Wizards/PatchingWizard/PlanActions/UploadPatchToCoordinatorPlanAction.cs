@@ -47,12 +47,12 @@ namespace XenAdmin.Wizards.PatchingWizard.PlanActions
     {
         private readonly XenServerPatch xenServerPatch;
         private readonly List<HostUpdateMapping> mappings;
-        private Dictionary<XenServerPatch, string> AllDownloadedPatches = new Dictionary<XenServerPatch, string>();
+        private readonly Dictionary<XenServerPatch, string> AllDownloadedPatches = new Dictionary<XenServerPatch, string>();
         private KeyValuePair<XenServerPatch, string> patchFromDisk;
         private AsyncAction inProgressAction;
-        private bool skipDiskSpaceCheck;
+        private readonly bool skipDiskSpaceCheck;
         private readonly UpdateType updateType;
-        private string updateFilePath;
+        private readonly string updateFilePath;
         private readonly Control invokingControl;
         private readonly List<Host> selectedServers;
 

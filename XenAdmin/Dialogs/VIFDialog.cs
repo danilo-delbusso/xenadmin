@@ -377,7 +377,7 @@ namespace XenAdmin.Dialogs
         
         private class NetworkComboBoxItem : IEquatable<NetworkComboBoxItem>
         {
-            public XenAPI.Network Network;
+            public readonly XenAPI.Network Network;
 
             public NetworkComboBoxItem(XenAPI.Network network)
             {

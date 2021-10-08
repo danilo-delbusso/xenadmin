@@ -39,7 +39,7 @@ namespace XenAdmin.Diagnostics.Problems.VmApplianceProblem
 {
     class ExistingVmApplianceWarning : Warning
     {
-        private VM_appliance vmAppliance;
+        private readonly VM_appliance vmAppliance;
 
         public ExistingVmApplianceWarning(Check check, VM_appliance vmAppliance)
             : base(check)

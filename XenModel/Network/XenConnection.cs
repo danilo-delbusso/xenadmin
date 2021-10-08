@@ -155,7 +155,7 @@ namespace XenAdmin.Network
         private DateTime m_startTime = DateTime.MinValue;
         private int m_lastDebug;
         private TimeSpan ServerTimeOffset_ = TimeSpan.Zero;
-        private object ServerTimeOffsetLock = new object();
+        private readonly object ServerTimeOffsetLock = new object();
         /// <summary>
         /// The offset between the clock at the client and the clock at the server.  server time + ServerTimeOffset = client time.
         /// This does not take the local timezone into account -- all calculations should be in UTC.
@@ -629,9 +629,9 @@ namespace XenAdmin.Network
             }
         }
 
-        private static object WaitForMonitor = new object();
+        private static readonly object WaitForMonitor = new object();
         private static int WaitForEventRegistered = 0;
-        private static object WaitForEventRegisteredLock = new object();
+        private static readonly object WaitForEventRegisteredLock = new object();
         public void WaitFor(Func<bool> predicate, Func<bool> cancelling)
         {
             lock (WaitForEventRegisteredLock)

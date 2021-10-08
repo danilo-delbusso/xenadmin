@@ -123,7 +123,7 @@ namespace XenAdmin.Controls.CustomDataGraph
         public Data_source DataSource;
 
         public bool Enabled;
-        private string friendlyName;
+        private readonly string friendlyName;
         public Color Color;
         public bool ColorChanged;
         public string Id;
@@ -165,8 +165,8 @@ namespace XenAdmin.Controls.CustomDataGraph
 
     public static class DataSourceItemList
     {
-        private static Regex io_throughput_rw_regex = new Regex("^io_throughput_(read|write)_([a-f0-9]{8})$"); // old SR read/write datasources
-        private static Regex sr_rw_regex = new Regex("^(read|write)_([a-f0-9]{8})$"); // replacement SR read/write datasources
+        private static readonly Regex io_throughput_rw_regex = new Regex("^io_throughput_(read|write)_([a-f0-9]{8})$"); // old SR read/write datasources
+        private static readonly Regex sr_rw_regex = new Regex("^(read|write)_([a-f0-9]{8})$"); // replacement SR read/write datasources
 
         public static List<DataSourceItem> BuildList(IXenObject xenObject, List<Data_source> dataSources)
         {

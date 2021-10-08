@@ -41,7 +41,7 @@ namespace XenAdmin.Actions.Wlb
     public class EnableWLBAction : AsyncAction
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private static string OPTIMIZINGPOOL = "wlb_optimizing_pool";
+        private static readonly string OPTIMIZINGPOOL = "wlb_optimizing_pool";
 
         public Dictionary<string, string> WlbConfiguration = new Dictionary<string, string>();
 

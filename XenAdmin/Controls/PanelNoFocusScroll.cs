@@ -35,7 +35,7 @@ namespace XenAdmin.Controls
 {
     class PanelNoFocusScroll : Panel
     {
-        object scrollLock = new object();
+        readonly object scrollLock = new object();
         public bool defaultBehaviour = false;
 
         protected override System.Drawing.Point ScrollToControl(Control activeControl)

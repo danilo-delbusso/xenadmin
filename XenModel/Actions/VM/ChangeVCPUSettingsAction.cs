@@ -36,8 +36,8 @@ namespace XenAdmin.Actions
 {
     public class ChangeVCPUSettingsAction : PureAsyncAction
     {
-        private long m_VCPUs_max;
-        private long m_VCPUs_at_startup;
+        private readonly long m_VCPUs_max;
+        private readonly long m_VCPUs_at_startup;
         private VM m_VM;
         public ChangeVCPUSettingsAction(VM vm, long VCPUs_max, long VCPUs_at_startup)
             : base(vm.Connection, "", true)

@@ -43,7 +43,7 @@ namespace XenAdmin.Dialogs
     public partial class ResolvingSubjectsDialog : XenDialogBase
     {
         private AddRemoveSubjectsAction resolveAction;
-        private IXenConnection _connection;
+        private readonly IXenConnection _connection;
 
         private ResolvingSubjectsDialog()
         {
@@ -208,7 +208,7 @@ namespace XenAdmin.Dialogs
             public string sid;
             public string ResolvedName;
 
-            private string enteredName;
+            private readonly string enteredName;
             public string EnteredName
             {
                 get { return enteredName; }

@@ -169,11 +169,11 @@ namespace XenAdmin.Wizards.GenericPages
 
         private class VMDataGridViewRow : DataGridViewRow
         {
-            private DataGridViewCheckBoxCell _selectedCell = new DataGridViewCheckBoxCell();
-            private DataGridViewTextBoxCell _nameCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _descriptionCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _currentGroupCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _quiesce_supported;
+            private readonly DataGridViewCheckBoxCell _selectedCell = new DataGridViewCheckBoxCell();
+            private readonly DataGridViewTextBoxCell _nameCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _descriptionCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _currentGroupCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _quiesce_supported;
             public readonly VM Vm;
             public VMDataGridViewRow(bool selected, VM vm)
             {

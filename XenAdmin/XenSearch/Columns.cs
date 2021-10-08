@@ -43,7 +43,7 @@ namespace XenAdmin.XenSearch
 {
     public class ColumnAccessors
     {
-        private static Dictionary<ColumnNames, Column> columns = new Dictionary<ColumnNames, Column>();
+        private static readonly Dictionary<ColumnNames, Column> columns = new Dictionary<ColumnNames, Column>();
 
         static ColumnAccessors()
         {

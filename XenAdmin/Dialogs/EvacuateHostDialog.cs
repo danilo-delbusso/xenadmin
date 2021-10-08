@@ -58,8 +58,8 @@ namespace XenAdmin.Dialogs
         private ToStringWrapper<Host> hostSelection;
         private Dictionary<string, AsyncAction> solveActionsByVmUuid;
         private Dictionary<XenRef<VM>, String[]> reasons;
-        private string elevatedUsername;
-        private string elevatedPassword;
+        private readonly string elevatedUsername;
+        private readonly string elevatedPassword;
         private Session elevatedSession;
         private volatile bool _rebuildInProgress;
         private volatile bool _rebuildRequired;

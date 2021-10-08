@@ -84,10 +84,12 @@ namespace XenAdmin.Dialogs
         private SrReadCachingEditPage SrReadCachingEditPage;
         #endregion
 
-        private IXenObject xenObject, xenObjectBefore, xenObjectCopy;
+        private readonly IXenObject xenObject;
+        private readonly IXenObject xenObjectBefore;
+        private readonly IXenObject xenObjectCopy;
         private AsyncAction _action;
         private bool _startAction = true;
-        private System.Timers.Timer timer = new System.Timers.Timer();
+        private readonly System.Timers.Timer timer = new System.Timers.Timer();
 
         public new event EventHandler<PropertiesDialogClosingEventArgs> FormClosing;
 

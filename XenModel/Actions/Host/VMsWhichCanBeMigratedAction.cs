@@ -37,7 +37,7 @@ namespace XenAdmin.Actions.HostActions
 {
     public class VMsWhichCanBeMigratedAction : PureAsyncAction
     {
-        private List<string> VmsRefsNotMigratable = new List<string>();
+        private readonly List<string> VmsRefsNotMigratable = new List<string>();
         public List<VM> MigratableVms = new List<VM>();
 
         public VMsWhichCanBeMigratedAction(IXenConnection connection, Host host)

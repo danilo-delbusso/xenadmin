@@ -38,31 +38,31 @@ namespace XenAdmin.Wlb
     {
         #region  Variables
 
-        private static string SUB_ID = "id";
-        private static string CREATED = "created";
-        private static string SUB_NAME = "name";
-        private static string SUB_DESCRIPTION = "description";
-        private static string SUBSCRIBER_ID = "subscriberId";
-        private static string SUBSCRIBER_NAME = "subscriberName";
-        private static string SCHEDULE_ID = "scheduleId";
-        private static string DAYOFWEEK = "daysOfWeek";
-        private static string EXECUTE_TIMEOFDAY = "executeTimeOfDay";
-        private static string TRIGGER_TYPE = "triggerType";
-        private static string ENABLED = "enabled";
-        private static string ENABLE_DATE = "enableDate";
-        private static string DISABLE_DATE = "disableDate";
-        private static string LAST_TOUCHED = "lastTouched";
-        private static string LAST_TOUCHEDBY = "lastTouchedBy";
-        private static string LAST_RUN = "lastRun";
-        private static string LAST_RUNRESULT = "lastRunResult";
-        private static string EMAIL_TO = "emailTo";
-        private static string EMAIL_REPLYTO = "emailReplyTo";
-        private static string REPORT_RENDERFORMAT = "rpRenderFormat";
-        private static string EMAIL_SUBJECT = "emailSubject";
-        private static string EMAIL_COMMENT = "emailComment";
-        private static string EMAIL_CC = "emailCc";
-        private static string EMAIL_BCC = "emailBcc";
-        private static string REPORT_ID = "reportId";
+        private static readonly string SUB_ID = "id";
+        private static readonly string CREATED = "created";
+        private static readonly string SUB_NAME = "name";
+        private static readonly string SUB_DESCRIPTION = "description";
+        private static readonly string SUBSCRIBER_ID = "subscriberId";
+        private static readonly string SUBSCRIBER_NAME = "subscriberName";
+        private static readonly string SCHEDULE_ID = "scheduleId";
+        private static readonly string DAYOFWEEK = "daysOfWeek";
+        private static readonly string EXECUTE_TIMEOFDAY = "executeTimeOfDay";
+        private static readonly string TRIGGER_TYPE = "triggerType";
+        private static readonly string ENABLED = "enabled";
+        private static readonly string ENABLE_DATE = "enableDate";
+        private static readonly string DISABLE_DATE = "disableDate";
+        private static readonly string LAST_TOUCHED = "lastTouched";
+        private static readonly string LAST_TOUCHEDBY = "lastTouchedBy";
+        private static readonly string LAST_RUN = "lastRun";
+        private static readonly string LAST_RUNRESULT = "lastRunResult";
+        private static readonly string EMAIL_TO = "emailTo";
+        private static readonly string EMAIL_REPLYTO = "emailReplyTo";
+        private static readonly string REPORT_RENDERFORMAT = "rpRenderFormat";
+        private static readonly string EMAIL_SUBJECT = "emailSubject";
+        private static readonly string EMAIL_COMMENT = "emailComment";
+        private static readonly string EMAIL_CC = "emailCc";
+        private static readonly string EMAIL_BCC = "emailBcc";
+        private static readonly string REPORT_ID = "reportId";
         public static string REPORT_NAME = "reportName";
 
         private string _reportDisplayName;

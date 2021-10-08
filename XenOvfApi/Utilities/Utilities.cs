@@ -55,7 +55,7 @@ namespace XenOvf.Utilities
         private const long GB = (MB * 1024);
 
         //TODO: does it need to be configurabe by XenAdmin?
-        private static bool UseOnlineSchema = false;
+        private static readonly bool UseOnlineSchema = false;
 
         private static readonly string[] KnownNamespaces =
         {
@@ -72,7 +72,7 @@ namespace XenOvf.Utilities
             "xenc=http://www.w3.org/2001/04/xmlenc#"
         };
 
-        private static Dictionary<string, string> Schemas = new Dictionary<string, string>
+        private static readonly Dictionary<string, string> Schemas = new Dictionary<string, string>
         {
             {"http://www.w3.org/XML/1998/namespace", "Schemas\\xml.xsd"},
             {"http://schemas.dmtf.org/wbem/wscim/1/common", "Schemas\\common.xsd"},

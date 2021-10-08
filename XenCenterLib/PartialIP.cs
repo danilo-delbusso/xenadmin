@@ -90,8 +90,8 @@ namespace XenCenterLib
             }
         }
 
-        private static char[] SEPARATORS = new char[] { '.' };
-        private static String[] WILDCARDS = new String[] { "", "*", "_", "x", "n" };
+        private static readonly char[] SEPARATORS = new char[] { '.' };
+        private static readonly String[] WILDCARDS = new String[] { "", "*", "_", "x", "n" };
 
         public static PartialIP Parse(String candidate)
         {

@@ -53,9 +53,9 @@ namespace XenAdmin.Dialogs
 
         private static readonly int[] SortableColumnIndexes = new int[] {DisplayOnGraphColumnIndex, NameColumnIndex, TypeColumnIndex};
 
-        private DesignedGraph designedGraph;
-        private GraphList graphList;
-        private bool isNew;
+        private readonly DesignedGraph designedGraph;
+        private readonly GraphList graphList;
+        private readonly bool isNew;
         private List<DataSourceItem> _dataSources = new List<DataSourceItem>();
 
         public GraphDetailsDialog(): this(null, null)
@@ -315,7 +315,7 @@ namespace XenAdmin.Dialogs
 
         private class DataSourceGridViewRow : DataGridViewRow
         {
-            private DataSourceItem dsi;
+            private readonly DataSourceItem dsi;
             internal DataSourceItem Dsi { get { return dsi; } }
 
             public DataSourceGridViewRow(DataSourceItem dataSourceItem, bool displayOnGraph)

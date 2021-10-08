@@ -37,7 +37,7 @@ namespace XenAdmin.Actions
     public class GetServerLocalTimeAction : PureAsyncAction
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private Host _host;
+        private readonly Host _host;
 
         public ServerTimeInfo? ServerTimeInfo;
 

@@ -476,7 +476,7 @@ namespace XenAdmin.TabPages
         }
 
 
-        private object statusUpdaterLock = new object();
+        private readonly object statusUpdaterLock = new object();
         /// <summary>
         /// Background thread called periodically to update subjects logged in status.
         /// </summary>

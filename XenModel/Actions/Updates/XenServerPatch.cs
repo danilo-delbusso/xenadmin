@@ -39,7 +39,7 @@ namespace XenAdmin.Core
     [DebuggerDisplay("XenServerPatch (Name={Name}; Uuid={Uuid})")]
     public class XenServerPatch : IEquatable<XenServerPatch>
     {
-        private string _uuid;
+        private readonly string _uuid;
         public readonly string Name;
         public readonly string Description;
         public readonly string Guidance;

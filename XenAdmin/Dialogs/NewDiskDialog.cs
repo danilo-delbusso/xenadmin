@@ -47,7 +47,7 @@ namespace XenAdmin.Dialogs
         #region Private fields
 
         private readonly VM TheVM;
-        private VDI DiskTemplate;
+        private readonly VDI DiskTemplate;
         private readonly IEnumerable<VDI> _VDINamesInUse = new List<VDI>();
 
         #endregion

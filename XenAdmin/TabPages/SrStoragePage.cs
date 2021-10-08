@@ -607,8 +607,8 @@ namespace XenAdmin.TabPages
         {
             private readonly Control owner;
             private readonly object _locker = new object();
-            private BackgroundWorker worker;
-            private Queue<RefreshGridRequest> queue = new Queue<RefreshGridRequest>();
+            private readonly BackgroundWorker worker;
+            private readonly Queue<RefreshGridRequest> queue = new Queue<RefreshGridRequest>();
 
             public VDIsDataGridViewBuilder(Control owner)
             {

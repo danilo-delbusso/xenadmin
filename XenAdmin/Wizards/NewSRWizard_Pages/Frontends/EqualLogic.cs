@@ -216,7 +216,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
         private class DellStoragePoolRow : DataGridViewRow
         {
-            public DellStoragePool StoragePool;
+            public readonly DellStoragePool StoragePool;
 
             public DellStoragePoolRow(DellStoragePool StoragePool)
             {

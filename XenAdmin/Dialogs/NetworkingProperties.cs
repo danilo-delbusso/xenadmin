@@ -48,14 +48,14 @@ namespace XenAdmin.Dialogs
 {
     public partial class NetworkingProperties : VerticallyTabbedDialog
     {
-        private Host Host;
-        private Pool Pool;
+        private readonly Host Host;
+        private readonly Pool Pool;
         
-        private string ObjectName;
+        private readonly string ObjectName;
 
         private List<PIF> ShownPIFs;
         private List<PIF> AllPIFs;
-        private bool AllowManagementOnVLAN;
+        private readonly bool AllowManagementOnVLAN;
 
         private readonly ToolTip toolTipRemove = new ToolTip();
         private bool tooltipVisible;

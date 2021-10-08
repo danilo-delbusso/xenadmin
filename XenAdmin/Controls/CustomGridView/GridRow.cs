@@ -178,8 +178,8 @@ namespace XenAdmin.Controls.CustomGridView
             }
         }
 
-        private int RowSeparation = 4;  // leave this between most rows
-        private int GroupSeparation = 8;  // leave this instead after the last row in a group of children
+        private readonly int RowSeparation = 4;  // leave this between most rows
+        private readonly int GroupSeparation = 8;  // leave this instead after the last row in a group of children
         public int SpaceAfter
         {
             get

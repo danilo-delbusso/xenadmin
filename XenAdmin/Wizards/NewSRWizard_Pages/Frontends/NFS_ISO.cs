@@ -48,7 +48,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
         private SR _srToReattach;
         private bool _disasterRecoveryTask;
-        private List<String> my_srs = new List<String>();
+        private readonly List<String> my_srs = new List<String>();
 
         public NFS_ISO()
         {

@@ -39,8 +39,8 @@ namespace XenAdmin.Wizards.ImportWizard.Filters
 {
     public class HardwareCompatibilityFilter : ReasoningFilter
     {
-        private List<Xen_ConfigurationSettingData_Type> _hardwarePlatformSettings = new List<Xen_ConfigurationSettingData_Type>();
-        private List<Host> _hosts = new List<Host>();
+        private readonly List<Xen_ConfigurationSettingData_Type> _hardwarePlatformSettings = new List<Xen_ConfigurationSettingData_Type>();
+        private readonly List<Host> _hosts = new List<Host>();
 
         public HardwareCompatibilityFilter(IXenObject itemAddedToComboBox, List<Xen_ConfigurationSettingData_Type> hardwarePlatformSettings)
             : base(itemAddedToComboBox)

@@ -36,8 +36,8 @@ namespace XenAdmin.Actions.VMActions
 {
     public class VMCopyAction : AsyncAction
     {
-        private string _nameLabel;
-        private string _namedescription;
+        private readonly string _nameLabel;
+        private readonly string _namedescription;
 
         public VMCopyAction(VM vm, Host host, SR sr, string nameLabel, string description)
             : base(vm.Connection, string.Format(Messages.ACTION_VM_COPYING_TITLE, vm.Name(), nameLabel, sr.NameWithoutHost()))

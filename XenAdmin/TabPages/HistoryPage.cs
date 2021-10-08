@@ -516,18 +516,18 @@ namespace XenAdmin.TabPages
 
         public class DataGridViewActionRow : DataGridViewRow
         {
-            private DataGridViewImageCell expanderCell = new DataGridViewImageCell();
-            private DataGridViewImageCell statusCell = new DataGridViewImageCell();
-            private DataGridViewTextBoxCell messageCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell locationCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell dateCell = new DataGridViewTextBoxCell();
-            private DataGridViewDropDownSplitButtonCell actionCell = new DataGridViewDropDownSplitButtonCell();
+            private readonly DataGridViewImageCell expanderCell = new DataGridViewImageCell();
+            private readonly DataGridViewImageCell statusCell = new DataGridViewImageCell();
+            private readonly DataGridViewTextBoxCell messageCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell locationCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell dateCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewDropDownSplitButtonCell actionCell = new DataGridViewDropDownSplitButtonCell();
 
-            private ToolStripMenuItem cancelItem = new ToolStripMenuItem(Messages.CANCEL);
-            private ToolStripMenuItem dismissItem = new ToolStripMenuItem(Messages.ALERT_DISMISS);
-            private ToolStripMenuItem goToItem = new ToolStripMenuItem(Messages.HISTORYPAGE_GOTO);
-            private ToolStripSeparator separatorItem = new ToolStripSeparator();
-            private ToolStripMenuItem copyItem = new ToolStripMenuItem(Messages.COPY);
+            private readonly ToolStripMenuItem cancelItem = new ToolStripMenuItem(Messages.CANCEL);
+            private readonly ToolStripMenuItem dismissItem = new ToolStripMenuItem(Messages.ALERT_DISMISS);
+            private readonly ToolStripMenuItem goToItem = new ToolStripMenuItem(Messages.HISTORYPAGE_GOTO);
+            private readonly ToolStripSeparator separatorItem = new ToolStripSeparator();
+            private readonly ToolStripMenuItem copyItem = new ToolStripMenuItem(Messages.COPY);
 
             public event Action<DataGridViewActionRow> DismissalRequested;
             public event Action<IXenObject> GoToXenObjectRequested;

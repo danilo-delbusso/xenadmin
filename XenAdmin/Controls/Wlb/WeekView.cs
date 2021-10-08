@@ -103,8 +103,8 @@ namespace XenAdmin.Controls.Wlb
         private Dictionary<RectangleF, TriggerPoint> _taskMap = new Dictionary<RectangleF, TriggerPoint>();
 
         private Point _toolTipLocation = new Point();
-        private ToolTip _toolTip = new ToolTip();
-        private Timer _toolTipTimer = new Timer();
+        private readonly ToolTip _toolTip = new ToolTip();
+        private readonly Timer _toolTipTimer = new Timer();
         private string _toolTipText = string.Empty;
         #endregion
 

@@ -38,7 +38,7 @@ namespace XenAdmin.Alerts
 {
     public class DuplicateIqnAlert : IqnAlert
     {
-        private Dictionary<Host, Host> RepeatedIQNs;
+        private readonly Dictionary<Host, Host> RepeatedIQNs;
 
         public DuplicateIqnAlert(Host host, Dictionary<Host, Host> repeatedIQNs)
             : base(host)

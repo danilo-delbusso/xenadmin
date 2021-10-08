@@ -42,10 +42,10 @@ namespace XenAdmin.Controls
     public class TagList : CustomListItem
     {
         private List<string> _tags;
-        private LinkLabel linkDialogLabel = new LinkLabel();
-        private Label tagsLabel;
-        private PictureBox icon = new PictureBox();
-        private Panel _panel=null;
+        private readonly LinkLabel linkDialogLabel = new LinkLabel();
+        private readonly Label tagsLabel;
+        private readonly PictureBox icon = new PictureBox();
+        private readonly Panel _panel=null;
         public TagList(List<string> tags, Panel panel, int width)
             : base(null, Program.DefaultFontBold, Color.White)
         {

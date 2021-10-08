@@ -48,9 +48,9 @@ namespace XenAdmin.Wizards.RollingUpgradeWizard.PlanActions
     class RpuUploadAndApplySuppPackPlanAction : HostPlanAction
     {
         private Host host;
-        private List<Host> hosts;
-        private string suppPackPath;
-        private Dictionary<Host, Pool_update> uploadedSuppPacks;
+        private readonly List<Host> hosts;
+        private readonly string suppPackPath;
+        private readonly Dictionary<Host, Pool_update> uploadedSuppPacks;
         public List<PlanAction> DelayedPlanActions;
         private readonly List<string> hostsThatWillRequireReboot;
 

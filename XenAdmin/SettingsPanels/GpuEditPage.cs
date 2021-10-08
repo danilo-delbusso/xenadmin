@@ -48,7 +48,7 @@ namespace XenAdmin.SettingsPanels
     public partial class GpuEditPage : XenTabPage, IEditPage
     {
         public VM vm;
-        private List<VGPU> currentGpus = new List<VGPU>();
+        private readonly List<VGPU> currentGpus = new List<VGPU>();
 
         public GpuEditPage()
         {

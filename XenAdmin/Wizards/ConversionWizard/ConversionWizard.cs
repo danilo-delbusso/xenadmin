@@ -52,7 +52,7 @@ namespace XenAdmin.Wizards.ConversionWizard
 
         private readonly ConversionClient _conversionClient;
 
-        private Dictionary<string, VmMapping> _vmMappings = new Dictionary<string, VmMapping>();
+        private readonly Dictionary<string, VmMapping> _vmMappings = new Dictionary<string, VmMapping>();
 
         public ConversionWizard(ConversionClient client)
             : base(client.Connection)

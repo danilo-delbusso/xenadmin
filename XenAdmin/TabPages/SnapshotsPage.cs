@@ -67,7 +67,7 @@ namespace XenAdmin.TabPages
             TreeView
         }
 
-        private Dictionary<string, SnapshotsView> _storedViewsPerVm = new Dictionary<string, SnapshotsView>();
+        private readonly Dictionary<string, SnapshotsView> _storedViewsPerVm = new Dictionary<string, SnapshotsView>();
 
         public SnapshotsPage()
         {
@@ -426,12 +426,12 @@ namespace XenAdmin.TabPages
 
         private class SnapshotDataGridViewRow : DataGridViewRow
         {
-            private DataGridViewTextBoxCell _type = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _name = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _creationTime = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _size = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _tags = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _description = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _type = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _name = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _creationTime = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _size = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _tags = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _description = new DataGridViewTextBoxCell();
             private DataGridViewTextBoxCell _sortType = new DataGridViewTextBoxCell();
 
             public SnapshotDataGridViewRow(VM snapshot)

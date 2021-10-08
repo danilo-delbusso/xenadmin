@@ -42,7 +42,7 @@ namespace XenAdmin.Actions.VMActions
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private Dictionary<string, SR> _storageMapping;
+        private readonly Dictionary<string, SR> _storageMapping;
 
         public VMMoveAction(VM vm, Dictionary<string, SR> storageMapping, Host host)
             : base(vm.Connection, string.Format(Messages.ACTION_VM_MOVING, vm.Name()))

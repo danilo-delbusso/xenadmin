@@ -39,7 +39,7 @@ namespace XenAdmin.Controls.DataGridViewEx
     /// </summary>
     public class CollapsingPoolHostRowSorter<T> : CollapsingPoolHostDataGridViewRowStableSorter<T> where T : CollapsingPoolHostDataGridViewRow
     {
-        private int columnClicked;
+        private readonly int columnClicked;
 
         public CollapsingPoolHostRowSorter(ListSortDirection direction, int columnClicked)
             : base(direction)

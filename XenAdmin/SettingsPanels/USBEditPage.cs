@@ -255,10 +255,10 @@ namespace XenAdmin.SettingsPanels
 
         private class VMUsbRow : DataGridViewExRow
         {
-            private VUSB _vusb;
-            private DataGridViewTextBoxCell locationCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell descriptionCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell attachedCell = new DataGridViewTextBoxCell();
+            private readonly VUSB _vusb;
+            private readonly DataGridViewTextBoxCell locationCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell descriptionCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell attachedCell = new DataGridViewTextBoxCell();
 
             public VMUsbRow(VUSB vusb)
             {

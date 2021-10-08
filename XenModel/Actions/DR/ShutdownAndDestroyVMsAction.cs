@@ -41,7 +41,7 @@ namespace XenAdmin.Actions.DR
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private List<VM> selectedToDelete;
+        private readonly List<VM> selectedToDelete;
 
         public ShutdownAndDestroyVMsAction(IXenConnection connection, List<VM> deleteVMs)
             : base(connection, deleteVMs.Count == 1 ? Messages.ACTION_SHUTDOWN_AND_DESTROY_VM_TITLE : Messages.ACTION_SHUTDOWN_AND_DESTROY_VMS_TITLE)

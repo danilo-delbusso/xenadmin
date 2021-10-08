@@ -37,7 +37,7 @@ namespace XenAdmin.Diagnostics.Checks
 {
     public class ClientVersionCheck : Check
     {
-        private XenServerVersion _newServerVersion;
+        private readonly XenServerVersion _newServerVersion;
 
         public ClientVersionCheck(XenServerVersion newServerVersion)
         {

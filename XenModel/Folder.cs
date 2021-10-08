@@ -44,7 +44,7 @@ namespace XenAdmin.Model
 
         private readonly String _name_label;
         private readonly Folder parent;
-        private List<IXenObject> xenObjects;
+        private readonly List<IXenObject> xenObjects;
 
         public Folder(Folder parent, String name)
         {

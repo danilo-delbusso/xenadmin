@@ -41,9 +41,9 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard
 {
     public partial class CrossPoolMigrateFinishPage : XenTabPage
     {
-        private int selectionCount;
-        private WizardMode wizardMode;
-        private bool templatesOnly = false;
+        private readonly int selectionCount;
+        private readonly WizardMode wizardMode;
+        private readonly bool templatesOnly = false;
 
         public CrossPoolMigrateFinishPage(int selectionCount, WizardMode wizardMode, bool templatesOnly)
 		{

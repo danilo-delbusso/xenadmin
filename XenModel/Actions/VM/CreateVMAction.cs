@@ -91,12 +91,12 @@ namespace XenAdmin.Actions.VMActions
         private readonly string cloudConfigDriveTemplateText;
         private SR firstSR = null;
 
-        private Action<VMStartAbstractAction, Failure> _startDiagnosisForm;
-        private Action<VM, bool> _warningDialogHAInvalidConfig;
+        private readonly Action<VMStartAbstractAction, Failure> _startDiagnosisForm;
+        private readonly Action<VM, bool> _warningDialogHAInvalidConfig;
 
         private bool PointOfNoReturn;
 
-        private bool assignOrRemoveVgpu;
+        private readonly bool assignOrRemoveVgpu;
 
         /// <summary>
         /// These are the RBAC dependencies that you always need to create a VM. Check CreateVMAction constructor for runtime dependent dependencies.

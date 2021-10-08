@@ -40,7 +40,7 @@ namespace XenAdmin.Dialogs.VMDialogs
 {
     public partial class MoveVMDialog : XenDialogBase
     {
-        private VM vm;
+        private readonly VM vm;
 
         public MoveVMDialog(VM vm)
         {

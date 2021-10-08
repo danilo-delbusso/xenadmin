@@ -230,13 +230,13 @@ namespace XenAdmin.TabPages
 
         private class HostUsbRow : DataGridViewExRow
         {
-            private PUSB _pusb;
+            private readonly PUSB _pusb;
             private VM _vm;
 
-            private DataGridViewTextBoxCell locationCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell descriptionCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell passthroughCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell vmCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell locationCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell descriptionCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell passthroughCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell vmCell = new DataGridViewTextBoxCell();
 
             public HostUsbRow(PUSB pusb)
             {

@@ -131,7 +131,7 @@ namespace XenOvf
     /// </summary>
     internal class FolderPackage : Package
     {
-        private string _Folder;
+        private readonly string _Folder;
 
         public FolderPackage(string path)
             : base(path)

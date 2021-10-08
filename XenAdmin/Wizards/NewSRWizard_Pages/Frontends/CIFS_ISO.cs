@@ -50,7 +50,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
         private bool m_disasterRecoveryTask;
         private SR m_srToReattach;
-        private List<String> my_srs = new List<String>();
+        private readonly List<String> my_srs = new List<String>();
         #endregion
 
         public CIFS_ISO()

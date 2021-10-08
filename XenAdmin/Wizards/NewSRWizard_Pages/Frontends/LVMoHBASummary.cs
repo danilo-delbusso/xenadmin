@@ -225,7 +225,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
         private class LVMoHBASrDescriptorGridViewRow : LVMoHBASummaryGridViewRow
         {
-            private SrDescriptor srDescriptor;
+            private readonly SrDescriptor srDescriptor;
 
             public LVMoHBASrDescriptorGridViewRow(SrDescriptor srDescriptor)
             {

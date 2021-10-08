@@ -52,15 +52,15 @@ namespace XenAdmin.Plugins
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private List<Feature> _features = new List<Feature>();
+        private readonly List<Feature> _features = new List<Feature>();
         private string _error;
-        private Dictionary<string, Search> _searches = new Dictionary<string, Search>();
-        private Dictionary<string, RbacMethodList> _methodLists = new Dictionary<string, RbacMethodList>();
+        private readonly Dictionary<string, Search> _searches = new Dictionary<string, Search>();
+        private readonly Dictionary<string, RbacMethodList> _methodLists = new Dictionary<string, RbacMethodList>();
         private ResourceManager _resourceManager;
         private bool _enabled;
 
-        private string _organization;          // the name of the company folder inside the "Plugins" folder
-        private string _name;       // the name of the plugin folder and .xcplugin.xml file
+        private readonly string _organization;          // the name of the company folder inside the "Plugins" folder
+        private readonly string _name;       // the name of the plugin folder and .xcplugin.xml file
         private string _label;        // optional - $plugin.label in resources file, 'label' in the XML, replaces _name for GUI display purposes
         private Version _version;     // required - 'version' in the XML, currently only 1 and 2 are accepted
         private string _description;  // optional - $plugin.description in resources file, 'description' in the XML

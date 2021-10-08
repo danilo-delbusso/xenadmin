@@ -41,7 +41,7 @@ namespace XenAdmin.Wizards.PatchingWizard.PlanActions
         private readonly List<XenRef<VM>> _vms;
         public bool EnableOnly { get; set; }
         private readonly bool _restartAgentFallback;
-        private List<string> hostsNeedReboot;
+        private readonly List<string> hostsNeedReboot;
 
         public RestartHostPlanAction(Host host, List<XenRef<VM>> vms, bool enableOnly = false, bool restartAgentFallback = false, List<string> hostsThatWillRequireReboot = null)
             : base(host)

@@ -48,9 +48,9 @@ namespace XenAdmin.Wizards.ImportWizard
     class ImportSelectHostPage : SelectMultipleVMDestinationPage
     {
         private EnvelopeType _selectedOvfEnvelope;
-        private List<Xen_ConfigurationSettingData_Type> vgpuSettings = new List<Xen_ConfigurationSettingData_Type>();
-        private List<Xen_ConfigurationSettingData_Type> hardwarePlatformSettings = new List<Xen_ConfigurationSettingData_Type>();
-        private List<Xen_ConfigurationSettingData_Type> vendorDeviceSettings = new List<Xen_ConfigurationSettingData_Type>();
+        private readonly List<Xen_ConfigurationSettingData_Type> vgpuSettings = new List<Xen_ConfigurationSettingData_Type>();
+        private readonly List<Xen_ConfigurationSettingData_Type> hardwarePlatformSettings = new List<Xen_ConfigurationSettingData_Type>();
+        private readonly List<Xen_ConfigurationSettingData_Type> vendorDeviceSettings = new List<Xen_ConfigurationSettingData_Type>();
 
         public event Action<IXenConnection> ConnectionSelectionChanged;
 

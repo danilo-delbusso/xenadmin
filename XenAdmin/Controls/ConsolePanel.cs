@@ -46,7 +46,7 @@ namespace XenAdmin.Controls
         private const int MAX_ACTIVE_VM_CONSOLES = 10;
 
         public VNCView activeVNCView;
-        private Dictionary<VM, VNCView> vncViews = new Dictionary<VM, VNCView>();
+        private readonly Dictionary<VM, VNCView> vncViews = new Dictionary<VM, VNCView>();
 
         protected static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 

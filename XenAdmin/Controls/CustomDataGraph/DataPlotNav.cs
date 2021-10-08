@@ -576,11 +576,11 @@ namespace XenAdmin.Controls.CustomDataGraph
             set { _scrollViewWidth = value; }
         }
         private ScrollMode TimerScroll = ScrollMode.None;
-        private Timer Scroller = new Timer();
+        private readonly Timer Scroller = new Timer();
         private TimeSpan AnimateCurrentWidth;
         private TimeSpan AnimateCurrentOffset;
         private bool Animating = false;
-        private Timer ResizeAnimation = new Timer();
+        private readonly Timer ResizeAnimation = new Timer();
         public TimeSpan ScrollStrength = TimeSpan.Zero;
 
         protected override void OnMouseDown(MouseEventArgs e)

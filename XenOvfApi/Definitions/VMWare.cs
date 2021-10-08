@@ -64,7 +64,7 @@ namespace XenOvf.Definitions.VMX
 
     public class Vmw_Vmx_File
     {
-        Dictionary<string, string> vmxdata = new Dictionary<string, string>();
+        readonly Dictionary<string, string> vmxdata = new Dictionary<string, string>();
 
         public Vmw_Vmx_File(string filename)
         {

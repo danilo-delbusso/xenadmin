@@ -191,7 +191,7 @@ namespace XenAdmin.TabPages
 
         protected class PIFRow : DataGridViewRow
         {
-            private PIF pif;
+            private readonly PIF pif;
             public PIF PIF
             {
                 get { return pif; }

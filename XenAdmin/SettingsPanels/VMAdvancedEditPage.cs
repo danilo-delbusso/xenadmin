@@ -42,11 +42,11 @@ namespace XenAdmin.SettingsPanels
 {
     public partial class VMAdvancedEditPage : UserControl, IEditPage
     {
-        private static double SHADOW_MULTIPLIER_GENERAL_USE = 1.0;
-        private static double SHADOW_MULTIPLIER_CPS = 4.0;
+        private static readonly double SHADOW_MULTIPLIER_GENERAL_USE = 1.0;
+        private static readonly double SHADOW_MULTIPLIER_CPS = 4.0;
         private readonly ToolTip m_invalidParamToolTip;
         private VM vm = null;
-        private bool showCpsOptimisation;
+        private readonly bool showCpsOptimisation;
 
         public VMAdvancedEditPage()
         {

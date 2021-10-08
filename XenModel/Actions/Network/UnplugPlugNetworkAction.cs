@@ -42,9 +42,9 @@ namespace XenAdmin.Actions
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private List<PIF> PIFs;
-        private List<VIF> VIFs;
-        private XenAPI.Network network;
+        private readonly List<PIF> PIFs;
+        private readonly List<VIF> VIFs;
+        private readonly XenAPI.Network network;
 
         public UnplugPlugNetworkAction(XenAPI.Network network, bool suppressHistory)
             : base (network.Connection, Messages.ACTION_PIF_UNPLUG_PLUG_TITLE, Messages.ACTION_PIF_UNPLUG_PLUG_DESC, suppressHistory)

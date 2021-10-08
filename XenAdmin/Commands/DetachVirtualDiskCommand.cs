@@ -42,7 +42,7 @@ namespace XenAdmin.Commands
     class DetachVirtualDiskCommand : Command
     {
 
-        private VM targetVM = null;
+        private readonly VM targetVM = null;
 
         /// <summary>
         /// Detaches a list of VDIs from all their attached VMs (VBD unplug + VBD destroy)

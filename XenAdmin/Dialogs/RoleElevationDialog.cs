@@ -48,7 +48,7 @@ namespace XenAdmin.Dialogs
         public string elevatedPassword;
         public string elevatedUsername;
 
-        private List<Role> authorizedRoles;
+        private readonly List<Role> authorizedRoles;
 
         /// <summary>
         /// Displays a dialog informing the user they need a different role to complete the task, and offers the chance to switch user. Optionally logs 

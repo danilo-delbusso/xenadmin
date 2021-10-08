@@ -37,9 +37,9 @@ namespace XenCenterLib
     // A ComparableAddress represents either an IP address (IPv4 or IPv6) or a PartialIP or a hostname
     public class ComparableAddress : IComparable
     {
-        IPAddress addressIP = null;
-        PartialIP partialIP = null;
-        string addressString = null;
+        readonly IPAddress addressIP = null;
+        readonly PartialIP partialIP = null;
+        readonly string addressString = null;
 
         private ComparableAddress(byte[] address)
         {

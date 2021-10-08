@@ -157,10 +157,10 @@ namespace XenAdmin.Wizards.HAWizard_Pages
 
         private class StorageRow : DataGridViewExRow
         {
-            private DataGridViewImageCell cellImage;
-            private DataGridViewTextBoxCell cellSr;
-            private DataGridViewTextBoxCell cellDescription;
-            private DataGridViewTextBoxCell cellComment;
+            private readonly DataGridViewImageCell cellImage;
+            private readonly DataGridViewTextBoxCell cellSr;
+            private readonly DataGridViewTextBoxCell cellDescription;
+            private readonly DataGridViewTextBoxCell cellComment;
 
             public SRWrapper SrWrapper { get; private set; }
 

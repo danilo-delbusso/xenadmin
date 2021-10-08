@@ -36,7 +36,7 @@ namespace XenAdmin.Actions
     public class PvsProxyCreateAction : AsyncAction
     {
         private readonly PVS_site site;
-        private VIF vif;
+        private readonly VIF vif;
 
         public PvsProxyCreateAction(VM vm, PVS_site site, VIF vif)
             : base(vm.Connection, string.Format(Messages.ACTION_ENABLE_PVS_READ_CACHING_FOR, vm, site))

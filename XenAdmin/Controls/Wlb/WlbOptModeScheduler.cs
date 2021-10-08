@@ -47,14 +47,14 @@ namespace XenAdmin.Controls.Wlb
     {
         #region Color Constants
 
-        private Color COLOR_MAX_PERFORMANCE = Color.White; // Color.FromArgb(30, 49, 191);
-        private Color COLOR_MAX_DENSITY = Color.White; // Color.FromArgb(30, 191, 30);
-        private Color COLOR_MAX_PERFORMANCE_SUBITEM_TEXT = Color.Black; //Color.White;
-        private Color COLOR_MAX_DENSITY_SUBITEM_TEXT = Color.DarkGreen; //Color.White;
-        private Color COLOR_HIGHLIGHTED_MAX_PERFORMANCE_SUBITEM_TEXT = Color.White; //Color.White;
-        private Color COLOR_HIGHLIGHTED_MAX_DENSITY_SUBITEM_TEXT = Color.LightGreen; //Color.White;
-        private Color COLOR_NEW_DAY = Color.LightBlue; // Color.Yellow;
-        private Color COLOR_DISABLED_TASK = Color.Gray;
+        private readonly Color COLOR_MAX_PERFORMANCE = Color.White; // Color.FromArgb(30, 49, 191);
+        private readonly Color COLOR_MAX_DENSITY = Color.White; // Color.FromArgb(30, 191, 30);
+        private readonly Color COLOR_MAX_PERFORMANCE_SUBITEM_TEXT = Color.Black; //Color.White;
+        private readonly Color COLOR_MAX_DENSITY_SUBITEM_TEXT = Color.DarkGreen; //Color.White;
+        private readonly Color COLOR_HIGHLIGHTED_MAX_PERFORMANCE_SUBITEM_TEXT = Color.White; //Color.White;
+        private readonly Color COLOR_HIGHLIGHTED_MAX_DENSITY_SUBITEM_TEXT = Color.LightGreen; //Color.White;
+        private readonly Color COLOR_NEW_DAY = Color.LightBlue; // Color.Yellow;
+        private readonly Color COLOR_DISABLED_TASK = Color.Gray;
         private Color COLOR_DUPLICATE_TASK = Color.Red;
 
         #endregion
@@ -70,7 +70,7 @@ namespace XenAdmin.Controls.Wlb
         private bool _initializing = false;
 
         // Listview minimum column widths
-        private int[] minimumColumnWidths = { 0, 60, 60, 60, 60 };
+        private readonly int[] minimumColumnWidths = { 0, 60, 60, 60, 60 };
 
 
         #endregion Private Fields

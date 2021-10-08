@@ -56,7 +56,7 @@ namespace XenAdmin.TabPages
         internal static readonly Font ItemValueFont = Program.DefaultFont;
         internal static readonly Font ItemValueFontBold = Program.DefaultFontBold;
 
-        private Font titleLabelFont = new Font(DefaultFont.FontFamily, DefaultFont.Size + 1f, FontStyle.Bold);
+        private readonly Font titleLabelFont = new Font(DefaultFont.FontFamily, DefaultFont.Size + 1f, FontStyle.Bold);
 
         public BaseTabPage()
         {

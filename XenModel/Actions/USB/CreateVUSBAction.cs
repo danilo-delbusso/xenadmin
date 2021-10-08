@@ -37,7 +37,7 @@ namespace XenAdmin.Actions
 {
     public class CreateVUSBAction : PureAsyncAction
     {
-        private PUSB _pusb;
+        private readonly PUSB _pusb;
 
         public CreateVUSBAction(PUSB pusb, VM vm) : 
             base(pusb.Connection, String.Format(Messages.ACTION_VUSB_CREATING,  pusb.Name(), vm.Name()))

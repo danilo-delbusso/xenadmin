@@ -784,7 +784,7 @@ namespace XenAdmin.Plugins
             /// <summary>
             /// May be null, if this is the XenCenter node.
             /// </summary>
-            public IXenObject Obj;
+            public readonly IXenObject Obj;
 
             /// <summary>
             /// May be null.

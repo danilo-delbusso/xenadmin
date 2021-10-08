@@ -177,8 +177,8 @@ namespace XenAdmin.ServerDBs
             boxingOpCodes[typeof(bool)] = OpCodes.Ldind_I1;
         }
 
-        private TypeBuilder typeBuilder;
-        private FieldBuilder handlerFieldBuilder;
+        private readonly TypeBuilder typeBuilder;
+        private readonly FieldBuilder handlerFieldBuilder;
 
         public MethodImplementor(TypeBuilder typeBuilder, FieldBuilder handlerFieldBuilder)
         {

@@ -41,8 +41,8 @@ namespace XenAdmin.Actions.VMActions
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private List<VBD> _deleteDisks;
-        private List<VM> _deleteSnapshots;
+        private readonly List<VBD> _deleteDisks;
+        private readonly List<VM> _deleteSnapshots;
 
         public VMDestroyAction(VM vm, List<VBD> deleteDisks, List<VM> deleteSnapshots)
             : base(vm.Connection, String.Format(Messages.ACTION_VM_DESTROYING_TITLE, vm.Name(), vm.Home() == null ? Helpers.GetName(vm.Connection) : Helpers.GetName(vm.Home())))

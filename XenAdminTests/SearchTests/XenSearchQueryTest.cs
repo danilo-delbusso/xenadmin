@@ -66,8 +66,8 @@ namespace XenAdminTests.SearchTests
 
     public class XmlResultsAdapter : IAcceptGroups
     {
-        private XmlDocument doc;
-        private XmlElement parent;
+        private readonly XmlDocument doc;
+        private readonly XmlElement parent;
 
         public XmlResultsAdapter(XmlDocument doc, XmlElement parent)
         {

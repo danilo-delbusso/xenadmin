@@ -47,7 +47,7 @@ namespace DotNetVnc
     /// </summary>
     public class KeyMap
     {
-        private static Dictionary<Keys, int> map = new Dictionary<Keys, int>();
+        private static readonly Dictionary<Keys, int> map = new Dictionary<Keys, int>();
 
         static KeyMap()
         {
@@ -95,8 +95,8 @@ namespace DotNetVnc
             return map.ContainsKey(key);
         }
 
-        private static IntPtr keyboard_state = Marshal.AllocHGlobal(256);
-        private static StringBuilder char_buffer = new StringBuilder(Win32.TO_UNICODE_BUFFER_SIZE);
+        private static readonly IntPtr keyboard_state = Marshal.AllocHGlobal(256);
+        private static readonly StringBuilder char_buffer = new StringBuilder(Win32.TO_UNICODE_BUFFER_SIZE);
 
         private static int UnicodeOfKey(Keys key)
         {
@@ -143,7 +143,7 @@ namespace DotNetVnc
         private delegate int LowLevelKeyboardProc(
             int nCode, int wParam, KBDLLHOOKSTRUCT* lParam);
 
-        private static LowLevelKeyboardProc _proc = HookCallback;
+        private static readonly LowLevelKeyboardProc _proc = HookCallback;
         private static IntPtr _hookID = IntPtr.Zero;
 
         public delegate void KeyEvent(bool down, int scancode, int keysym);
@@ -153,11 +153,11 @@ namespace DotNetVnc
         [StructLayout(LayoutKind.Sequential)]
         private struct KBDLLHOOKSTRUCT
         {
-            public int vkCode;
-            public int scanCode;
-            public int flags;
-            public int time;
-            public int dwExtraInfo;
+            public readonly int vkCode;
+            public readonly int scanCode;
+            public readonly int flags;
+            public readonly int time;
+            public readonly int dwExtraInfo;
         }
 #pragma warning restore 0649
 

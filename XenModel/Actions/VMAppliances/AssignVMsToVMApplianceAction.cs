@@ -39,8 +39,8 @@ namespace XenAdmin.Actions
 {
     public class AssignVMsToVMApplianceAction : PureAsyncAction
     {
-        private VM_appliance _vmAppliance;
-        private List<XenRef<VM>> _selectedVMs;
+        private readonly VM_appliance _vmAppliance;
+        private readonly List<XenRef<VM>> _selectedVMs;
 
         public AssignVMsToVMApplianceAction(VM_appliance vmAppliance, List<XenRef<VM>> selectedVMs, bool suppressHistory)
             : base(vmAppliance.Connection, selectedVMs.Count == 1 ?
@@ -74,7 +74,7 @@ namespace XenAdmin.Actions
 
     public class RemoveVMsFromVMApplianceAction : PureAsyncAction
     {
-        private List<XenRef<VM>> _selectedVMs;
+        private readonly List<XenRef<VM>> _selectedVMs;
 
         public RemoveVMsFromVMApplianceAction(VM_appliance vmAppliance, List<XenRef<VM>> selectedVMs)
             : base(vmAppliance.Connection, selectedVMs.Count == 1 ?

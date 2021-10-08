@@ -38,7 +38,7 @@ namespace XenAdmin.Diagnostics.Problems.PoolProblem
 {
     public abstract class PoolProblem : Problem
     {
-        private Pool _pool;
+        private readonly Pool _pool;
 
         public PoolProblem(Check check, Pool pool)
             : base(check)

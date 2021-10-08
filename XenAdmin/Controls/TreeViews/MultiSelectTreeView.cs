@@ -72,7 +72,7 @@ namespace XenAdmin.Controls
         private MultiSelectTreeNode _mostRecentSelectedNode;
         private MultiSelectTreeNode _nodeToStartEditOn;
         private MultiSelectTreeNode _selectionMirrorPoint;
-        private MultiSelectTreeNodeCollection _nodes;
+        private readonly MultiSelectTreeNodeCollection _nodes;
 
         public Point LastMouseDownEventPosition { get; private set; }
 

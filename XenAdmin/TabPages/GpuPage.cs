@@ -58,7 +58,7 @@ namespace XenAdmin.TabPages
         public override string HelpID => "TabPageGPU";
 
         private IXenObject xenObject;
-        List<PGPU> pGPUs = new List<PGPU>();
+        readonly List<PGPU> pGPUs = new List<PGPU>();
 
         /// <summary>
         /// The object that the panel is displaying GPU info for. 

@@ -37,7 +37,7 @@ namespace XenAdmin.Actions
 {
     public class RunPolicyNowAction : PureAsyncAction
     {
-        private VMSS _policy;
+        private readonly VMSS _policy;
         public RunPolicyNowAction(VMSS policy)
             : base(policy.Connection, string.Format(Messages.RUN_POLICY, policy.Name()))
         {

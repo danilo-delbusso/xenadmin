@@ -36,7 +36,7 @@ namespace XenAdmin.Actions
 {
     public class DeleteVUSBAction : PureAsyncAction
     {
-        private VUSB _vusb;
+        private readonly VUSB _vusb;
 
         public DeleteVUSBAction(VUSB vusb, VM vm) : 
             base(vusb.Connection, String.Format(Messages.ACTION_VUSB_DELETING, vusb.Name(), vm.Name()))

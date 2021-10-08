@@ -36,7 +36,7 @@ namespace XenAdmin.Actions
 {
     public class CreateVIFAction : AsyncAction
     {
-        private VIF _vifDescriptor;
+        private readonly VIF _vifDescriptor;
 
         public CreateVIFAction(VM vm, VIF vifDescriptor, bool suppressHistory = false)
             : base(vm.Connection, string.Format(Messages.ACTION_VIF_CREATING_TITLE, vm.Name()), suppressHistory)

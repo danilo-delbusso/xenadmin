@@ -39,9 +39,12 @@ namespace XenAdmin.Actions
 {
     public class ChangeMemorySettingsAction : AsyncAction
     {
-        long static_min, static_max, dynamic_min, dynamic_max;
-        private Action<VMStartAbstractAction, Failure> _startDiagnosticForm;
-        private Action<VM, bool> _warningDialogHAInvalidConfig;
+        readonly long static_min;
+        readonly long static_max;
+        readonly long dynamic_min;
+        readonly long dynamic_max;
+        private readonly Action<VMStartAbstractAction, Failure> _startDiagnosticForm;
+        private readonly Action<VM, bool> _warningDialogHAInvalidConfig;
 
         public ChangeMemorySettingsAction(VM vm, string title,
             long static_min, long dynamic_min, long dynamic_max, long static_max, Action<VM, bool> warningDialogHAInvalidConfig, Action<VMStartAbstractAction, Failure> startDiagnosticForm, bool suppressHistory)

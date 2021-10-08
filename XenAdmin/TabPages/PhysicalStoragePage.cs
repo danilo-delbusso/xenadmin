@@ -417,17 +417,17 @@ namespace XenAdmin.TabPages
 
         protected class SRRow: DataGridViewRow
         {
-            private SR sr;
+            private readonly SR sr;
             public SR SR { get { return sr; } }
 
-            private DataGridViewExImageCell imageCell = new DataGridViewExImageCell();
-            private DataGridViewTextBoxCell nameCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell descriptionCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell typeCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell sharedCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell usageCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell sizeCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell virtAllocCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewExImageCell imageCell = new DataGridViewExImageCell();
+            private readonly DataGridViewTextBoxCell nameCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell descriptionCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell typeCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell sharedCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell usageCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell sizeCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell virtAllocCell = new DataGridViewTextBoxCell();
             
 
             public SRRow(SR sr)

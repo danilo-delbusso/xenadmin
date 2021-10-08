@@ -41,7 +41,7 @@ namespace XenAdmin.Actions.DR
         private XenRef<Session> _metadataSessionRef;
         public Session MetadataSession;
 
-        private VDI _vdi;
+        private readonly VDI _vdi;
 
         public VDI Vdi
         {

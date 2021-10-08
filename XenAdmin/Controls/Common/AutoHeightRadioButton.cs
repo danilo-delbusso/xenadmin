@@ -46,7 +46,7 @@ namespace XenAdmin.Controls.Common
     public class AutoHeightRadioButton : RadioButton
     {
         Size cachedSizeOfOneLineOfText = Size.Empty;
-        Dictionary<Size, Size> preferredSizeHash = new Dictionary<Size, Size>();
+        readonly Dictionary<Size, Size> preferredSizeHash = new Dictionary<Size, Size>();
 
         private void CacheTextSize()
         {

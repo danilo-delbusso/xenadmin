@@ -39,7 +39,7 @@ namespace XenAdmin.ServerDBs.FakeAPI
     internal abstract class fakeXenObject
     {
         protected DbProxy proxy;
-        private string clazz;
+        private readonly string clazz;
 
         protected fakeXenObject(string clazz, DbProxy proxy)
         {

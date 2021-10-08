@@ -37,8 +37,8 @@ namespace XenAPI
     public class StorageLinkPool
     {
         private string _friendlyName;
-        private uint _capacity;
-        private uint _usedSpace;
+        private readonly uint _capacity;
+        private readonly uint _usedSpace;
 
         public string StorageLinkSystemId { get; private set; }
         public string ParentStorageLinkPoolId { get; private set; }

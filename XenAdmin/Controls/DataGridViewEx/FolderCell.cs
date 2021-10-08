@@ -38,7 +38,7 @@ namespace XenAdmin.Controls.DataGridViewEx
 {
     class FolderCell : DataGridViewCell
     {
-        FolderListItem folderListItem;
+        readonly FolderListItem folderListItem;
 
         public FolderCell(FolderListItem folderListItem)
         {

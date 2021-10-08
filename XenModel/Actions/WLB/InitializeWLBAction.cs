@@ -43,7 +43,7 @@ namespace XenAdmin.Actions.Wlb
         private readonly string _wlbPassword;
         private readonly string _xenServerUserName;
         private readonly string _xenServerPassword;
-        private static string OPTIMIZINGPOOL = "wlb_optimizing_pool";
+        private static readonly string OPTIMIZINGPOOL = "wlb_optimizing_pool";
 
         public InitializeWLBAction(Pool pool, string wlbUrl, string wlbUserName, string wlbPassword, string xenServerUserName, string xenServerPassword)
             : base(pool.Connection, string.Format(Messages.INITIALIZING_WLB_ON, Helpers.GetName(pool).Ellipsise(50)), Messages.INITIALIZING_WLB, false)

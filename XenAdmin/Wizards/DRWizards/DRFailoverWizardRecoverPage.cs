@@ -93,7 +93,7 @@ namespace XenAdmin.Wizards.DRWizards
             }
         }
 
-        private static Bitmap animatedImage = Resources.ajax_loader;
+        private static readonly Bitmap animatedImage = Resources.ajax_loader;
 
         private void onFrameChanged(object sender, EventArgs e)
         {
@@ -155,7 +155,7 @@ namespace XenAdmin.Wizards.DRWizards
 
         public DRWizardType WizardType { private get; set; }
 
-        private Dictionary<VDI, List<AsyncAction>> actions = new Dictionary<VDI, List<AsyncAction>>();
+        private readonly Dictionary<VDI, List<AsyncAction>> actions = new Dictionary<VDI, List<AsyncAction>>();
         private int objectsToBeRecovered;
 
         private StartActionAfterRecovery startActionAfterRecovery;
@@ -474,9 +474,9 @@ namespace XenAdmin.Wizards.DRWizards
         public class DataGridViewRowRecover : DataGridViewRow
         {
             public readonly IXenObject XenObject; // it can be VM or VM_appliance
-            private DataGridViewImageCell imageCell = new DataGridViewImageCell();
-            private DataGridViewTextBoxCell taskCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell statusCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewImageCell imageCell = new DataGridViewImageCell();
+            private readonly DataGridViewTextBoxCell taskCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell statusCell = new DataGridViewTextBoxCell();
 
             private DataGridViewRowRecover()
             {

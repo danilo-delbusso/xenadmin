@@ -40,8 +40,8 @@ namespace XenAdmin.Dialogs
 {
     public partial class AddVGPUDialog : XenDialogBase
     {
-        private VM _vm;
-        private List<VGPU> existingVGpus;
+        private readonly VM _vm;
+        private readonly List<VGPU> existingVGpus;
         public GpuTuple SelectedTuple { private set; get; }
 
         public AddVGPUDialog(VM vm, List<VGPU> VGpus)

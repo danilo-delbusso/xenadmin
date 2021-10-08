@@ -280,7 +280,7 @@ namespace XenAdmin.Network
             }
         }
 
-        private static MethodInfo ClearMethod = typeof(Cache).GetMethod("Clear_", BindingFlags.NonPublic | BindingFlags.Instance);
+        private static readonly MethodInfo ClearMethod = typeof(Cache).GetMethod("Clear_", BindingFlags.NonPublic | BindingFlags.Instance);
         public void Clear()
         {
             foreach (IDictionary d in dictionaries.Values)
@@ -297,7 +297,7 @@ namespace XenAdmin.Network
             }
         }
 
-        private static MethodInfo UpdateFromMethod = typeof(Cache).GetMethod("UpdateFrom_", BindingFlags.NonPublic | BindingFlags.Instance);
+        private static readonly MethodInfo UpdateFromMethod = typeof(Cache).GetMethod("UpdateFrom_", BindingFlags.NonPublic | BindingFlags.Instance);
 
         /// <returns>true if some changes have been made.  This is used to indicate that XenObjectsUpdated should be fired by IXenConnection.</returns>
         public bool UpdateFrom(IXenConnection connection, IList<ObjectChange> changes)

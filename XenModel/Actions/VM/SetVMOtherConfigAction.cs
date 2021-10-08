@@ -36,8 +36,8 @@ namespace XenAdmin.Actions.VMActions
 {
     public class SetVMOtherConfigAction : PureAsyncAction
     {
-        private string Key;
-        private string Val;
+        private readonly string Key;
+        private readonly string Val;
 
         public SetVMOtherConfigAction(IXenConnection connection, VM vm, string key, string val)
             : base(connection, Messages.SAVING_VM_PROPERTIES_ACTION_TITLE, true)

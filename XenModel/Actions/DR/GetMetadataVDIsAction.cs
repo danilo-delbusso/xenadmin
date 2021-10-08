@@ -42,7 +42,7 @@ namespace XenAdmin.Actions.DR
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private readonly List<VDI> _vdis = new List<VDI>();
-        private List<string> _restrictSrList;
+        private readonly List<string> _restrictSrList;
 
         public GetMetadataVDIsAction(IXenConnection connection, List<string> restrictSrList)
             : base(connection, Messages.ACTION_GET_METADATA_VDIS_TITLE, null, true)

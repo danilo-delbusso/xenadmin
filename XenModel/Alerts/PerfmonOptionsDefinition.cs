@@ -45,7 +45,7 @@ namespace XenAdmin.Alerts
 
         private class MailLanguageList
         {
-            private Dictionary<String, String> _list;
+            private readonly Dictionary<String, String> _list;
 
             public MailLanguageList(Dictionary<String, String> initList)
             {
@@ -106,7 +106,7 @@ namespace XenAdmin.Alerts
         private readonly String mailDestination;
         private readonly String mailLanguageCode;
 
-        private static MailLanguageList ml_list = new MailLanguageList(new Dictionary<String, String>() {
+        private static readonly MailLanguageList ml_list = new MailLanguageList(new Dictionary<String, String>() {
             {Messages.MAIL_LANGUAGE_ENGLISH_CODE, Messages.MAIL_LANGUAGE_ENGLISH_NAME},
             {Messages.MAIL_LANGUAGE_CHINESE_CODE, Messages.MAIL_LANGUAGE_CHINESE_NAME},
             {Messages.MAIL_LANGUAGE_JAPANESE_CODE, Messages.MAIL_LANGUAGE_JAPANESE_NAME}

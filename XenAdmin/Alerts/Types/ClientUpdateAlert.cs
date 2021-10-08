@@ -68,7 +68,7 @@ namespace XenAdmin.Alerts
 
         public override string HelpID => "XenCenterUpdateAlert";
 
-        static int DISMISSED_XC_VERSIONS_LIMIT = 5;
+        static readonly int DISMISSED_XC_VERSIONS_LIMIT = 5;
 
         public override void Dismiss()
         {

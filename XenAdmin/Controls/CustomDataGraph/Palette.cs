@@ -77,8 +77,8 @@ namespace XenAdmin.Controls.CustomDataGraph
             };
 
 
-        private static Dictionary<string, Color> DefaultDatasetColours = new Dictionary<string, Color>();
-        private static Dictionary<string, Color> CustomDatasetColours = new Dictionary<string, Color>();
+        private static readonly Dictionary<string, Color> DefaultDatasetColours = new Dictionary<string, Color>();
+        private static readonly Dictionary<string, Color> CustomDatasetColours = new Dictionary<string, Color>();
 
         public static Color GetColour(string uuid)
         {

@@ -45,7 +45,7 @@ namespace XenAdmin.Actions.DR
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private PoolMetadata _poolMetadata;
+        private readonly PoolMetadata _poolMetadata;
         public PoolMetadata PoolMetadata
         {
             get

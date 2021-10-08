@@ -40,7 +40,7 @@ namespace XenAdmin.Actions
 {
     public class DestroyPolicyAction: PureAsyncAction
     {
-        private List<VMSS> _selectedToDelete;
+        private readonly List<VMSS> _selectedToDelete;
         public DestroyPolicyAction(IXenConnection connection,List<VMSS> deletePolicies) : base(connection, Messages.DELETE_POLICIES)
         {
             _selectedToDelete = deletePolicies;

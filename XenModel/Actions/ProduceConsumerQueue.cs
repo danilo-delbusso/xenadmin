@@ -36,8 +36,8 @@ using System.Collections.Generic;
 public class ProduceConsumerQueue
 {
     readonly object _locker = new object();
-    Thread[] _workers;
-    Queue<Action> _itemQ = new Queue<Action>();
+    readonly Thread[] _workers;
+    readonly Queue<Action> _itemQ = new Queue<Action>();
 
     public ProduceConsumerQueue(int workerCount)
     {

@@ -47,14 +47,14 @@ namespace XenAdmin.Controls
         /// <summary>
         /// Maintain a list of all the objects we currently have events on for clearing out on rebuild
         /// </summary>
-        private List<IXenConnection> connectionsWithEvents = new List<IXenConnection>();
-        private List<Pool> poolsWithEvents = new List<Pool>();
-        private List<Host> hostsWithEvents = new List<Host>();
+        private readonly List<IXenConnection> connectionsWithEvents = new List<IXenConnection>();
+        private readonly List<Pool> poolsWithEvents = new List<Pool>();
+        private readonly List<Host> hostsWithEvents = new List<Host>();
         /// <summary>
         /// Store only host check states because the pools can be in an
         /// indeterminate state.
         /// </summary>
-        private Dictionary<string, bool> HostCheckStates = new Dictionary<string, bool>();
+        private readonly Dictionary<string, bool> HostCheckStates = new Dictionary<string, bool>();
         private readonly CollectionChangeEventHandler m_hostCollectionChangedWithInvoke;
         private bool inFilterListUpdate;
         private bool retryFilterListUpdate;

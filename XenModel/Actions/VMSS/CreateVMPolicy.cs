@@ -38,9 +38,9 @@ namespace XenAdmin.Actions
 {
     public class CreateVMPolicy : AsyncAction
     {
-        private VMSS _record;
-        private List<VM> _vms;
-        private bool _runNow = false;
+        private readonly VMSS _record;
+        private readonly List<VM> _vms;
+        private readonly bool _runNow = false;
         public CreateVMPolicy(VMSS record, List<VM> vms, bool runNow)
             : base(record.Connection, Messages.CREATE_POLICY)
         {

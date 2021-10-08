@@ -42,7 +42,7 @@ namespace XenServerHealthCheck
     public partial class XenServerHealthCheckService : ServiceBase
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private CancellationTokenSource cts = new CancellationTokenSource();
+        private readonly CancellationTokenSource cts = new CancellationTokenSource();
 
         public XenServerHealthCheckService()
         {

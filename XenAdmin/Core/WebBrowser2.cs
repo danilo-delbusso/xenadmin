@@ -197,7 +197,7 @@ namespace XenAdmin.Core
         /// </summary>
         private class WebBrowser2EventHelper : StandardOleMarshalObject, DWebBrowserEvents2
         {
-            private WebBrowser2 parent;
+            private readonly WebBrowser2 parent;
 
             public WebBrowser2EventHelper(WebBrowser2 parent)
             {

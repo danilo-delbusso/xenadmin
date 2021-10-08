@@ -46,10 +46,10 @@ namespace XenAdmin.TabPages
     public partial class PvsPage : BaseTabPage
     {
         private IXenConnection connection;
-        private SelectionManager enableSelectionManager;
-        private SelectionManager disableSelectionManager;
+        private readonly SelectionManager enableSelectionManager;
+        private readonly SelectionManager disableSelectionManager;
 
-        private DataGridViewVms_DefaultSort vmDefaultSort;
+        private readonly DataGridViewVms_DefaultSort vmDefaultSort;
 
         private readonly CollectionChangeEventHandler PvsProxy_CollectionChangedWithInvoke;
         

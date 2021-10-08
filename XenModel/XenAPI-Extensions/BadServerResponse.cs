@@ -37,7 +37,7 @@ namespace XenAPI
 {
     public class BadServerResponse : Exception
     {
-        private string message;
+        private readonly string message;
 
         public BadServerResponse(string host)
         {

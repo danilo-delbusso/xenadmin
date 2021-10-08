@@ -45,7 +45,7 @@ namespace XenAdmin.Dialogs
         private DiskListVdiItem oldSelected = null;
         private bool oldROState = false;
 
-        private Pool poolofone;
+        private readonly Pool poolofone;
         private readonly CollectionChangeEventHandler SR_CollectionChangedWithInvoke;
         public AttachDiskDialog(VM vm) : base(vm.Connection)
         {

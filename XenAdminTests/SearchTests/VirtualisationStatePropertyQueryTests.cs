@@ -43,7 +43,7 @@ namespace XenAdminTests.SearchTests
     [TestFixture, Category(TestCategories.Unit)]
     public class VirtualisationStatePropertyQueryTests
     {
-        private List<Mock<VM>> _allVms = new List<Mock<VM>>();
+        private readonly List<Mock<VM>> _allVms = new List<Mock<VM>>();
 
         [OneTimeSetUp]
         public void TestFixtureSetUp()

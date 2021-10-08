@@ -329,8 +329,8 @@ namespace XenAdmin.Wizards.GenericPages
 
         private abstract class PermissionCheckGridRow : DataGridViewRow
         {
-            protected DataGridViewImageCell iconCell = new DataGridViewImageCell();
-            protected DataGridViewTextBoxCell descriptionCell = new DataGridViewTextBoxCell();
+            protected readonly DataGridViewImageCell iconCell = new DataGridViewImageCell();
+            protected readonly DataGridViewTextBoxCell descriptionCell = new DataGridViewTextBoxCell();
             protected PermissionCheckGridRow()
             {
                 Cells.Add(iconCell);
@@ -340,7 +340,7 @@ namespace XenAdmin.Wizards.GenericPages
 
         private class PermissionCheckHeaderRow : PermissionCheckGridRow
         {
-            private string description;
+            private readonly string description;
 
             public PermissionCheckHeaderRow(string desc)
             {

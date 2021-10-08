@@ -42,7 +42,7 @@ namespace XenAdmin.Actions
 
         public bool AllowRunningVMDelete = false;
 
-        private VDI Disk;
+        private readonly VDI Disk;
 
         public DestroyDiskAction(VDI disk)
             : base(disk.Connection, string.Format(Messages.ACTION_DISK_DELETING_TITLE, disk.Name(), disk.Connection.Resolve<SR>(disk.SR).NameWithoutHost()), false)

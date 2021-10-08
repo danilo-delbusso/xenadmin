@@ -36,9 +36,9 @@ namespace XenCenterLib
 {
     public class LimitedStack<T> : IEnumerable<T> where T : class
     {
-        private T[] contents;
+        private readonly T[] contents;
         private int index;
-        private int capacity;
+        private readonly int capacity;
 
         public LimitedStack(int capacity)
         {

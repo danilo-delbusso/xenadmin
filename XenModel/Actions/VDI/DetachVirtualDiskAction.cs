@@ -40,9 +40,9 @@ namespace XenAdmin.Actions
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private VDI vdi;
-        private VBD vbd;
-        private bool takeVDILock = true;
+        private readonly VDI vdi;
+        private readonly VBD vbd;
+        private readonly bool takeVDILock = true;
 
         /// <summary>
         /// Detaches a virtual disk

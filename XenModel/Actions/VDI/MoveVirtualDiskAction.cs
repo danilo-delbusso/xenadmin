@@ -42,7 +42,7 @@ namespace XenAdmin.Actions
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private VDI vdi;
+        private readonly VDI vdi;
 
         public MoveVirtualDiskAction(IXenConnection connection, XenAPI.VDI vdi, SR sr)
             : base(connection, string.Format(Messages.ACTION_MOVING_VDI_TO_SR, Helpers.GetName(vdi), Helpers.GetName(sr)))

@@ -55,15 +55,15 @@ namespace XenAdmin.Controls
             set { _borderColor = value; }
         }
 
-        private int shadowSize = 5;
-        private int shadowMargin = 2;
+        private readonly int shadowSize = 5;
+        private readonly int shadowMargin = 2;
 
         // static for good perfomance 
-        private static Image shadowDownRight = Images.StaticImages.tshadowdownright;
-        private static Image shadowDownLeft = Images.StaticImages.tshadowdownleft;
-        private static Image shadowDown = Images.StaticImages.tshadowdown;
-        private static Image shadowRight = Images.StaticImages.tshadowright;
-        private static Image shadowTopRight = Images.StaticImages.tshadowtopright;
+        private static readonly Image shadowDownRight = Images.StaticImages.tshadowdownright;
+        private static readonly Image shadowDownLeft = Images.StaticImages.tshadowdownleft;
+        private static readonly Image shadowDown = Images.StaticImages.tshadowdown;
+        private static readonly Image shadowRight = Images.StaticImages.tshadowright;
+        private static readonly Image shadowTopRight = Images.StaticImages.tshadowtopright;
 
         public ShadowPanel()
         {

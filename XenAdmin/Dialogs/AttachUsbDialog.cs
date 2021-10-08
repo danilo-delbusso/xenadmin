@@ -39,7 +39,7 @@ namespace XenAdmin.Dialogs
 {
     public partial class AttachUsbDialog : XenDialogBase
     {
-        private VM _vm;
+        private readonly VM _vm;
         private List<Host> possibleHosts;
         
         public AttachUsbDialog(VM vm): base(vm.Connection)

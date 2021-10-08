@@ -52,15 +52,15 @@ namespace XenAdmin.Actions.Wlb
 
     public class SendWlbConfigurationAction : AsyncAction
     {
-        private static string SET_HOST_CONFIGURATION = "set_host_configuration";
-        private static string SET_SCHEDULED_TASK = "set_scheduled_task";
-        private static string DELETE_SCHEDULED_TASK = "delete_scheduled_task";
-        private static string SET_REPORT_SUBSCRIPTIONS = "set_report_subscription";
-        private static string DELETE_REPORT_SUBSCRIPTIONS = "delete_report_subscription";
+        private static readonly string SET_HOST_CONFIGURATION = "set_host_configuration";
+        private static readonly string SET_SCHEDULED_TASK = "set_scheduled_task";
+        private static readonly string DELETE_SCHEDULED_TASK = "delete_scheduled_task";
+        private static readonly string SET_REPORT_SUBSCRIPTIONS = "set_report_subscription";
+        private static readonly string DELETE_REPORT_SUBSCRIPTIONS = "delete_report_subscription";
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private readonly SendWlbConfigurationKind _kind;
-        private Dictionary<string, string> WlbConfiguration = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> WlbConfiguration = new Dictionary<string, string>();
 
         public SendWlbConfigurationAction(Pool pool, Dictionary<string, string> configuration, SendWlbConfigurationKind kind)
             : base(pool.Connection, string.Format(Messages.SAVING_WLB_CONFIGURATION_FOR, Helpers.GetName(pool).Ellipsise(50)), Messages.SAVING_WLB_CONFIGURATION, false)

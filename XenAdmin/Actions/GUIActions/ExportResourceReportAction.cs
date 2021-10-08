@@ -59,9 +59,9 @@ namespace XenAdmin.Actions
         private List<VDIInfo> m_VDIs;
         private static MetricUpdater MetricUpdater;
         
-        private long itemCount = 0;
+        private readonly long itemCount = 0;
         private long itemIndex = 0;
-        private long baseIndex = 60;
+        private readonly long baseIndex = 60;
         
         enum FILE_TYPE_INDEX { XLS = 1, CSV = 2 };
         
@@ -207,16 +207,16 @@ namespace XenAdmin.Actions
             {
                 get { return _srSizeString; }
             }
-            private string _name;
-            private string _role;
-            private string _address;
-            private string _uuid;
-            private string _cpuUsage;
-            private string _networkUsage;
-            private string _memUsage;
-            private string _uptime;
-            private string _description;
-            private string _srSizeString;
+            private readonly string _name;
+            private readonly string _role;
+            private readonly string _address;
+            private readonly string _uuid;
+            private readonly string _cpuUsage;
+            private readonly string _networkUsage;
+            private readonly string _memUsage;
+            private readonly string _uptime;
+            private readonly string _description;
+            private readonly string _srSizeString;
         }
 
         private class SRInfo
@@ -255,12 +255,12 @@ namespace XenAdmin.Actions
             {
                 get { return _description; }
             }
-            private string _name;
-            private string _uuid;
-            private string _type;
-            private string _size;
-            private string _remark;
-            private string _description;
+            private readonly string _name;
+            private readonly string _uuid;
+            private readonly string _type;
+            private readonly string _size;
+            private readonly string _remark;
+            private readonly string _description;
         }
 
         private class NetworkInfo
@@ -304,13 +304,13 @@ namespace XenAdmin.Actions
             {
                 get { return _location; }
             }
-            private string _name;
-            private string _vlanID;
-            private string _linkStatus;
-            private string _mac;
-            private string _mtu;
-            private string _networkType;
-            private string _location;
+            private readonly string _name;
+            private readonly string _vlanID;
+            private readonly string _linkStatus;
+            private readonly string _mac;
+            private readonly string _mtu;
+            private readonly string _networkType;
+            private readonly string _location;
         }
 
         private class VMInfo
@@ -390,20 +390,20 @@ namespace XenAdmin.Actions
             {
                 get { return _description; }
             }
-            private string _name;
-            private string _uuid;
-            private string _vCpuNum;
-            private string _memSize;
-            private string _srInfo;
-            private string _nicNum;
-            private string _ip;
-            private string _mac;
-            private string _osInfo;
-            private string _powerStatus;
-            private string _uptime;
-            private string _hostInfo;
-            private string _templateName;
-            private string _description;
+            private readonly string _name;
+            private readonly string _uuid;
+            private readonly string _vCpuNum;
+            private readonly string _memSize;
+            private readonly string _srInfo;
+            private readonly string _nicNum;
+            private readonly string _ip;
+            private readonly string _mac;
+            private readonly string _osInfo;
+            private readonly string _powerStatus;
+            private readonly string _uptime;
+            private readonly string _hostInfo;
+            private readonly string _templateName;
+            private readonly string _description;
         }
 
         private class PGPUInfo
@@ -452,14 +452,14 @@ namespace XenAdmin.Actions
             {
                 get { return _powerStatus; }
             }
-            private string _name;
-            private string _uuid;
-            private string _host;
-            private string _busAddress;
-            private string _utilization;
-            private string _MemUtilization;
-            private string _temperature;
-            private string _powerStatus;
+            private readonly string _name;
+            private readonly string _uuid;
+            private readonly string _host;
+            private readonly string _busAddress;
+            private readonly string _utilization;
+            private readonly string _MemUtilization;
+            private readonly string _temperature;
+            private readonly string _powerStatus;
         }
 
         private class VDIInfo
@@ -498,12 +498,12 @@ namespace XenAdmin.Actions
             {
                 get { return _description; }
             }
-            private string _name;
-            private string _uuid;
-            private string _type;
-            private string _size;
-            private string _resideon;
-            private string _description;
+            private readonly string _name;
+            private readonly string _uuid;
+            private readonly string _type;
+            private readonly string _size;
+            private readonly string _resideon;
+            private readonly string _description;
         }
 
         private void ComposeParameters(ReportViewer viewer, IXenConnection connection)

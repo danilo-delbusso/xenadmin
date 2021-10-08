@@ -43,8 +43,8 @@ namespace XenAdmin.Wlb
         private WlbConfigurationKeyBase _keyBase;
 		private string _itemId;
         private Dictionary<string, string> _configuration;
-        private NumberFormatInfo _nfi = new CultureInfo("en-US", false).NumberFormat;
-        private DateTimeFormatInfo _dtfi = new CultureInfo("en-US", false).DateTimeFormat;
+        private readonly NumberFormatInfo _nfi = new CultureInfo("en-US", false).NumberFormat;
+        private readonly DateTimeFormatInfo _dtfi = new CultureInfo("en-US", false).DateTimeFormat;
 
 		public enum WlbConfigurationKeyBase
         {

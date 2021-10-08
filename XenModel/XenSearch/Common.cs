@@ -175,8 +175,8 @@ namespace XenAdmin.XenSearch
 
     public class PropertyAccessors
     {
-        private static Dictionary<PropertyNames, Type> property_types = new Dictionary<PropertyNames, Type>();
-        private static Dictionary<PropertyNames, Func<IXenObject, IComparable>> properties = new Dictionary<PropertyNames, Func<IXenObject, IComparable>>();
+        private static readonly Dictionary<PropertyNames, Type> property_types = new Dictionary<PropertyNames, Type>();
+        private static readonly Dictionary<PropertyNames, Func<IXenObject, IComparable>> properties = new Dictionary<PropertyNames, Func<IXenObject, IComparable>>();
 
         public static readonly Dictionary<String, vm_power_state> VM_power_state_i18n = new Dictionary<string, vm_power_state>();
         public static readonly Dictionary<String, VM.VirtualisationStatus> VirtualisationStatus_i18n = new Dictionary<string, VM.VirtualisationStatus>();
@@ -190,7 +190,7 @@ namespace XenAdmin.XenSearch
         public static readonly Dictionary<vm_power_state, Icons> VM_power_state_images = new Dictionary<vm_power_state, Icons>();
         public static readonly Dictionary<ObjectTypes, Icons> ObjectTypes_images = new Dictionary<ObjectTypes, Icons>();
         
-        private static Dictionary<ColumnNames, PropertyNames> column_sort_by = new Dictionary<ColumnNames, PropertyNames>();
+        private static readonly Dictionary<ColumnNames, PropertyNames> column_sort_by = new Dictionary<ColumnNames, PropertyNames>();
 
         static PropertyAccessors()
         {

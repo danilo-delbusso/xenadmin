@@ -56,9 +56,9 @@ namespace XenAdmin.TabPages
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         
-        private Dictionary<string, bool> expandedState = new Dictionary<string, bool>();
+        private readonly Dictionary<string, bool> expandedState = new Dictionary<string, bool>();
         private List<string> selectedUpdates = new List<string>();
-        private List<string> collapsedPoolRowsList = new List<string>();
+        private readonly List<string> collapsedPoolRowsList = new List<string>();
         private int checksQueue;
         private bool CheckForUpdatesInProgress;
 

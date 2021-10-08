@@ -44,7 +44,7 @@ namespace XenAdmin.Dialogs.Wlb
     public partial class WlbCredentialsDialog : XenDialogBase
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private Pool _pool;
+        private readonly Pool _pool;
 
         public WlbCredentialsDialog(Pool pool)
         {

@@ -40,9 +40,9 @@ namespace XenAdmin.Actions
 {
     public class SaveDataSourceStateAction : PureAsyncAction
     {
-        List<DataSourceItem> DataSourceItems;
-        List<DesignedGraph> Graphs;
-        IXenObject XenObject;
+        readonly List<DataSourceItem> DataSourceItems;
+        readonly List<DesignedGraph> Graphs;
+        readonly IXenObject XenObject;
 
         private Pool GetPool()
         {

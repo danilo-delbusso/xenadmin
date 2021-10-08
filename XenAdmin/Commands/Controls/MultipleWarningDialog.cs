@@ -47,7 +47,7 @@ namespace XenAdmin.Commands.Controls
          * We should monitor it's usefulness, it could be a good utility for displaying multiple messages in other situations.
          */
 
-        private List<Warning> Warnings = new List<Warning>();
+        private readonly List<Warning> Warnings = new List<Warning>();
 
         /// <summary>
         /// This constructor is only for use with the designer and as a base for the other constructors. Use a different overload.

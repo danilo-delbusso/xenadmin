@@ -39,7 +39,7 @@ namespace XenAdmin.Controls.ConsoleTab
 {
     public partial class FullScreenForm : Form
     {
-        private Control _referenceControl;
+        private readonly Control _referenceControl;
 
         public FullScreenForm()
         {

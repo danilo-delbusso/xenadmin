@@ -33,7 +33,7 @@ namespace XenAdmin.Actions
 {
     public class PlugVIFAction : PureAsyncAction
     {
-        private XenAPI.VIF _vif;
+        private readonly XenAPI.VIF _vif;
         public PlugVIFAction(XenAPI.VIF vif)
             : base(vif.Connection, string.Format(Messages.ACTION_VIF_PLUG_TITLE, vif.Connection.Resolve(vif.VM).Name()))
         {

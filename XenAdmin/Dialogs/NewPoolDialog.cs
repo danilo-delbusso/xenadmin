@@ -49,7 +49,7 @@ namespace XenAdmin.Dialogs
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private readonly List<ConnectionWrapperWithMoreStuff> connections = new List<ConnectionWrapperWithMoreStuff>();
-        private List<IXenConnection> newConnections = new List<IXenConnection>();
+        private readonly List<IXenConnection> newConnections = new List<IXenConnection>();
 
         public NewPoolDialog(Host host) 
         {

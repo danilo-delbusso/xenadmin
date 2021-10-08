@@ -37,7 +37,7 @@ namespace XenAdmin.Dialogs
 {
     public partial class AdPasswordPrompt : XenDialogBase
     {
-        private string helpName;
+        private readonly string helpName;
 
         public string Domain
         {

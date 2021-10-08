@@ -121,9 +121,9 @@ namespace XenAdmin.Dialogs.VMAppliances
         #region VMApplianceRow
         private class VMApplianceRow : DataGridViewRow
         {
-            private DataGridViewTextAndImageCell _nameCell = new DataGridViewTextAndImageCell();
-            private DataGridViewTextBoxCell _descriptionCell = new DataGridViewTextBoxCell();
-            private DataGridViewTextBoxCell _numVMsCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextAndImageCell _nameCell = new DataGridViewTextAndImageCell();
+            private readonly DataGridViewTextBoxCell _descriptionCell = new DataGridViewTextBoxCell();
+            private readonly DataGridViewTextBoxCell _numVMsCell = new DataGridViewTextBoxCell();
             public readonly VM_appliance VMAppliance;
             public VMApplianceRow(VM_appliance vmAppliance)
             {
@@ -134,7 +134,7 @@ namespace XenAdmin.Dialogs.VMAppliances
                 RefreshRow(true);
             }
 
-            private List<ListViewItem> vmItems = new List<ListViewItem>();
+            private readonly List<ListViewItem> vmItems = new List<ListViewItem>();
 
             public List<ListViewItem> VmItems
             {

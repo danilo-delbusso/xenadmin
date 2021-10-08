@@ -42,7 +42,7 @@ namespace XenAdmin.Controls
     /// </summary>
     public partial class LongStringComboBox : ComboBox
     {
-        static int MAX_WIDTH = 1000;
+        static readonly int MAX_WIDTH = 1000;
 
         public LongStringComboBox()
         {

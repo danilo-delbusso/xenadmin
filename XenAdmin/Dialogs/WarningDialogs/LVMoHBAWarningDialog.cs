@@ -43,9 +43,9 @@ namespace XenAdmin.Dialogs.WarningDialogs
     public partial class LVMoHBAWarningDialog : XenDialogBase
     {
         private Panel highlightedPanel;
-        private string deviceDetails;
-        private int remainingDevicesCount;
-        private bool foundExistingSR;
+        private readonly string deviceDetails;
+        private readonly int remainingDevicesCount;
+        private readonly bool foundExistingSR;
         private readonly SR.SRTypes existingSrType;
         private readonly SR.SRTypes requestedSrType;
         private readonly IXenConnection _connection;

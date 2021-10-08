@@ -43,7 +43,7 @@ namespace XenAdmin.Diagnostics.Problems.PoolProblem
 {
     class CPUIncompatibilityProblem : PoolProblem
     {
-        private Dictionary<VM, XenRef<Host>> vmsOnHosts = new Dictionary<VM, XenRef<Host>>();
+        private readonly Dictionary<VM, XenRef<Host>> vmsOnHosts = new Dictionary<VM, XenRef<Host>>();
 
         public CPUIncompatibilityProblem(Check check, Pool pool)
             : base(check, pool)

@@ -49,9 +49,9 @@ namespace XenAdmin.Dialogs
         protected internal PVS_site PvsSite;
         protected internal Rectangle DeleteIconBounds;
 
-        private IXenConnection connection;
-        private List<string> knownSiteNames;
-        private List<PvsCacheStorageRow> rows = new List<PvsCacheStorageRow>();
+        private readonly IXenConnection connection;
+        private readonly List<string> knownSiteNames;
+        private readonly List<PvsCacheStorageRow> rows = new List<PvsCacheStorageRow>();
 
         public event EventHandler Changed;
         public event EventHandler DeleteButtonClicked;

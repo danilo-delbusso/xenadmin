@@ -35,7 +35,7 @@ namespace XenAdmin.Actions
 {
     public class SetGpuPlacementPolicyAction : PureAsyncAction
     {
-        private allocation_algorithm allocationAlgorithm;
+        private readonly allocation_algorithm allocationAlgorithm;
 
         public SetGpuPlacementPolicyAction(Pool pool, allocation_algorithm allocationAlgorithm)
             : base(pool.Connection, Messages.SET_GPU_PLACEMENT_POLICY_ACTION_TITLE, 

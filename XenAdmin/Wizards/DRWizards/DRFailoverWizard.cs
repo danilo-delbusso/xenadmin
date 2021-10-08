@@ -59,7 +59,7 @@ namespace XenAdmin.Wizards.DRWizards
 
         private readonly Pool Pool;
         private DRWizardType WizardType;
-        private SummaryReport SummaryReport = new SummaryReport();
+        private readonly SummaryReport SummaryReport = new SummaryReport();
 
         public DRFailoverWizard(Pool pool)
             : this(pool, DRWizardType.Unknown)
@@ -157,8 +157,8 @@ namespace XenAdmin.Wizards.DRWizards
                 DoFinalCleanup();
         }
 
-        private List<DR_task> DrTasks = new List<DR_task>();
-        private List<XenRef<SR>> IntroducedSrs = new List<XenRef<SR>>();
+        private readonly List<DR_task> DrTasks = new List<DR_task>();
+        private readonly List<XenRef<SR>> IntroducedSrs = new List<XenRef<SR>>();
 
         private void NewDrTask(string opaqueRef)
         {
@@ -421,7 +421,7 @@ namespace XenAdmin.Wizards.DRWizards
 
     public class SummaryReport
     {
-        private StringBuilder report;
+        private readonly StringBuilder report;
         public SummaryReport()
         {
             report = new StringBuilder();

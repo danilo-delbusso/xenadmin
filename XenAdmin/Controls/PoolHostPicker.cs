@@ -59,7 +59,7 @@ namespace XenAdmin.Controls
 
 		public override int ItemHeight { get { return 18; } }
 
-        private CollectionChangeEventHandler CollectionChangedWithInvoke;
+        private readonly CollectionChangeEventHandler CollectionChangedWithInvoke;
         void CollectionChanged(object sender, CollectionChangeEventArgs e)
         {
             Program.BeginInvoke(this, buildList);

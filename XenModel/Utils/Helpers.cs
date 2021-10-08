@@ -986,33 +986,33 @@ namespace XenAdmin.Core
         }
 
         public static Regex CpuRegex = new Regex("^cpu([0-9]+)$");
-        static Regex CpuAvgFreqRegex = new Regex("^CPU([0-9]+)-avg-freq$");
+        static readonly Regex CpuAvgFreqRegex = new Regex("^CPU([0-9]+)-avg-freq$");
         public static Regex CpuStateRegex = new Regex("^cpu([0-9]+)-(C|P)([0-9]+)$");
-        static Regex CpuOtherRegex = new Regex("^cpu_avg|avg_cpu$");
-        private static Regex VcpuRegex = new Regex("^runstate_(blocked|concurrency_hazard|full_contention|fullrun|partial_contention|partial_run)$");
-        static Regex VifRegex = new Regex("^vif_([0-9]+)_(tx|rx)((_errors)?)$");
-        static Regex PifEthRegex = new Regex("^pif_eth([0-9]+)_(tx|rx)((_errors)?)$");
-        static Regex PifVlanRegex = new Regex("^pif_eth([0-9]+).([0-9]+)_(tx|rx)((_errors)?)$");
-        static Regex PifBrRegex = new Regex("^pif_xenbr([0-9]+)_(tx|rx)((_errors)?)$");
-        static Regex PifXapiRegex = new Regex("^pif_xapi([0-9]+)_(tx|rx)((_errors)?)$");
-        static Regex PifTapRegex = new Regex("^pif_tap([0-9]+)_(tx|rx)((_errors)?)$");
-        static Regex PifLoRegex = new Regex("^pif_lo_(tx|rx)((_errors)?)$");
-        static Regex PifBondRegex = new Regex("^pif_(bond[0-9]+)_(tx|rx)((_errors)?)$");
-        static Regex PifOtherRegex = new Regex("^pif_aggr_(tx|rx)$");
-        static Regex DiskRegex = new Regex("^vbd_((xvd|hd)[a-z]+)(_(read|write))?(_latency)?$");
-        static Regex DiskIopsRegex = new Regex("^vbd_((xvd|hd)[a-z]+)_iops_(read|write|total)$");
-        static Regex DiskThroughputRegex = new Regex("^vbd_((xvd|hd)[a-z]+)_io_throughput_(read|write|total)$");
-        static Regex DiskOtherRegex = new Regex("^vbd_((xvd|hd)[a-z]+)_(avgqu_sz|inflight|iowait)$");
-        static Regex NetworkLatencyRegex = new Regex("^network/latency$");
-        static Regex XapiLatencyRegex = new Regex("^xapi_healthcheck/latency$");
-        static Regex XapiMemoryRegex = new Regex("^xapi_(allocation|free_memory|live_memory|memory_usage)_kib$");
-        static Regex StatefileLatencyRegex = new Regex("^statefile/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/latency$");
-        static Regex LoadAvgRegex = new Regex("loadavg");
-        static Regex SrRegex = new Regex("^sr_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}_cache_(size|hits|misses)");
-        static Regex SrIORegex = new Regex("^(io_throughput|iops)_(read|write|total)_([a-f0-9]{8})$");
-        static Regex SrOtherRegex = new Regex("^(latency|avgqu_sz|inflight|iowait)_([a-f0-9]{8})$");
-        static Regex SrReadWriteRegex = new Regex("^((read|write)(_latency)?)_([a-f0-9]{8})$");
-        static Regex GpuRegex = new Regex(@"^gpu_((memory_(free|used))|power_usage|temperature|(utilisation_(compute|memory_io)))_((([a-fA-F0-9]{4}\/)|([a-fA-F0-9]{8}\/))?[a-fA-F0-9]{2}\/[0-1][a-fA-F0-9].[0-7])$");
+        static readonly Regex CpuOtherRegex = new Regex("^cpu_avg|avg_cpu$");
+        private static readonly Regex VcpuRegex = new Regex("^runstate_(blocked|concurrency_hazard|full_contention|fullrun|partial_contention|partial_run)$");
+        static readonly Regex VifRegex = new Regex("^vif_([0-9]+)_(tx|rx)((_errors)?)$");
+        static readonly Regex PifEthRegex = new Regex("^pif_eth([0-9]+)_(tx|rx)((_errors)?)$");
+        static readonly Regex PifVlanRegex = new Regex("^pif_eth([0-9]+).([0-9]+)_(tx|rx)((_errors)?)$");
+        static readonly Regex PifBrRegex = new Regex("^pif_xenbr([0-9]+)_(tx|rx)((_errors)?)$");
+        static readonly Regex PifXapiRegex = new Regex("^pif_xapi([0-9]+)_(tx|rx)((_errors)?)$");
+        static readonly Regex PifTapRegex = new Regex("^pif_tap([0-9]+)_(tx|rx)((_errors)?)$");
+        static readonly Regex PifLoRegex = new Regex("^pif_lo_(tx|rx)((_errors)?)$");
+        static readonly Regex PifBondRegex = new Regex("^pif_(bond[0-9]+)_(tx|rx)((_errors)?)$");
+        static readonly Regex PifOtherRegex = new Regex("^pif_aggr_(tx|rx)$");
+        static readonly Regex DiskRegex = new Regex("^vbd_((xvd|hd)[a-z]+)(_(read|write))?(_latency)?$");
+        static readonly Regex DiskIopsRegex = new Regex("^vbd_((xvd|hd)[a-z]+)_iops_(read|write|total)$");
+        static readonly Regex DiskThroughputRegex = new Regex("^vbd_((xvd|hd)[a-z]+)_io_throughput_(read|write|total)$");
+        static readonly Regex DiskOtherRegex = new Regex("^vbd_((xvd|hd)[a-z]+)_(avgqu_sz|inflight|iowait)$");
+        static readonly Regex NetworkLatencyRegex = new Regex("^network/latency$");
+        static readonly Regex XapiLatencyRegex = new Regex("^xapi_healthcheck/latency$");
+        static readonly Regex XapiMemoryRegex = new Regex("^xapi_(allocation|free_memory|live_memory|memory_usage)_kib$");
+        static readonly Regex StatefileLatencyRegex = new Regex("^statefile/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/latency$");
+        static readonly Regex LoadAvgRegex = new Regex("loadavg");
+        static readonly Regex SrRegex = new Regex("^sr_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}_cache_(size|hits|misses)");
+        static readonly Regex SrIORegex = new Regex("^(io_throughput|iops)_(read|write|total)_([a-f0-9]{8})$");
+        static readonly Regex SrOtherRegex = new Regex("^(latency|avgqu_sz|inflight|iowait)_([a-f0-9]{8})$");
+        static readonly Regex SrReadWriteRegex = new Regex("^((read|write)(_latency)?)_([a-f0-9]{8})$");
+        static readonly Regex GpuRegex = new Regex(@"^gpu_((memory_(free|used))|power_usage|temperature|(utilisation_(compute|memory_io)))_((([a-fA-F0-9]{4}\/)|([a-fA-F0-9]{8}\/))?[a-fA-F0-9]{2}\/[0-1][a-fA-F0-9].[0-7])$");
 
         public static DataSourceCategory GetDataSourceCategory(string name)
         {

@@ -47,7 +47,7 @@ namespace XenAdmin.SettingsPanels
         private XenAPI.Network network;
         private Host host;
 
-        private bool _ValidToSave = true;
+        private readonly bool _ValidToSave = true;
         private readonly ToolTip InvalidParamToolTip;
         private bool runningVMsWithoutTools = false;
 

@@ -42,11 +42,11 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard
 {
     internal class CrossPoolMigrateDestinationPage : SelectMultipleVMDestinationPage
     {
-        private List<VM> selectedVMs;
-        private WizardMode wizardMode;
+        private readonly List<VM> selectedVMs;
+        private readonly WizardMode wizardMode;
         // A 2-level cache to store the result of CrossPoolMigrateCanMigrateFilter.
         // Cache structure is like: <vm-ref, <host-ref, fault-reason>>.
-        private IDictionary<string, IDictionary<string, string>> migrateFilterCache = 
+        private readonly IDictionary<string, IDictionary<string, string>> migrateFilterCache = 
             new Dictionary<string, IDictionary<string, string>>();
 
 

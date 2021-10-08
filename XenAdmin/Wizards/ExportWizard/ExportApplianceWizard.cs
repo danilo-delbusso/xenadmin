@@ -57,7 +57,7 @@ namespace XenAdmin.Wizards.ExportWizard
         private readonly ExportFinishPage m_pageFinish;
         #endregion
 
-        private IXenObject m_selectedObject;
+        private readonly IXenObject m_selectedObject;
 		private bool? m_exportAsXva;
 
 		public ExportApplianceWizard(IXenConnection con, SelectedItemCollection selection)

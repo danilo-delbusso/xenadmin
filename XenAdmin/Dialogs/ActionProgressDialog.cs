@@ -46,7 +46,7 @@ namespace XenAdmin.Dialogs
     internal partial class ActionProgressDialog : XenDialogBase
     {
         public readonly AsyncAction action;
-        private bool showTryAgain = true;
+        private readonly bool showTryAgain = true;
         private bool showCancel;
         
         /// <summary>

@@ -40,8 +40,8 @@ namespace CommandLib
     /// </summary>
     public class HeaderChecksumFailed : ApplicationException
     {
-        private uint expected;
-        private uint received;
+        private readonly uint expected;
+        private readonly uint received;
 
         public HeaderChecksumFailed(uint expected, uint received)
         {
@@ -88,24 +88,24 @@ namespace CommandLib
         public static uint length = 512;
 
         /* http://en.wikipedia.org/w/index.php?title=Tar_%28file_format%29&oldid=83554041 */
-        private static int file_name_off = 0;
-        private static int file_name_len = 100;
-        private static int file_mode_off = 100;
-        private static int file_mode_len = 8;
-        private static int user_id_off = 108;
-        private static int user_id_len = 8;
-        private static int group_id_off = 116;
-        private static int group_id_len = 8;
-        private static int file_size_off = 124;
-        private static int file_size_len = 12;
-        private static int mod_time_off = 136;
-        private static int mod_time_len = 12;
-        private static int chksum_off = 148;
-        private static int chksum_len = 8;
-        private static int link_off = 156;
-        private static int link_len = 1;
-        private static int link_name_off = 156;
-        private static int link_name_len = 100;
+        private static readonly int file_name_off = 0;
+        private static readonly int file_name_len = 100;
+        private static readonly int file_mode_off = 100;
+        private static readonly int file_mode_len = 8;
+        private static readonly int user_id_off = 108;
+        private static readonly int user_id_len = 8;
+        private static readonly int group_id_off = 116;
+        private static readonly int group_id_len = 8;
+        private static readonly int file_size_off = 124;
+        private static readonly int file_size_len = 12;
+        private static readonly int mod_time_off = 136;
+        private static readonly int mod_time_len = 12;
+        private static readonly int chksum_off = 148;
+        private static readonly int chksum_len = 8;
+        private static readonly int link_off = 156;
+        private static readonly int link_len = 1;
+        private static readonly int link_name_off = 156;
+        private static readonly int link_name_len = 100;
 
         /// <summary>
         /// True if a buffer contains all zeroes

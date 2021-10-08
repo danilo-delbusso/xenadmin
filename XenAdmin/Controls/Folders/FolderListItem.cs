@@ -50,13 +50,13 @@ namespace XenAdmin.Controls
         private const int IMAGE_OFFSET = 4;
 
         public enum AllowSearch { None, AllButLast, All };
-        private AllowSearch allowSearch;
+        private readonly AllowSearch allowSearch;
 
         private string path;
         private List<FLIControl> controls;
         public Control Parent;
         private int maxWidth = 0;
-        private bool hasChangeButton;
+        private readonly bool hasChangeButton;
         private LinkLabel changeLabel;
         private Padding itemBorder;
 
@@ -342,7 +342,7 @@ namespace XenAdmin.Controls
 
         private class FLIControl
         {
-            public string tag;
+            public readonly string tag;
             public Rectangle rect;
 
             public FLIControl(string tag, Rectangle rect)

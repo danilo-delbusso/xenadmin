@@ -39,7 +39,7 @@ namespace XenAdmin.Dialogs
     public partial class BallooningDialog : XenDialogBase
     {
         private readonly VM _vm;
-        private VMMemoryControlsEdit memoryControls;
+        private readonly VMMemoryControlsEdit memoryControls;
 
         public BallooningDialog()
         {

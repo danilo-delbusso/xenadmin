@@ -54,9 +54,9 @@ namespace XenAdmin.ConsoleView
         /// <summary>
         /// http://msdn2.microsoft.com/en-us/library/aa383022(VS.85).aspx
         /// </summary>
-        private MsRdpClient9 rdpClient9 = null;
+        private readonly MsRdpClient9 rdpClient9 = null;
 
-        private MsRdpClient6 rdpClient6 = null;
+        private readonly MsRdpClient6 rdpClient6 = null;
 
         /// <summary>
         /// This will be equal to rdpClient9, if the DLL that we've got is version 8, otherwise equal to

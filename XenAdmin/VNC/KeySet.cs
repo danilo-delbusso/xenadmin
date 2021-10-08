@@ -37,7 +37,7 @@ namespace DotNetVnc
 {
     public class KeySet : IEquatable<KeySet>
     {
-        List<Keys> keys;
+        readonly List<Keys> keys;
 
         public IList<Keys> Keys
         {

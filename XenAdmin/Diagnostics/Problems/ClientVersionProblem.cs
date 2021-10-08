@@ -37,7 +37,7 @@ namespace XenAdmin.Diagnostics.Problems
 {
     public class ClientVersionProblem : ProblemWithInformationUrl
     {
-        private ClientVersion _requiredXenCenterVersion;
+        private readonly ClientVersion _requiredXenCenterVersion;
 
         public ClientVersionProblem(Check check, ClientVersion requiredXenCenterVersion)
             : base(check)
@@ -58,7 +58,7 @@ namespace XenAdmin.Diagnostics.Problems
 
     public class ClientVersionWarning : WarningWithInformationUrl
     {
-        private ClientVersion _requiredXenCenterVersion;
+        private readonly ClientVersion _requiredXenCenterVersion;
 
         public ClientVersionWarning(Check check, ClientVersion requiredXenCenterVersion)
             : base(check)

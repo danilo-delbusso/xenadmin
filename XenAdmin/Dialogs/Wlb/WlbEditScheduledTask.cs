@@ -44,7 +44,7 @@ namespace XenAdmin.Dialogs.Wlb
 
         #region Private Fields
         
-        private WlbScheduledTask _task;
+        private readonly WlbScheduledTask _task;
 
         #endregion
 

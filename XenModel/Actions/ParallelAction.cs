@@ -47,10 +47,10 @@ namespace XenAdmin.Actions
         //Change parameter to increase the number of concurrent actions running
         private const int DEFAULT_MAX_NUMBER_OF_PARALLEL_ACTIONS = 25;
 
-        private Dictionary<IXenConnection, List<AsyncAction>> actionsByConnection = new Dictionary<IXenConnection, List<AsyncAction>>();
-        private Dictionary<IXenConnection, ProduceConsumerQueue> queuesByConnection = new Dictionary<IXenConnection, ProduceConsumerQueue>();
+        private readonly Dictionary<IXenConnection, List<AsyncAction>> actionsByConnection = new Dictionary<IXenConnection, List<AsyncAction>>();
+        private readonly Dictionary<IXenConnection, ProduceConsumerQueue> queuesByConnection = new Dictionary<IXenConnection, ProduceConsumerQueue>();
 
-        private List<AsyncAction> actionsWithNoConnection = new List<AsyncAction>();
+        private readonly List<AsyncAction> actionsWithNoConnection = new List<AsyncAction>();
         private ProduceConsumerQueue queueWithNoConnection;
 
         private readonly int maxNumberOfParallelActions;

@@ -51,7 +51,7 @@ namespace XenAdmin.Controls.Wlb
 
         private IXenObject _xenObject;
         private Pool _pool;
-        private Dictionary<VM, WlbOptimizationRecommendation> _vmOptList = new Dictionary<VM, WlbOptimizationRecommendation>();
+        private readonly Dictionary<VM, WlbOptimizationRecommendation> _vmOptList = new Dictionary<VM, WlbOptimizationRecommendation>();
         private Dictionary<XenRef<VM>, string[]> _recommendations = new Dictionary<XenRef<VM>, string[]>();
         private string _optId = String.Empty;
         private bool _autoOptEnabled = false;
@@ -67,7 +67,7 @@ namespace XenAdmin.Controls.Wlb
         private readonly Color DisabledShadedRowColor;
         
         // Listview minimum column widths
-        private int[] minimumColumnWidths = { 0, 25, 25, 25 };
+        private readonly int[] minimumColumnWidths = { 0, 25, 25, 25 };
 
         /// <summary>
         /// Initialize optimize pool listview
@@ -473,7 +473,7 @@ namespace XenAdmin.Controls.Wlb
         #endregion
 
         #region Refresh Timer
-        private System.Threading.Timer recommendationUpdateTimer;
+        private readonly System.Threading.Timer recommendationUpdateTimer;
         private const int RECOMMENDATION_INITIAL_INTERVAL = 1000 * 5; // 5 seconds interval
         // Default to 2 minutes due to Kirkwood recommendation is generated every 2 minutes
         private const int RECOMMENDATION_UPDATE_INTERVAL = 1000 * 30; // 30 seconds interval
@@ -786,7 +786,7 @@ namespace XenAdmin.Controls.Wlb
 
         }
 
-        private RbacMethodList WLB_PERMISSION_CHECKS = new RbacMethodList(
+        private readonly RbacMethodList WLB_PERMISSION_CHECKS = new RbacMethodList(
             "pool.initialize_wlb",
             "pool.set_wlb_enabled",
             "pool.send_wlb_configuration"

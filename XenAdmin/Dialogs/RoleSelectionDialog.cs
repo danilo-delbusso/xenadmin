@@ -42,9 +42,9 @@ namespace XenAdmin.Dialogs
 {
     public partial class RoleSelectionDialog : XenDialogBase
     {
-        private List<Subject> subjects;
+        private readonly List<Subject> subjects;
 
-        private Dictionary<Role, List<Subject>> _subjectsPerRole;
+        private readonly Dictionary<Role, List<Subject>> _subjectsPerRole;
 
         public RoleSelectionDialog()
         {

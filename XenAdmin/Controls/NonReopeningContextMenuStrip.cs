@@ -40,7 +40,7 @@ namespace XenAdmin.Controls
 {
     public class NonReopeningContextMenuStrip : ContextMenuStrip
     {
-        private static TimeSpan Epsilon = TimeSpan.FromMilliseconds(200);  // the time within which we are not allowed to reopen
+        private static readonly TimeSpan Epsilon = TimeSpan.FromMilliseconds(200);  // the time within which we are not allowed to reopen
 
         private DateTime lastClosedTime = DateTime.MinValue;
 

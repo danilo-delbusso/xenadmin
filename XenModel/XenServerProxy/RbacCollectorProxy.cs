@@ -47,7 +47,7 @@ namespace XenAdmin.Core
             return (Proxy)generator.CreateProxyInstance(proxyType, new RbacCollectorProxy(rbacMethods));
         }
 
-        private RbacMethodList rbacMethods = new RbacMethodList();
+        private readonly RbacMethodList rbacMethods = new RbacMethodList();
         public RbacCollectorProxy(RbacMethodList rbacMethods)
         {
             this.rbacMethods = rbacMethods;

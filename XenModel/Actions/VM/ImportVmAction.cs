@@ -46,14 +46,14 @@ namespace XenAdmin.Actions
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private const int HTTP_PUT_TIMEOUT = 30*60*1000; //30 minutes
 
-        private string m_filename;
+        private readonly string m_filename;
         private readonly Host m_affinity;
         public const string IMPORT_TASK = "import_task";
 
 		private bool m_startAutomatically;
     	private List<VIF> m_VIFs;
 
-    	private object monitor = new object();
+    	private readonly object monitor = new object();
 		private bool m_wizardDone;
 
         private readonly Action<VM, bool> _warningDelegate;

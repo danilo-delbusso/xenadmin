@@ -39,7 +39,7 @@ namespace XenAdmin.Diagnostics.Problems.VMProblem
 {
     public class ExistingVmWarning : Warning
     {
-        private VM _vm;
+        private readonly VM _vm;
 
         public ExistingVmWarning(Check check, VM vm)
             : base(check)

@@ -42,9 +42,9 @@ namespace XenAdminTests.UnitTests
     [TestFixture, Category(TestCategories.Unit)]
     class ExceptionSerializationTest
     {
-        private List<string> errorDescriptions = new List<string> { "AN_ERROR_CODEE", "Error description", "Some text"};
-        private List<string> friendlyErrorDescriptions = new List<string> { "CANNOT_ADD_VLAN_TO_BOND_SLAVE", "Cannot add..."};
-        private string errorText = "An Error has occured";
+        private readonly List<string> errorDescriptions = new List<string> { "AN_ERROR_CODEE", "Error description", "Some text"};
+        private readonly List<string> friendlyErrorDescriptions = new List<string> { "CANNOT_ADD_VLAN_TO_BOND_SLAVE", "Cannot add..."};
+        private readonly string errorText = "An Error has occured";
 
         [Test]
         public void TestEmptyFailure()

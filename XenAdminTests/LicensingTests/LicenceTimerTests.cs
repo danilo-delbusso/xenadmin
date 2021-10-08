@@ -39,7 +39,7 @@ namespace XenAdminTests.LicensingTests
     [TestFixture, Category(TestCategories.Unit)]
     public class LicenceTimerTests
     {
-        private static Dictionary<TimeSpan, string> sharedResults = new Dictionary<TimeSpan, string>()
+        private static readonly Dictionary<TimeSpan, string> sharedResults = new Dictionary<TimeSpan, string>()
         {
             {new TimeSpan(3650, 0, 0, 0), "121 months"},
             {new TimeSpan(365, 0, 0, 0), "12 months"},

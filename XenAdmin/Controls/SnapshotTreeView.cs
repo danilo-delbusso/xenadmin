@@ -51,7 +51,7 @@ namespace XenAdmin.Controls
 
 
         //We need this fake thing to make the scrollbars work with the customdrawdate.
-        private ListViewItem whiteIcon = new ListViewItem();
+        private readonly ListViewItem whiteIcon = new ListViewItem();
 
 
         private Color linkLineColor = SystemColors.ControlDark;
@@ -118,7 +118,7 @@ namespace XenAdmin.Controls
 
         #endregion
 
-        private ImageList imageList = new ImageList();
+        private readonly ImageList imageList = new ImageList();
 
         public SnapshotTreeView(IContainer container)
         {
@@ -597,7 +597,7 @@ namespace XenAdmin.Controls
 
         public Size DefaultSize = new Size(70, 64);
 
-        private Timer spinningTimer = new Timer();
+        private readonly Timer spinningTimer = new Timer();
 
 
 

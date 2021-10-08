@@ -45,18 +45,18 @@ namespace XenOvf
     public partial class OVF
     {
         private ManagementObject Win32_ComputerSystem = null;
-        private List<ManagementObject> Win32_Processor = new List<ManagementObject>();
-        private List<ManagementObject> Win32_CDROMDrive = new List<ManagementObject>();
-        private List<ManagementObject> Win32_DiskDrive = new List<ManagementObject>();
-        private List<ManagementObject> Win32_NetworkAdapter = new List<ManagementObject>();
-        private List<ManagementObject> Win32_IDEController = new List<ManagementObject>();
-        private List<ManagementObject> Win32_SCSIController = new List<ManagementObject>();
-        private List<ManagementObject> Win32_IDEControllerDevice = new List<ManagementObject>();
-        private List<ManagementObject> Win32_SCSIControllerDevice = new List<ManagementObject>();
-        private List<ManagementObject> Win32_DiskPartition = new List<ManagementObject>();
-        private List<ManagementObject> Win32_DiskDriveToDiskPartition = new List<ManagementObject>();
+        private readonly List<ManagementObject> Win32_Processor = new List<ManagementObject>();
+        private readonly List<ManagementObject> Win32_CDROMDrive = new List<ManagementObject>();
+        private readonly List<ManagementObject> Win32_DiskDrive = new List<ManagementObject>();
+        private readonly List<ManagementObject> Win32_NetworkAdapter = new List<ManagementObject>();
+        private readonly List<ManagementObject> Win32_IDEController = new List<ManagementObject>();
+        private readonly List<ManagementObject> Win32_SCSIController = new List<ManagementObject>();
+        private readonly List<ManagementObject> Win32_IDEControllerDevice = new List<ManagementObject>();
+        private readonly List<ManagementObject> Win32_SCSIControllerDevice = new List<ManagementObject>();
+        private readonly List<ManagementObject> Win32_DiskPartition = new List<ManagementObject>();
+        private readonly List<ManagementObject> Win32_DiskDriveToDiskPartition = new List<ManagementObject>();
 
-        private Dictionary<string, string> mappings = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> mappings = new Dictionary<string, string>();
 
         #region CONVERSIONS
 

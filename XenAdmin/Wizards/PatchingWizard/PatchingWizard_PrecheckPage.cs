@@ -59,7 +59,7 @@ namespace XenAdmin.Wizards.PatchingWizard
         public List<Host> SelectedServers = new List<Host>();
         private readonly List<Problem> ProblemsResolvedPreCheck = new List<Problem>();
         private AsyncAction resolvePrechecksAction;
-        private List<DataGridViewRow> allRows = new List<DataGridViewRow>();
+        private readonly List<DataGridViewRow> allRows = new List<DataGridViewRow>();
 
         private bool _isRecheckQueued;
         public Dictionary<Pool_update, Dictionary<Host, SR>> SrUploadedUpdates = new Dictionary<Pool_update, Dictionary<Host, SR>>();
@@ -563,9 +563,9 @@ namespace XenAdmin.Wizards.PatchingWizard
 
         private abstract class PreCheckGridRow : XenAdmin.Controls.DataGridViewEx.DataGridViewExRow
         {
-            protected DataGridViewImageCell _iconCell = new DataGridViewImageCell();
-            protected DataGridViewTextBoxCell _descriptionCell = new DataGridViewTextBoxCell();
-            protected DataGridViewCell _solutionCell = null;
+            protected readonly DataGridViewImageCell _iconCell = new DataGridViewImageCell();
+            protected readonly DataGridViewTextBoxCell _descriptionCell = new DataGridViewTextBoxCell();
+            protected readonly DataGridViewCell _solutionCell = null;
             protected PreCheckGridRow(DataGridViewCell solutionCell)
             {
                 _solutionCell = solutionCell;
@@ -575,7 +575,7 @@ namespace XenAdmin.Wizards.PatchingWizard
 
         private class PreCheckHeaderRow : PreCheckGridRow
         {
-            private string description;
+            private readonly string description;
 
             public PreCheckHeaderRow(string text)
                 : base(new DataGridViewTextBoxCell())
@@ -611,8 +611,8 @@ namespace XenAdmin.Wizards.PatchingWizard
 
         private class PreCheckHostRow : PreCheckGridRow
         {
-            private Problem _problem = null;
-            private Check _check = null;
+            private readonly Problem _problem = null;
+            private readonly Check _check = null;
             public PreCheckHostRow(Problem problem)
                 : base(new DataGridViewTextBoxCell())
             {

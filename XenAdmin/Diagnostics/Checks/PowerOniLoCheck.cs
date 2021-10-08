@@ -43,7 +43,7 @@ namespace XenAdmin.Diagnostics.Checks
     class PowerOniLoCheck : HostPostLivenessCheck
     {
         private readonly Dictionary<string, string> _installMethodConfig;
-        private XenServerVersion _newVersion;
+        private readonly XenServerVersion _newVersion;
         private readonly bool _manualUpgrade;
 
         public PowerOniLoCheck(Host host, XenServerVersion newVersion)

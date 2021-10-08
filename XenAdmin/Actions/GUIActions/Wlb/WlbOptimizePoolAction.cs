@@ -46,7 +46,7 @@ namespace XenAdmin.Actions.Wlb
     class WlbOptimizePoolAction : AsyncAction
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private string optId = String.Empty;
+        private readonly string optId = String.Empty;
         private readonly Dictionary<VM, WlbOptimizationRecommendation> vmOptList = new Dictionary<VM, WlbOptimizationRecommendation>();
         
         private bool moveToNext = false;

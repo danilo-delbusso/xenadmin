@@ -35,7 +35,7 @@ namespace XenAdmin.Actions
 {
     public class EnableClusteringAction : AsyncAction
     {
-        private XenAPI.Network network;
+        private readonly XenAPI.Network network;
         
         public EnableClusteringAction(Pool pool, XenAPI.Network network)
             : base(pool.Connection, Messages.ENABLE_CLUSTERING_ON_POOL,

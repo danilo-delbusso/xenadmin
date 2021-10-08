@@ -40,8 +40,8 @@ namespace XenAdmin.Actions
     public class AssignVMsToPolicyAction : PureAsyncAction
     {
 
-        private VMSS _policy;
-        private List<XenRef<VM>> _selectedVMs;
+        private readonly VMSS _policy;
+        private readonly List<XenRef<VM>> _selectedVMs;
 
         public AssignVMsToPolicyAction(VMSS policy, List<XenRef<VM>> selectedVMs, bool suppressHistory)
             : base(policy.Connection, Messages.ASSIGN_VMSS_POLICY_NOAMP, suppressHistory)
@@ -74,7 +74,7 @@ namespace XenAdmin.Actions
 
     public class RemoveVMsFromPolicyAction : PureAsyncAction
     {
-        private List<XenRef<VM>> _selectedVMs;
+        private readonly List<XenRef<VM>> _selectedVMs;
         private VMSS _policy;
 
         public RemoveVMsFromPolicyAction(VMSS policy, List<XenRef<VM>> selectedVMs)

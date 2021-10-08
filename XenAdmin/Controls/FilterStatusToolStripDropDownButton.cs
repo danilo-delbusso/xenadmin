@@ -44,13 +44,13 @@ namespace XenAdmin.Controls
 
         private bool internalUpdating;
 
-        private ToolStripMenuItem toolStripMenuItemComplete;
-        private ToolStripMenuItem toolStripMenuItemInProgress;
-        private ToolStripMenuItem toolStripMenuItemError;
-        private ToolStripMenuItem toolStripMenuItemCancelled;
-        private ToolStripMenuItem toolStripMenuItemQueued;
-        private ToolStripMenuItem toolStripMenuItemIncomplete;
-        private ToolStripMenuItem toolStripMenuItemAll;
+        private readonly ToolStripMenuItem toolStripMenuItemComplete;
+        private readonly ToolStripMenuItem toolStripMenuItemInProgress;
+        private readonly ToolStripMenuItem toolStripMenuItemError;
+        private readonly ToolStripMenuItem toolStripMenuItemCancelled;
+        private readonly ToolStripMenuItem toolStripMenuItemQueued;
+        private readonly ToolStripMenuItem toolStripMenuItemIncomplete;
+        private readonly ToolStripMenuItem toolStripMenuItemAll;
 
         public FilterStatusToolStripDropDownButton()
         {

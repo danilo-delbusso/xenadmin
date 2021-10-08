@@ -36,7 +36,7 @@ namespace XenAdmin.Actions
 {
     public class ChangeControlDomainMemoryAction : AsyncAction
     {
-        long memory;
+        readonly long memory;
 
         public ChangeControlDomainMemoryAction(Host host, long memory, bool suppressHistory)
             : base(host.Connection, string.Format(Messages.ACTION_CHANGE_CONTROL_DOMAIN_MEMORY, host.Name()), suppressHistory)

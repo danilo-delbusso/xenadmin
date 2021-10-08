@@ -49,9 +49,9 @@ namespace XenAdmin.Controls.Ballooning
         private const int TEXT_FADE = 8;
 
         // Because one bar has several regions with different tooltips, we handle the tooltip timing etc. ourselves.
-        private ToolTip toolTip = new ToolTip();
+        private readonly ToolTip toolTip = new ToolTip();
         private Dictionary<Rectangle, string> toolTipRegions = new Dictionary<Rectangle, string>();
-        private Timer toolTipTimer = new Timer();
+        private readonly Timer toolTipTimer = new Timer();
         private const int TOOLTIP_DELAY = 500;
         private Point lastMouseLocation;
         private Point toolTipLocation;

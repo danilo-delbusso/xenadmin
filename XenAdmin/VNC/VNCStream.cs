@@ -131,7 +131,7 @@ namespace DotNetVnc
         private readonly MyStream stream;
 
         private readonly Object writeLock = new Object();
-        private Object pauseMonitor = new Object();
+        private readonly Object pauseMonitor = new Object();
 
         private volatile bool running = true;
 

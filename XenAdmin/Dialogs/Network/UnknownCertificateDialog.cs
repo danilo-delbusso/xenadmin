@@ -39,8 +39,8 @@ namespace XenAdmin.Dialogs.Network
 {
     public partial class UnknownCertificateDialog : XenDialogBase
     {
-        private string _hostname;
-        private X509Certificate2 _certificate;
+        private readonly string _hostname;
+        private readonly X509Certificate2 _certificate;
 
         public UnknownCertificateDialog(X509Certificate certificate,string hostname)
         {

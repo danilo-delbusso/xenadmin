@@ -595,12 +595,12 @@ namespace XenAdmin.Core
         [StructLayout(LayoutKind.Sequential)]
         private struct NativeMessage
         {
-            public IntPtr handle;
-            public uint msg;
-            public IntPtr wParam;
-            public IntPtr lParam;
-            public uint time;
-            public System.Drawing.Point p;
+            public readonly IntPtr handle;
+            public readonly uint msg;
+            public readonly IntPtr wParam;
+            public readonly IntPtr lParam;
+            public readonly uint time;
+            public readonly System.Drawing.Point p;
         }
 
     }

@@ -38,8 +38,8 @@ namespace XenAdmin.Alerts
 {
     public class LicenseAlert : Alert
     {
-        private string hostName;
-        private DateTime nowDate;
+        private readonly string hostName;
+        private readonly DateTime nowDate;
         private DateTime expiryDate;
 
         public LicenseAlert(string hostname, DateTime now, DateTime expiry)

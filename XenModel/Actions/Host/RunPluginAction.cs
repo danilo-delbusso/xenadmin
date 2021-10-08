@@ -50,9 +50,9 @@ namespace XenAdmin.Actions
             }
         }
 
-        private string Plugin;
-        private string Function;
-        private Dictionary<string, string> Args;
+        private readonly string Plugin;
+        private readonly string Function;
+        private readonly Dictionary<string, string> Args;
 
         public RunPluginAction(IXenConnection connection, Host host, string plugin, string function, Dictionary<string, string> args, bool hide_from_logs)
             : base(connection, string.Format(Messages.PLUGIN_TITLE, plugin),hide_from_logs)

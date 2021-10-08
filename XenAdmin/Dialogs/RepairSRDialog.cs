@@ -47,10 +47,10 @@ namespace XenAdmin.Dialogs
     {
         private readonly ReadOnlyCollection<SR> _srList;
         private AsyncAction _repairAction;
-        private Font BoldFont;
+        private readonly Font BoldFont;
         private readonly CollectionChangeEventHandler Host_CollectionChangedWithInvoke;
         private readonly CollectionChangeEventHandler PBD_CollectionChangedWithInvoke;
-        private bool runAction;
+        private readonly bool runAction;
         public AsyncAction RepairAction
         {
             get

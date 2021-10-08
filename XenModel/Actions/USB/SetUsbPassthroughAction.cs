@@ -36,8 +36,8 @@ namespace XenAdmin.Actions
 {
     public class SetUsbPassthroughAction : PureAsyncAction
     {
-        private PUSB _pusb;
-        private bool _passthroughEnabled;
+        private readonly PUSB _pusb;
+        private readonly bool _passthroughEnabled;
 
         public SetUsbPassthroughAction (PUSB pusb, bool passthroughEnabled) :
             base(pusb.Connection, String.Format(passthroughEnabled ? Messages.ACTION_USB_PASSTHROUGH_ENABLING : Messages.ACTION_USB_PASSTHROUGH_DISABLING, pusb.Name()))

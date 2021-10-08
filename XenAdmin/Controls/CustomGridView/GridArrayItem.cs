@@ -136,8 +136,8 @@ namespace XenAdmin.Controls.CustomGridView
     public class GridVerticalArrayItem : GridArrayItem
     {
         private const int Padding = 1;
-        private bool RegularSpacing;
-        private int ItemHeight;
+        private readonly bool RegularSpacing;
+        private readonly int ItemHeight;
 
         public GridVerticalArrayItem(GridItemBase[] items, bool clickSelectsRow)
             : this(items, -1, clickSelectsRow)
@@ -242,8 +242,8 @@ namespace XenAdmin.Controls.CustomGridView
         private const int MinimumWidth = 75;
         private const int Padding = 3;
 
-        private int indent;
-        private int[] widths;
+        private readonly int indent;
+        private readonly int[] widths;
         private Rectangle lastPaintRectangle;
 
         // There should be one fewer width than items

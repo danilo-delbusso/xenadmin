@@ -42,7 +42,7 @@ namespace XenAdmin.Actions
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private Dictionary<Host, VDI> suppPackVdis;
+        private readonly Dictionary<Host, VDI> suppPackVdis;
 
         public InstallSupplementalPackAction(Dictionary<Host, VDI> suppPackVdis, bool suppressHistory)
             : base(null,

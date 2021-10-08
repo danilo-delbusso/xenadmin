@@ -56,7 +56,7 @@ namespace XenAdmin.TabPages
         private static readonly int ALERT_CAP = 1000;
 
         private readonly CollectionChangeEventHandler m_alertCollectionChangedWithInvoke;
-        Dictionary<string, bool> expandedState = new Dictionary<string, bool>();
+        readonly Dictionary<string, bool> expandedState = new Dictionary<string, bool>();
         private bool inAlertBuild;
         private bool retryAlertBuild;
 

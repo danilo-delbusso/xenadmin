@@ -42,8 +42,8 @@ namespace XenAdmin.Actions
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        XenAPI.Network newNetwork;
-        private List<PIF> selectedPifs;
+        readonly XenAPI.Network newNetwork;
+        private readonly List<PIF> selectedPifs;
 
         public CreateSriovAction(IXenConnection connection, XenAPI.Network newNetwork, List<XenAPI.PIF> pifs)
             : base(connection,

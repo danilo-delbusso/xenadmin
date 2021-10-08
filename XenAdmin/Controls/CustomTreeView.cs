@@ -49,8 +49,8 @@ namespace XenAdmin.Controls
         /// the Items collection instead.
         /// </summary>
         public readonly List<CustomTreeNode> Nodes = new List<CustomTreeNode>();
-        private VisualStyleRenderer plusRenderer;
-        private VisualStyleRenderer minusRenderer;
+        private readonly VisualStyleRenderer plusRenderer;
+        private readonly VisualStyleRenderer minusRenderer;
         private CustomTreeNode lastSelected;
         private bool _inUpdate = false;
         

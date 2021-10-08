@@ -42,8 +42,8 @@ namespace XenAdmin.ServerDBs
     public class SimulatorWebStream : Stream
     {
         // might be null
-        private SimulatorWebProxy simProxy;
-        private Uri Url;
+        private readonly SimulatorWebProxy simProxy;
+        private readonly Uri Url;
 
         private long position;
         private long Start;
@@ -284,7 +284,8 @@ namespace XenAdmin.ServerDBs
         {
             return simProxy.proxy.db.ObjectWithFieldValue("host", "address", Url.Host);
         }
-        Random rand = new Random();
+
+        readonly Random rand = new Random();
         private double CpuStatsForHost(string host_ref)
         {
             switch (host_ref)

@@ -52,9 +52,9 @@ namespace XenAdmin.Actions
                 this.members = members;
             }
 
-            internal Bond bond;
-            internal PIF bondInterface;
-            internal List<PIF> members;
+            internal readonly Bond bond;
+            internal readonly PIF bondInterface;
+            internal readonly List<PIF> members;
         }
 
         private readonly string name_label;
