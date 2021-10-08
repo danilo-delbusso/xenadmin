@@ -320,7 +320,7 @@ namespace XenAdmin.Wlb
         public int ReportRenderFormat
         {
             get { return GetConfigValueInt(base.BuildComplexKey(REPORT_RENDERFORMAT)); }
-            set { SetConfigValueInt(base.BuildComplexKey(REPORT_RENDERFORMAT), (int)value, true); }
+            set { SetConfigValueInt(base.BuildComplexKey(REPORT_RENDERFORMAT), value, true); }
         }
 
         /// <summary>

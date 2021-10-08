@@ -141,7 +141,7 @@ namespace XenAdmin.Controls.CustomDataGraph
             if (TimerScroll == ScrollMode.None || (TimerScroll == ScrollMode.Right && ScrollViewOffset == TimeSpan.Zero))
                 return;
 
-            TimeSpan inc = TimeSpan.FromTicks(TimerScroll == ScrollMode.Left ? (long)(ScrollStrength.Ticks * 1) : (long)(ScrollStrength.Ticks * -1));
+            TimeSpan inc = TimeSpan.FromTicks(TimerScroll == ScrollMode.Left ? ScrollStrength.Ticks * 1 : ScrollStrength.Ticks * -1);
 
             if (ScrollViewOffset.Ticks + inc.Ticks < 0)
             {
@@ -669,7 +669,7 @@ namespace XenAdmin.Controls.CustomDataGraph
                 {
                     AnimateCurrentWidth = ScrollViewWidth;
                     Animating = true;
-                    ScrollViewWidth = TimeSpan.FromTicks((long)(ScrollViewWidth.Ticks * 7));
+                    ScrollViewWidth = TimeSpan.FromTicks(ScrollViewWidth.Ticks * 7);
                 }
                 else if (GraphWidth.Ticks > ScrollViewWidth.Ticks * 0.7)
                 {

@@ -303,7 +303,7 @@ namespace XenAdmin.Dialogs
             {
                 newConnections.Remove(connection);
             }
-            connections.RemoveAll((Predicate<ConnectionWrapperWithMoreStuff>)delegate(ConnectionWrapperWithMoreStuff c)
+            connections.RemoveAll(delegate(ConnectionWrapperWithMoreStuff c)
             {
                 return !ConnectionsManager.XenConnectionsCopy.Contains(c.Connection);
             });

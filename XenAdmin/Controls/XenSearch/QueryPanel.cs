@@ -655,7 +655,7 @@ namespace XenAdmin.Controls.XenSearch
                         if (column == XenAdmin.XenSearch.ColumnNames.name)
                         {
                             EventHandler onDoubleClickDelegate = isFolderRow ?
-                                    (EventHandler)delegate
+                                    delegate
                                     {
                                         Program.MainWindow.DoSearch(Search.SearchForFolder(ixmo.opaque_ref));
                                     } :

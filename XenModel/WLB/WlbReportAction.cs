@@ -93,7 +93,7 @@ namespace XenAdmin.Actions.Wlb
             log.DebugFormat("Downloading report {0}.", report);
 
             // The DownloadFile call will block, so we need a separate thread to poll for task status.
-            Thread taskThread = new Thread((ThreadStart)progressPoll);
+            Thread taskThread = new Thread(progressPoll);
             taskThread.Name = "Progress polling thread for WLBReportAction for " + report.Ellipsise(20);
             taskThread.IsBackground = true;
             taskThread.Start();

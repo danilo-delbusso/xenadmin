@@ -276,7 +276,7 @@ namespace XenAdmin.Model
 
             string[] emptyFolders = Array.FindAll<string>(
                 emptyFolder.Split(EMPTY_FOLDERS_SEPARATORS),
-                (Predicate<string>)delegate(string s) { return s.StartsWith("/"); });
+                delegate(string s) { return s.StartsWith("/"); });
             Array.Sort<string>(emptyFolders);
 
             return emptyFolders;

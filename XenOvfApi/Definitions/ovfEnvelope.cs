@@ -1056,9 +1056,9 @@ namespace XenOvf.Definitions
 
         public StartupSection_TypeItem()
         {
-            this.startDelayField = ((ushort)(0));
+            this.startDelayField = 0;
             this.waitingForGuestField = false;
-            this.stopDelayField = ((ushort)(0));
+            this.stopDelayField = 0;
             this.startActionField = "powerOn";
             this.stopActionField = "powerOff";
         }
@@ -1192,7 +1192,7 @@ namespace XenOvf.Definitions
 
         public InstallSection_Type()
         {
-            this.initialBootStopDelayField = ((ushort)(0));
+            this.initialBootStopDelayField = 0;
         }
 
         /// <remarks/>

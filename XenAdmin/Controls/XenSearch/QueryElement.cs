@@ -1686,7 +1686,7 @@ namespace XenAdmin.Controls.XenSearch
                 // CA-17132: Special case pools because they're silly
                 if (typeof(T) == typeof(Pool))
                 {
-                    entries.RemoveAll((Predicate<T>)delegate(T m)
+                    entries.RemoveAll(delegate(T m)
                     {
                         return Helpers.GetPool(m.Connection) == null;
                     });

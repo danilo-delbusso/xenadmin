@@ -1485,7 +1485,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -1493,7 +1493,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -2355,7 +2355,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -2363,7 +2363,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -3225,7 +3225,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -3233,7 +3233,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -4095,7 +4095,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -4103,7 +4103,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -4977,7 +4977,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -4985,7 +4985,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -5859,7 +5859,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -5867,7 +5867,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -6741,7 +6741,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -6749,7 +6749,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -7635,7 +7635,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -7643,7 +7643,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -8529,7 +8529,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -8537,7 +8537,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -9423,7 +9423,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -9431,7 +9431,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -10365,7 +10365,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -10373,7 +10373,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -10381,7 +10381,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -11315,7 +11315,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -11323,7 +11323,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -11331,7 +11331,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -12289,7 +12289,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -12297,7 +12297,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -12305,7 +12305,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -13263,7 +13263,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -13271,7 +13271,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -13279,7 +13279,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -14285,7 +14285,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -14293,7 +14293,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -14301,7 +14301,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -14309,7 +14309,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetStatusText", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetStatusText(statusCode)));
+            string returnValue = this.ocx.GetStatusText(statusCode);
             return returnValue;
         }
         
@@ -15315,7 +15315,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -15323,7 +15323,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -15331,7 +15331,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -15339,7 +15339,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetStatusText", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetStatusText(statusCode)));
+            string returnValue = this.ocx.GetStatusText(statusCode);
             return returnValue;
         }
         
@@ -16357,7 +16357,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -16365,7 +16365,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -16373,7 +16373,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -16381,7 +16381,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetStatusText", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetStatusText(statusCode)));
+            string returnValue = this.ocx.GetStatusText(statusCode);
             return returnValue;
         }
         
@@ -16396,7 +16396,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("Reconnect", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlReconnectStatus returnValue = ((MSTSCLib.ControlReconnectStatus)(this.ocx.Reconnect(ulWidth, ulHeight)));
+            MSTSCLib.ControlReconnectStatus returnValue = this.ocx.Reconnect(ulWidth, ulHeight);
             return returnValue;
         }
         
@@ -17414,7 +17414,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -17422,7 +17422,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -17430,7 +17430,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -17438,7 +17438,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetStatusText", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetStatusText(statusCode)));
+            string returnValue = this.ocx.GetStatusText(statusCode);
             return returnValue;
         }
         
@@ -17453,7 +17453,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("Reconnect", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlReconnectStatus returnValue = ((MSTSCLib.ControlReconnectStatus)(this.ocx.Reconnect(ulWidth, ulHeight)));
+            MSTSCLib.ControlReconnectStatus returnValue = this.ocx.Reconnect(ulWidth, ulHeight);
             return returnValue;
         }
         
@@ -18483,7 +18483,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -18491,7 +18491,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -18499,7 +18499,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -18507,7 +18507,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetStatusText", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetStatusText(statusCode)));
+            string returnValue = this.ocx.GetStatusText(statusCode);
             return returnValue;
         }
         
@@ -18522,7 +18522,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("Reconnect", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlReconnectStatus returnValue = ((MSTSCLib.ControlReconnectStatus)(this.ocx.Reconnect(ulWidth, ulHeight)));
+            MSTSCLib.ControlReconnectStatus returnValue = this.ocx.Reconnect(ulWidth, ulHeight);
             return returnValue;
         }
         
@@ -19580,7 +19580,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -19588,7 +19588,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -19596,7 +19596,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -19604,7 +19604,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetStatusText", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetStatusText(statusCode)));
+            string returnValue = this.ocx.GetStatusText(statusCode);
             return returnValue;
         }
         
@@ -19619,7 +19619,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("Reconnect", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlReconnectStatus returnValue = ((MSTSCLib.ControlReconnectStatus)(this.ocx.Reconnect(ulWidth, ulHeight)));
+            MSTSCLib.ControlReconnectStatus returnValue = this.ocx.Reconnect(ulWidth, ulHeight);
             return returnValue;
         }
         
@@ -20689,7 +20689,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -20697,7 +20697,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -20705,7 +20705,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -20713,7 +20713,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetStatusText", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetStatusText(statusCode)));
+            string returnValue = this.ocx.GetStatusText(statusCode);
             return returnValue;
         }
         
@@ -20728,7 +20728,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("Reconnect", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlReconnectStatus returnValue = ((MSTSCLib.ControlReconnectStatus)(this.ocx.Reconnect(ulWidth, ulHeight)));
+            MSTSCLib.ControlReconnectStatus returnValue = this.ocx.Reconnect(ulWidth, ulHeight);
             return returnValue;
         }
         
@@ -21798,7 +21798,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetVirtualChannelOptions", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            int returnValue = ((int)(this.ocx.GetVirtualChannelOptions(chanName)));
+            int returnValue = this.ocx.GetVirtualChannelOptions(chanName);
             return returnValue;
         }
         
@@ -21806,7 +21806,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("RequestClose", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlCloseStatus returnValue = ((MSTSCLib.ControlCloseStatus)(this.ocx.RequestClose()));
+            MSTSCLib.ControlCloseStatus returnValue = this.ocx.RequestClose();
             return returnValue;
         }
         
@@ -21814,7 +21814,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetErrorDescription", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason)));
+            string returnValue = this.ocx.GetErrorDescription(disconnectReason, extendedDisconnectReason);
             return returnValue;
         }
         
@@ -21822,7 +21822,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("GetStatusText", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            string returnValue = ((string)(this.ocx.GetStatusText(statusCode)));
+            string returnValue = this.ocx.GetStatusText(statusCode);
             return returnValue;
         }
         
@@ -21837,7 +21837,7 @@ namespace AxMSTSCLib {
             if ((this.ocx == null)) {
                 throw new System.Windows.Forms.AxHost.InvalidActiveXStateException("Reconnect", System.Windows.Forms.AxHost.ActiveXInvokeKind.MethodInvoke);
             }
-            MSTSCLib.ControlReconnectStatus returnValue = ((MSTSCLib.ControlReconnectStatus)(this.ocx.Reconnect(ulWidth, ulHeight)));
+            MSTSCLib.ControlReconnectStatus returnValue = this.ocx.Reconnect(ulWidth, ulHeight);
             return returnValue;
         }
         

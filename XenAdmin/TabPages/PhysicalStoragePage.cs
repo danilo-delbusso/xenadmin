@@ -320,8 +320,8 @@ namespace XenAdmin.TabPages
 
             if (e.Column.Index == columnUsage.Index)
             {
-                int percent1 = sr1.physical_size == 0 ? 0 : (int)(100.0 * sr1.physical_utilisation / (double)sr1.physical_size);
-                int percent2 = sr2.physical_size == 0 ? 0 : (int)(100.0 * sr2.physical_utilisation / (double)sr2.physical_size);
+                int percent1 = sr1.physical_size == 0 ? 0 : (int)(100.0 * sr1.physical_utilisation / sr1.physical_size);
+                int percent2 = sr2.physical_size == 0 ? 0 : (int)(100.0 * sr2.physical_utilisation / sr2.physical_size);
                 long diff = percent1 - percent2;
                 e.SortResult = diff > 0 ? 1 : diff < 0 ? -1 : 0;
                 e.Handled = true;

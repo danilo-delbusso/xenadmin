@@ -97,7 +97,7 @@ namespace XenAdmin.Dialogs.VMDialogs
                 if (row.Action != ActionCellAction.Migrate)
                     continue;
 
-                required += (long)row.Vm.memory_dynamic_max;
+                required += row.Vm.memory_dynamic_max;
             }
             RequiredLabel.ForeColor = required > PoolMemoryFree ? Color.Red : ForeColor;
             RequiredLabel.Text = Util.MemorySizeStringSuitableUnits(required, true);

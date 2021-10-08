@@ -504,7 +504,7 @@ namespace XenOvf.Utilities
                     List<object> values = new List<object>();
                     for (int i = 0; i < xa.xendata.xenvalue.Length; i++ )
                     {
-                        values.Add(DeserializeContent((XmlNode)((XmlNode[])xa.xendata.xenvalue[i])[0]));
+                        values.Add(DeserializeContent(((XmlNode[])xa.xendata.xenvalue[i])[0]));
                     }
                     xa.xendata.xenvalue = values.ToArray();
                 }

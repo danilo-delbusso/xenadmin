@@ -161,7 +161,7 @@ namespace XenCenterLib
                     for (int i = 0; i < thisBytes.Length; ++i)
                     {
                         if (thisBytes[i] != otherBytes[i])
-                            return (int)thisBytes[i] - (int)otherBytes[i];
+                            return thisBytes[i] - otherBytes[i];
                     }
 
                     return 0;

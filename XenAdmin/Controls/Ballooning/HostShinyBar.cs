@@ -71,13 +71,13 @@ namespace XenAdmin.Controls.Ballooning
 
             Graphics g = e.Graphics;
             Rectangle barArea = barRect;
-            double bytesPerPixel = (double)host_metrics.memory_total / (double)barArea.Width;
+            double bytesPerPixel = host_metrics.memory_total / (double)barArea.Width;
 
             // Grid
             DrawGrid(g, barArea, bytesPerPixel, host_metrics.memory_total);
 
             // A bar for Xen memory
-            double left = (double)barArea.Left;
+            double left = barArea.Left;
             DrawSegment(g, xen_memory - dom0_memory, bytesPerPixel, BrandManager.ProductBrand, null, HostShinyBar_Xen, ref left);
 
             // A bar for Dom0 memory

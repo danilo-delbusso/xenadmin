@@ -1653,7 +1653,7 @@ namespace XenAdmin.Network
         private void StartReconnectSingleHostTimer()
         {
             ReconnectionTimer =
-                new System.Threading.Timer((TimerCallback)ReconnectSingleHostTimer, null,
+                new System.Threading.Timer(ReconnectSingleHostTimer, null,
                 ReconnectHostTimeoutMs, ReconnectHostTimeoutMs);
         }
 
@@ -1674,7 +1674,7 @@ namespace XenAdmin.Network
         {
             OnConnectionMessageChanged(string.Format(Messages.CONNECTION_WILL_RETRY_SUPPORTER, LastConnectionFullName.Ellipsise(25) , timeout / 1000));
             ReconnectionTimer =
-                new System.Threading.Timer((TimerCallback)ReconnectCoordinatorTimer, null,
+                new System.Threading.Timer(ReconnectCoordinatorTimer, null,
                                            timeout, Timeout.Infinite);
         }
 

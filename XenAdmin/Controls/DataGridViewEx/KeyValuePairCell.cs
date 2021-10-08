@@ -169,8 +169,8 @@ namespace XenAdmin.Controls.DataGridViewEx
                     graphics.DrawString(
                         kvp.Key,
                         cellStyle.Font, brush,
-                        (float)(cellBounds.X + cellStyle.Padding.Left),
-                        (float)(cellBounds.Y + currentY));
+                        cellBounds.X + cellStyle.Padding.Left,
+                        cellBounds.Y + currentY);
 
                 currentY += s.Height + KVP_SPACE;
                 heights[i] = s.Height;
@@ -185,8 +185,8 @@ namespace XenAdmin.Controls.DataGridViewEx
 
                 using (var brush = new SolidBrush(Selected ? cellStyle.SelectionForeColor : cellStyle.ForeColor))
                     graphics.DrawString(kvp.Value, cellStyle.Font, brush,
-                        (float)(cellBounds.X + cellStyle.Padding.Left + indent),
-                        (float)(cellBounds.Y + currentY));
+                        cellBounds.X + cellStyle.Padding.Left + indent,
+                        cellBounds.Y + currentY);
 
                 currentY += heights[i] + KVP_SPACE;
             }

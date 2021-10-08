@@ -61,8 +61,8 @@ namespace XenCenterLib
         private static bool CAS<S>(ref S location, S comparand, S newValue) where S : class
         {
             return
-                (object)comparand ==
-                (object)Interlocked.CompareExchange<S>(ref location, newValue, comparand);
+                comparand ==
+                Interlocked.CompareExchange<S>(ref location, newValue, comparand);
         }
 
         public void Enqueue(T item)

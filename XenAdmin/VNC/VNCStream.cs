@@ -884,7 +884,7 @@ namespace DotNetVnc
                 bitsPerPixel == 16 ?
                     (uint)(color[start] |
                            color[start + 1] << 8) :
-                    (uint)color[start];
+                    color[start];
 
             byte[] newColor = new byte[4];
 

@@ -69,7 +69,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 string spaceText = string.Format(Messages.STORAGELINK_POOL_DISK_SPACE, freeSpaceText, capacityText);
 
                 double capacity = Math.Max(1, (double)pool.StorageLinkPool.Capacity);
-                double freeSpace = (double)pool.StorageLinkPool.FreeSpace;
+                double freeSpace = pool.StorageLinkPool.FreeSpace;
                 double usedSpacePerc = (capacity - freeSpace) / capacity;
 
                 simpleProgressBar1.Progress = usedSpacePerc;
@@ -158,7 +158,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                     string spaceText = string.Format(Messages.STORAGELINK_POOL_DISK_SPACE, freeSpaceText, capacityText);
 
                     double capacity = Math.Max(1, (double)item.StorageLinkPool.Capacity);
-                    double freeSpace = (double)item.StorageLinkPool.FreeSpace;
+                    double freeSpace = item.StorageLinkPool.FreeSpace;
                     double usedSpacePerc = (capacity - freeSpace) / capacity;
 
                     Rectangle progBarBounds = new Rectangle(e.Bounds.Right - progBarWidth - 3, e.Bounds.Bottom - progBarHeight - 6, progBarWidth, progBarHeight);

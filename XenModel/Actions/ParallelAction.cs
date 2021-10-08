@@ -183,7 +183,7 @@ namespace XenAdmin.Actions
             }
             foreach (var action in actionsWithNoConnection)
                 total += action.PercentComplete;
-            PercentComplete = (int)(total / actionsCount);
+            PercentComplete = total / actionsCount;
         }
 
         private readonly object _lock = new object();

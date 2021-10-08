@@ -1241,7 +1241,7 @@ namespace XenAdmin.ConsoleView
         {
             bool hasToReconnect = vncScreen.rdpIP == null;
             vncScreen.rdpIP = vncScreen.PollPort(XSVNCScreen.RDP_PORT, true);
-            Program.Invoke(this, (MethodInvoker)(() =>
+            Program.Invoke(this, () =>
             {
                 if (hasToReconnect)
                 {
@@ -1251,7 +1251,7 @@ namespace XenAdmin.ConsoleView
                 Unpause();
                 UpdateButtons();
                 toggleConsoleButton.Enabled = true; // make sure the toggleConsoleButton is enabled after rdp port polling (CA-102755) 
-            }));
+            });
 
         }
 

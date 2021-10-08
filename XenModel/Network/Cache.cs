@@ -455,7 +455,7 @@ namespace XenAdmin.Network
             XenRef<T> xenref = source.xenref as XenRef<T>;
             if (xenref == null)
             {
-                xenref = new XenRef<T>((string)source.xenref);
+                xenref = new XenRef<T>(source.xenref);
             }
 
             if (source.value != null)

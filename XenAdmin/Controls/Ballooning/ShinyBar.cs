@@ -144,7 +144,7 @@ namespace XenAdmin.Controls.Ballooning
                 }
 
                 // Render text to a bitmap...
-                using (Bitmap bitmap = new Bitmap((int)(segmentBounds.Width + 1), (int)(segmentBounds.Height + 1), PixelFormat.Format32bppArgb))
+                using (Bitmap bitmap = new Bitmap(segmentBounds.Width + 1, segmentBounds.Height + 1, PixelFormat.Format32bppArgb))
                 {
                     using (Graphics gBitmap = Graphics.FromImage(bitmap))
                     {
@@ -179,7 +179,7 @@ namespace XenAdmin.Controls.Ballooning
                     }
 
                     // ...and render bitmap to final image
-                    Point location = new Point((int)segmentBounds.X, (int)segmentBounds.Y);
+                    Point location = new Point(segmentBounds.X, segmentBounds.Y);
                     g.DrawImage(bitmap, location);
                 }
             }
@@ -238,7 +238,7 @@ namespace XenAdmin.Controls.Ballooning
 
             // Calculate a suitable increment
             long incr = Util.BINARY_MEGA / 2;
-            while((double)incr / bytesPerPixel * 2 < min_gap + longest)
+            while(incr / bytesPerPixel * 2 < min_gap + longest)
                 incr *= 2;
 
             // Draw the grid
@@ -248,7 +248,7 @@ namespace XenAdmin.Controls.Ballooning
                 for (long x = 0; x <= max; x += incr)
                 {
                     // Tick
-                    int pos = barArea.Left + (int)((double)x / bytesPerPixel);
+                    int pos = barArea.Left + (int)(x / bytesPerPixel);
                     g.DrawLine(pen, pos, line_top, pos, line_bottom);
 
                     // Label

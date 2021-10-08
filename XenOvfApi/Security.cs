@@ -690,7 +690,7 @@ namespace XenOvf
             FileStream inputFile = new FileStream(fullPathToFileName, FileMode.Open, FileAccess.Read, FileShare.None);
             FileStream outputFile = new FileStream(targetfile, FileMode.Create, FileAccess.Write, FileShare.None);
             CryptoStream cryptostream = null;
-            OnChanged(new OvfEventArgs(OvfEventType.Start, "Crypto: Start: ", fullPathToFileName, (ulong)0, (ulong)inputFile.Length));
+            OnChanged(new OvfEventArgs(OvfEventType.Start, "Crypto: Start: ", fullPathToFileName, 0, (ulong)inputFile.Length));
             _length = (ulong)inputFile.Length;
 
             if (encrypt)
@@ -707,7 +707,7 @@ namespace XenOvf
                 outputFile.Flush();
             }
 
-            OnChanged(new OvfEventArgs(OvfEventType.End, "Crypto: Completed", fullPathToFileName, (ulong)0, (ulong)inputFile.Length));
+            OnChanged(new OvfEventArgs(OvfEventType.End, "Crypto: Completed", fullPathToFileName, 0, (ulong)inputFile.Length));
             inputFile.Dispose();
             outputFile.Dispose();
         }
@@ -720,7 +720,7 @@ namespace XenOvf
             int currentRead = 0;
             int totalRead = 0;
 
-            OnChanged(new OvfEventArgs(OvfEventType.Start, "Crypto: Start: ", fullPathToFileName, (ulong)0, (ulong)inputFile.Length));
+            OnChanged(new OvfEventArgs(OvfEventType.Start, "Crypto: Start: ", fullPathToFileName, 0, (ulong)inputFile.Length));
             _length = (ulong)inputFile.Length;
             while (true)
             {
@@ -758,7 +758,7 @@ namespace XenOvf
             byte[] buff = new byte[bytearray.Length];
             try
             {
-                checkStream.Read(buff, 0, (int)bytearray.Length);
+                checkStream.Read(buff, 0, bytearray.Length);
                 Encoding uni = new UnicodeEncoding();
                 string original = uni.GetString(buff, 0, buff.Length);
                 original = original.Trim(new char[] { ' ', '\0' });

@@ -218,11 +218,11 @@ namespace XenAdmin.Controls
 
                 else
                 {
-                    float startX = (float)this.Padding.Left +           //Control left padding
+                    float startX = this.Padding.Left +           //Control left padding
                                   (float)LinePadding.Left;             //Line left padding
-                    float endX = (float)this.Width -                    //Control width
+                    float endX = this.Width -                    //Control width
                                  (float)this.Padding.Right -            //Control right padding
-                                 (float)this.LinePadding.Right;         //Line right padding
+                                 this.LinePadding.Right;         //Line right padding
                     graphics.DrawLine(pen, startX, lineY, endX, lineY);
                 }
             }
@@ -230,25 +230,25 @@ namespace XenAdmin.Controls
 
         private void DrawRightLine(Graphics graphics, SizeF textSizeF, float lineY, Pen pen)
         {
-            float startX = (float)this.Padding.Left +           //Control left padding
+            float startX = this.Padding.Left +           //Control left padding
                            (float)LinePadding.Left;             //Line left padding
-            float endX = (float)this.Width -                    //Control width
+            float endX = this.Width -                    //Control width
                          (float)this.Padding.Right -            //Control right padding
-                         (float)this.LinePadding.Right -        //Line right padding
-                         (float)this.LabelPadding.Horizontal -  //Label horizontal padding
+                         this.LinePadding.Right -        //Line right padding
+                         this.LabelPadding.Horizontal -  //Label horizontal padding
                          textSizeF.Width;                       //Width of the label text
             graphics.DrawLine(pen, startX, lineY, endX, lineY);
         }
 
         private void DrawLeftLine(Graphics graphics, SizeF textSizeF, float lineY, Pen pen)
         {
-            float startX = (float)this.Padding.Left +           //Control left padding
+            float startX = this.Padding.Left +           //Control left padding
                            (float)LabelPadding.Horizontal +     //Label left+right padding
-                           (float)LinePadding.Left +            //Line left padding
+                           LinePadding.Left +            //Line left padding
                            textSizeF.Width;                     //Width of the label text
-            float endX = (float)this.Width -                    //Control width
+            float endX = this.Width -                    //Control width
                          (float)this.Padding.Right -            //Control right padding
-                         (float)this.LinePadding.Right;         //Line right padding
+                         this.LinePadding.Right;         //Line right padding
             graphics.DrawLine(pen, startX, lineY, endX, lineY);
         }
 

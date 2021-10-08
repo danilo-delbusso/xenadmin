@@ -514,7 +514,7 @@ namespace XenAdmin.SettingsPanels
             if (selectedAffinity != null)
             {
                 Host_metrics host_metrics = vm.Connection.Resolve<Host_metrics>(selectedAffinity.metrics);
-                if ((showAlways || (testValue && (host_metrics != null && (double)host_metrics.memory_total < (double)nudMemory.Value * (double)Util.BINARY_MEGA))))
+                if ((showAlways || (testValue && (host_metrics != null && host_metrics.memory_total < (double)nudMemory.Value * Util.BINARY_MEGA))))
                 {
                     MemWarningLabel.Visible = true;
                 }

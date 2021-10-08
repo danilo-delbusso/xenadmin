@@ -300,8 +300,8 @@ namespace XenAdmin.Controls.Wlb
             
             //Virtual spacing elements
             _dayWidth = _gridWidth / (float)DAYS_IN_WEEK;
-            _hourWidth = _dayWidth / (float)HOURS_IN_DAY;
-            _hourIntervalWidth = _hourWidth * (float)_hourLabelInterval;
+            _hourWidth = _dayWidth / HOURS_IN_DAY;
+            _hourIntervalWidth = _hourWidth * _hourLabelInterval;
             
             //text label elements
             _dayLabelHeight = this.Font.GetHeight(graphics) + _dayLabelPadding.Top + _dayLabelPadding.Bottom;
@@ -409,7 +409,7 @@ namespace XenAdmin.Controls.Wlb
         {
             using (Pen gridPen = new Pen(_gridColor))
             {
-                Rectangle rect = new Rectangle(this.Margin.Left, this.Margin.Top, (int)_gridWidth, (int)_gridHeight);
+                Rectangle rect = new Rectangle(this.Margin.Left, this.Margin.Top, _gridWidth, _gridHeight);
                 graphics.DrawRectangle(gridPen, rect);
             }
         }
@@ -423,7 +423,7 @@ namespace XenAdmin.Controls.Wlb
                 //Draw day divider lines
                 for (int i = 1; i < DAYS_IN_WEEK; i++)
                 {
-                    float dayLineX = this.Margin.Left + _dayWidth * (float)i;
+                    float dayLineX = this.Margin.Left + _dayWidth * i;
                     graphics.DrawLine(pen, dayLineX, this.Margin.Top, dayLineX, _gridHeight);
                 }
 
@@ -494,7 +494,7 @@ namespace XenAdmin.Controls.Wlb
                         }
                         else
                         {
-                        DateTime time = new DateTime(DateTime.Now.Year, 1, 1, (int)(_hourLabelInterval * ((int)hourIncr / (int)_hourIntervalWidth)), 0, 0);
+                        DateTime time = new DateTime(DateTime.Now.Year, 1, 1, _hourLabelInterval * ((int)hourIncr / (int)_hourIntervalWidth), 0, 0);
                         using (Brush brush = new SolidBrush(_hourLabelColor))
                         {
                             string timeString = HelpersGUI.DateTimeToString(time, Messages.DATEFORMAT_H_SHORT, true);
@@ -568,9 +568,9 @@ namespace XenAdmin.Controls.Wlb
        
         private void DrawTriggerPoint(Graphics graphics, TriggerPoint triggerPoint)
         {
-            int lineX = (int)this.Margin.Left + (int)triggerPoint.Day * (int)_dayWidth + (int)triggerPoint.Hour * (int)_hourWidth;
-            int lineY1 = (int)_barLineY - (_barHeight / 2) + _barPadding.Top;
-            int lineY2 = (int)_barLineY + (_barHeight / 2) - _barPadding.Bottom;
+            int lineX = this.Margin.Left + (int)triggerPoint.Day * (int)_dayWidth + triggerPoint.Hour * (int)_hourWidth;
+            int lineY1 = _barLineY - (_barHeight / 2) + _barPadding.Top;
+            int lineY2 = _barLineY + (_barHeight / 2) - _barPadding.Bottom;
 
             TriggerPoint nextTriggerPoint = _triggerPoints.GetNextTriggerPoint(triggerPoint);
             bool isLastTriggerPoint = (nextTriggerPoint.SortKey <= triggerPoint.SortKey);
@@ -579,7 +579,7 @@ namespace XenAdmin.Controls.Wlb
             int barWidth;
             if (isLastTriggerPoint)
             {
-                barWidth = (int)this.Margin.Left + (int)_gridWidth - lineX;
+                barWidth = this.Margin.Left + _gridWidth - lineX;
             }
             else  //otherwise, draw up to the beginning of the next trigger
             {

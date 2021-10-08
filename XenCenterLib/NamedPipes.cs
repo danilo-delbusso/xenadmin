@@ -271,7 +271,7 @@ namespace XenCenterLib
                 if (pipeThread == null)
                 {
                     run = true;
-                    pipeThread = new Thread((ThreadStart)BackgroundPipeThread);
+                    pipeThread = new Thread(BackgroundPipeThread);
                     pipeThread.Name = "Named pipe thread";
                     pipeThread.IsBackground = true;
                     pipeThread.Start();

@@ -215,7 +215,7 @@ namespace XenAdmin.ServerDBs.FakeAPI
 
         public Response<string> get_by_uuid(string session, string uuid)
         {
-            return new Response<string>((string)proxy.db.ObjectWithFieldValue("host", "uuid", uuid));
+            return new Response<string>(proxy.db.ObjectWithFieldValue("host", "uuid", uuid));
         }
 
         public Response<string> shutdown(string session, string opaque_ref)

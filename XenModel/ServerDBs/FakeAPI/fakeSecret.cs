@@ -54,7 +54,7 @@ namespace XenAdmin.ServerDBs.FakeAPI
 
         public Response<string> get_by_uuid(string session, string uuid)
         {
-            return new Response<string>((string)proxy.db.ObjectWithFieldValue("secret", "uuid", uuid));
+            return new Response<string>(proxy.db.ObjectWithFieldValue("secret", "uuid", uuid));
         }
 
         public Response<string> get_value(string session, string opaque_ref)

@@ -315,7 +315,7 @@ namespace XenOvf
                                         {
                                             case "string":
                                             {
-                                                newvalue = new cimString((string)((Ms_ParameterValue_Type)prop).Value);
+                                                newvalue = new cimString(((Ms_ParameterValue_Type)prop).Value);
                                                 break;
                                             }
                                             case "boolean":

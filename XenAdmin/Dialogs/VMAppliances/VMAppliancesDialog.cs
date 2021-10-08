@@ -324,7 +324,7 @@ namespace XenAdmin.Dialogs.VMAppliances
         {
             if (dataGridViewVMAppliances.SelectedRows.Count == 1 && dataGridViewVMAppliances.SelectedRows[0] is VMApplianceRow)
             {
-                currentSelected = (VM_appliance)((VMApplianceRow)dataGridViewVMAppliances.SelectedRows[0]).VMAppliance;
+                currentSelected = ((VMApplianceRow)dataGridViewVMAppliances.SelectedRows[0]).VMAppliance;
                 toolStripButtonEdit.Enabled = true;
             }
             else

@@ -137,7 +137,7 @@ namespace XenAdmin.Plugins
         private static string XenArrayStatement(IList<string> procParams)
         {
             // check how many objects we are passing in, each is a set of 4 strings (url, uuid, obj classname, obj uuid)
-            int count = (int)(procParams.Count / 4);
+            int count = procParams.Count / 4;
 
             // now we form a statement that will initialise a powershell array in the format (a,b,c,d),(a2,b2,c2,d2),(a3,b3,c3,d3) e.t.c 
             StringBuilder sb = new StringBuilder();

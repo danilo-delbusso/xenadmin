@@ -48,7 +48,7 @@ namespace XenAdminTests.XenModelTests
         [Test]
         public void Separate_null_lists_are_considered_equal_to_each_other()
         {
-            Assert.IsTrue(Helper.AreEqual2((List<string>)null, (List<string>)null));
+            Assert.IsTrue(Helper.AreEqual2(null, (List<string>)null));
         }
 
         [Test]
@@ -113,7 +113,7 @@ namespace XenAdminTests.XenModelTests
         [Test]
         public void Separate_null_dictionary_are_considered_equal_to_each_other()
         {
-            Assert.IsTrue(Helper.AreEqual2((Dictionary<string, string>)null, (Dictionary<string, string>)null));
+            Assert.IsTrue(Helper.AreEqual2(null, (Dictionary<string, string>)null));
         }
 
         [Test]

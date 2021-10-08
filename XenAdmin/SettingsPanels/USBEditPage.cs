@@ -273,7 +273,7 @@ namespace XenAdmin.SettingsPanels
 
             public VUSB Vusb
             {
-                get { return (VUSB)_vusb; }
+                get { return _vusb; }
             }
 
             public void UpdateDetails()

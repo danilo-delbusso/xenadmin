@@ -189,7 +189,7 @@ namespace XenAdmin.Controls.CustomGridView
         internal override int GetGridItemWidth(string column)
         {
             if (Row.ItemColumnSpan(this, column) == 1)
-                return (int)Math.Ceiling((double)DataSize.Width);
+                return (int)Math.Ceiling(DataSize.Width);
 
             return base.GetGridItemWidth(column);
         }

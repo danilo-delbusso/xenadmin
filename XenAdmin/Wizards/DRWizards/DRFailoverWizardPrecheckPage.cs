@@ -127,7 +127,7 @@ namespace XenAdmin.Wizards.DRWizards
             {
                 count += (poolMetadata.VmAppliances.Count + poolMetadata.Vms.Count);
             }
-            return (int)(((float)i / (float)(count)) * 100);
+            return (int)((i / (float)(count)) * 100);
         }
 
         private BackgroundWorker _worker = null;

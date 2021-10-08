@@ -81,7 +81,7 @@ namespace XenAdmin.Wlb
 
         public static double ConvertFromMbps(double mbpsValue)
         {
-            return (double)(mbpsValue * KILOBYTE * KILOBYTE);
+            return mbpsValue * KILOBYTE * KILOBYTE;
         }
 		#endregion
 

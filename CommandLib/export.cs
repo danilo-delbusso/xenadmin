@@ -87,7 +87,7 @@ namespace CommandLib
 
             for (uint i = 0; i < bytes.Length; i++)
             {
-                uint b = (uint)bytes[i];
+                uint b = bytes[i];
                 output[i * 2] = chars[b >> 4];
                 output[i * 2 + 1] = chars[b & 0x0F];
             }
@@ -150,8 +150,8 @@ namespace CommandLib
         private static string string_of_byte_array(byte[] payload)
         {
             Decoder decoder = Encoding.UTF8.GetDecoder();
-            char[] chars = new char[decoder.GetCharCount(payload, 0, (int)payload.Length)];
-            decoder.GetChars(payload, 0, (int)payload.Length, chars, 0);
+            char[] chars = new char[decoder.GetCharCount(payload, 0, payload.Length)];
+            decoder.GetChars(payload, 0, payload.Length, chars, 0);
             return new string(chars);
         }
 

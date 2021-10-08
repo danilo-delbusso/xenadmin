@@ -3212,7 +3212,7 @@ namespace XenOvf
                         {
                             if (_value.ToLower().StartsWith("device="))
                             {
-                                int cDevice = Convert.ToInt32(((string[])_value.Split(new char[] { '=' }))[1]);
+                                int cDevice = Convert.ToInt32(_value.Split(new char[] { '=' })[1]);
                                 if (cDevice > device)
                                 {
                                     device = cDevice;
@@ -3240,7 +3240,7 @@ namespace XenOvf
                 string testId = null;
                 if (rasd.Parent.Value.ToLower().Contains("msvm_resourceallocationsettingdata.instanceid="))
                 {
-                    testId = ((string[])rasd.Parent.Value.Split(new char[] { '=' }))[1].Replace("\"", "").Replace("\\", "");
+                    testId = rasd.Parent.Value.Split(new char[] { '=' })[1].Replace("\"", "").Replace("\\", "");
                 }
                 else
                 {
@@ -4158,7 +4158,7 @@ namespace XenOvf
 
             VirtualHardwareSection_Type vhs = null;
             Content_Type[] vsList = (((VirtualSystemCollection_Type)ovfEnv.Item)).Content;
-            foreach (Content_Type vsType in (Content_Type[])vsList)
+            foreach (Content_Type vsType in vsList)
             {
                 if (vsType is VirtualSystem_Type)
                 {
@@ -4776,7 +4776,7 @@ namespace XenOvf
 
             if (systems.Count == 1)
             {
-                ovfEnv.Item = (Content_Type)systems[0];
+                ovfEnv.Item = systems[0];
             }
             log.Debug("OVF.FinalizeEnvelope completed.");
         }

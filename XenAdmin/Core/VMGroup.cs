@@ -143,13 +143,13 @@ namespace XenAdmin.Core
 
         internal static AsyncAction AssignVMsToGroupAction(T group, List<XenRef<VM>> vms, bool suppressHistory)
         {
-            return typeof(T) == typeof(VMSS) ? (AsyncAction)(new AssignVMsToPolicyAction(group as VMSS, vms, suppressHistory)) :
+            return typeof(T) == typeof(VMSS) ? new AssignVMsToPolicyAction(@group as VMSS, vms, suppressHistory) :
                 (AsyncAction)(new AssignVMsToVMApplianceAction(group as VM_appliance, vms, suppressHistory));
         }
 
         internal static AsyncAction RemoveVMsFromGroupAction(T group, List<XenRef<VM>> vms)
         {
-            return typeof(T) == typeof(VMSS) ? (AsyncAction)(new RemoveVMsFromPolicyAction(group as VMSS, vms)) :
+            return typeof(T) == typeof(VMSS) ? new RemoveVMsFromPolicyAction(@group as VMSS, vms) :
                 (AsyncAction)(new RemoveVMsFromVMApplianceAction(group as VM_appliance, vms));
         }
 
@@ -165,7 +165,7 @@ namespace XenAdmin.Core
 
         internal static XenDialogBase ManageGroupsDialog(Pool pool)
         {
-            return typeof(T) == typeof(VMSS) ? (XenDialogBase)(new ScheduledSnapshotsDialog(pool)) : (XenDialogBase)(new VMAppliancesDialog(pool));
+            return typeof(T) == typeof(VMSS) ? new ScheduledSnapshotsDialog(pool) : (XenDialogBase)(new VMAppliancesDialog(pool));
         }
 
         internal static bool FeaturePossible(IXenConnection connection)
@@ -179,7 +179,7 @@ namespace XenAdmin.Core
 
         internal static Predicate<Host> FeatureRestricted
         {
-            get { return typeof(T) == typeof(VMSS) ? ((Predicate<Host>)Host.RestrictVMSnapshotSchedule) : (Predicate<Host>)Host.RestrictVMAppliances; }
+            get { return typeof(T) == typeof(VMSS) ? Host.RestrictVMSnapshotSchedule : (Predicate<Host>)Host.RestrictVMAppliances; }
         }
 
         internal static bool IsQuiescingSupported(IXenConnection connection)

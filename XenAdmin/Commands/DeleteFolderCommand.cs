@@ -65,7 +65,7 @@ namespace XenAdmin.Commands
         {
             List<IXenObject> folders = new List<IXenObject>(selection.AsXenObjects<Folder>(CanRun));
 
-            folders.RemoveAll((Predicate<IXenObject>)delegate(IXenObject folder)
+            folders.RemoveAll(delegate(IXenObject folder)
             {
                 // if the list contains any folders that are children to others in the list then
                 // they will automatically get deleted, so remove them here.

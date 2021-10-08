@@ -202,7 +202,7 @@ namespace XenAdmin.Controls.Ballooning
 
             Graphics g = e.Graphics;
             Rectangle barArea = barRect;
-            BytesPerPixel = (double)static_max / (double)barArea.Width;
+            BytesPerPixel = static_max / barArea.Width;
 
             // Grid
 
@@ -210,7 +210,7 @@ namespace XenAdmin.Controls.Ballooning
 
             // The bar
 
-            int left_width = (int)((double)memoryUsed / BytesPerPixel);
+            int left_width = (int)(memoryUsed / BytesPerPixel);
             if (left_width > barArea.Width)  // Happens if the user is reducing static_max to below current memory usage.
                 left_width = barArea.Width;  // I wanted to add a right-arrow to the bytesString in that case too, but the glyph isn't present in the font: and too much work to add an image.
             Rectangle rect = new Rectangle(barArea.Left, barArea.Top, left_width, barArea.Height);

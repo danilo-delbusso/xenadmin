@@ -172,7 +172,7 @@ namespace XenAPI
             List<Role> rolesAbleToCompleteApiCall = new List<Role>();
             foreach (Role role in Connection.Cache.Roles)
             {
-                List<Role> subroles = (List<Role>)Connection.ResolveAll<Role>(role.subroles);
+                List<Role> subroles = Connection.ResolveAll<Role>(role.subroles);
                 if (subroles.Find(
                     delegate(Role r)
                     {

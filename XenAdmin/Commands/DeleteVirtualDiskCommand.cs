@@ -229,14 +229,14 @@ namespace XenAdmin.Commands
                     warningDialog.AddWarningMessage(
                         Messages.MESSAGEBOX_DELETE_SNAPSHOT_TITLE,
                         Messages.WARNING_DELETE_SNAPSHOT,
-                        snapshots.ConvertAll<IXenObject>(delegate(VDI v){return (IXenObject)v;}));
+                        snapshots.ConvertAll<IXenObject>(delegate(VDI v){return v;}));
                 }
                 else if (snapshots.Count > 1)
                 {
                     warningDialog.AddWarningMessage(
                         Messages.MESSAGEBOX_DELETE_SNAPSHOTS_TITLE_MULTIPLE,
                         Messages.WARNING_DELETE_SNAPSHOT_MULTIPLE,
-                        snapshots.ConvertAll<IXenObject>(delegate(VDI v){return (IXenObject)v;}));
+                        snapshots.ConvertAll<IXenObject>(delegate(VDI v){return v;}));
                 }
 
                 if (isos.Count == 1)
@@ -244,14 +244,14 @@ namespace XenAdmin.Commands
                     warningDialog.AddWarningMessage(
                         Messages.MESSAGEBOX_DELETE_ISO_TITLE,
                         Messages.WARNING_DELETE_ISO,
-                        isos.ConvertAll<IXenObject>(delegate(VDI v) { return (IXenObject)v; }));
+                        isos.ConvertAll<IXenObject>(delegate(VDI v) { return v; }));
                 }
                 else if (isos.Count > 1)
                 {
                     warningDialog.AddWarningMessage(
                         Messages.MESSAGEBOX_DELETE_ISO_TITLE_MULTIPLE,
                         Messages.WARNING_DELETE_ISO_MULTIPLE,
-                        isos.ConvertAll<IXenObject>(delegate(VDI v) { return (IXenObject)v; }));
+                        isos.ConvertAll<IXenObject>(delegate(VDI v) { return v; }));
                 }
 
                 if (systemVDisks.Count == 1)
@@ -259,14 +259,14 @@ namespace XenAdmin.Commands
                     warningDialog.AddWarningMessage(
                         Messages.MESSAGEBOX_DELETE_SYS_DISK_TITLE,
                         Messages.WARNING_DELETE_SYS_DISK,
-                        systemVDisks.ConvertAll<IXenObject>(delegate(VDI v) { return (IXenObject)v; }));
+                        systemVDisks.ConvertAll<IXenObject>(delegate(VDI v) { return v; }));
                 }
                 else if (systemVDisks.Count > 1)
                 {
                     warningDialog.AddWarningMessage(
                         Messages.MESSAGEBOX_DELETE_SYS_DISK_TITLE_MULTIPLE,
                         Messages.WARNING_DELETE_SYS_DISK_MULTIPLE,
-                        systemVDisks.ConvertAll<IXenObject>(delegate(VDI v) { return (IXenObject)v; }));
+                        systemVDisks.ConvertAll<IXenObject>(delegate(VDI v) { return v; }));
                 }
 
                 if (virtualDisks.Count == 1)
@@ -274,14 +274,14 @@ namespace XenAdmin.Commands
                     warningDialog.AddWarningMessage(
                         Messages.MESSAGEBOX_DELETE_VD_TITLE,
                         Messages.WARNING_DELETE_VD,
-                        virtualDisks.ConvertAll<IXenObject>(delegate(VDI v) { return (IXenObject)v; }));
+                        virtualDisks.ConvertAll<IXenObject>(delegate(VDI v) { return v; }));
                 }
                 else if (virtualDisks.Count > 1)
                 {
                     warningDialog.AddWarningMessage(
                         Messages.MESSAGEBOX_DELETE_VD_TITLE_MUTLIPLE,
                         Messages.WARNING_DELETE_VD_MULTIPLE,
-                        virtualDisks.ConvertAll<IXenObject>(delegate(VDI v) { return (IXenObject)v; }));
+                        virtualDisks.ConvertAll<IXenObject>(delegate(VDI v) { return v; }));
                 }
                 return warningDialog.ShowDialog(Parent) == DialogResult.Yes;
             }

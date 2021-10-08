@@ -80,7 +80,7 @@ namespace XenAdmin.XenSearch
             {
                 sum += MetricUpdater.GetValue(vm, String.Format("cpu{0}", i.ToString()));
             }
-            return (int)Math.Round((sum * 100.0) / (double)total);
+            return (int)Math.Round((sum * 100.0) / total);
         }
 
         public static string vdiMemoryUsageString(VDI vdi)
@@ -218,7 +218,7 @@ namespace XenAdmin.XenSearch
             {
                 sum += MetricUpdater.GetValue(host, String.Format("cpu{0}", i.ToString()));
             }
-            return (int)Math.Round((sum * 100.0) / (double)total);
+            return (int)Math.Round((sum * 100.0) / total);
         }
 
         public static string hostMemoryUsageStringByMetric(Host host, MetricUpdater MetricUpdater)

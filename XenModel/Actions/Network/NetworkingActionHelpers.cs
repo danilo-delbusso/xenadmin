@@ -366,7 +366,7 @@ namespace XenAdmin.Actions
 
             List<PIF> to_reconfigure =
                 action.Connection.ResolveAll(network.PIFs).FindAll(
-                    (Predicate<PIF>)delegate(PIF p)
+                    delegate(PIF p)
                     {
                         return this_host == (p.host.opaque_ref == pif.host.opaque_ref);
                     });

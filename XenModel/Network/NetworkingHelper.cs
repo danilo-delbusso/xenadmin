@@ -109,7 +109,7 @@ namespace XenAdmin.Network
 
                 foreach (PIF pif in pifs)
                 {
-                    if (null == result.Find((Predicate<PIF>)delegate(PIF p) { return PIFsMatch(p, pif); }))
+                    if (null == result.Find(delegate(PIF p) { return PIFsMatch(p, pif); }))
                         result.Add(pif);
                 }
             }
@@ -197,7 +197,7 @@ namespace XenAdmin.Network
 
             foreach (PIF p1 in s1)
             {
-                if (s2.RemoveAll((Predicate<PIF>)delegate(PIF p) { return PIFsMatch(p, p1); }) != 1)
+                if (s2.RemoveAll(delegate(PIF p) { return PIFsMatch(p, p1); }) != 1)
                     return false;
             }
 

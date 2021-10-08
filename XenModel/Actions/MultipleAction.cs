@@ -154,7 +154,7 @@ namespace XenAdmin.Actions
             int n = subActions.Count;
             foreach (var action in subActions)
                 total += action.PercentComplete;
-            PercentComplete = (int)(total / n);
+            PercentComplete = total / n;
         }
 
         protected virtual void RunSubActions(List<Exception> exceptions)

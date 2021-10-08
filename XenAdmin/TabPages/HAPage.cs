@@ -325,14 +325,14 @@ namespace XenAdmin.TabPages
 
             List<SR> heartbeatSRs = pool.GetHAHeartbeatSRs();
             // Sort heartbeat SRs using NaturalCompare
-            heartbeatSRs.Sort((Comparison<SR>)delegate(SR a, SR b)
+            heartbeatSRs.Sort(delegate(SR a, SR b)
             {
                 return StringUtility.NaturalCompare(a.Name(), b.Name());
             });
 
             List<Host> members = new List<Host>(pool.Connection.Cache.Hosts);
             // Sort pool members using NaturalCompare
-            members.Sort((Comparison<Host>)delegate(Host a, Host b)
+            members.Sort(delegate(Host a, Host b)
             {
                 return StringUtility.NaturalCompare(a.Name(), b.Name());
             });

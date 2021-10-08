@@ -507,7 +507,7 @@ namespace XenAdmin.Actions.VMActions
             string suspendSr = null;
 
             double progress = 70;
-            double step = 20.0 / (double)Disks.Count;
+            double step = 20.0 / Disks.Count;
             foreach (DiskDescription disk in Disks)
             {
                 VBD vbd = GetDiskVBD(disk, vbds);
@@ -688,7 +688,7 @@ namespace XenAdmin.Actions.VMActions
             double progress = 90;
             VIF vif;
             List<VIF> existingTemplateVifs = Connection.ResolveAll(VM.VIFs);
-            double step = 5.0 / (double)existingTemplateVifs.Count;
+            double step = 5.0 / existingTemplateVifs.Count;
             for (int i = 0; i < existingTemplateVifs.Count; i++)
             {
                 vif = existingTemplateVifs[i];
@@ -699,7 +699,7 @@ namespace XenAdmin.Actions.VMActions
             }
 
             // then we add the ones the user has specified
-            step = 5.0 / (double)Vifs.Count;
+            step = 5.0 / Vifs.Count;
             for (int i = 0; i < Vifs.Count; i++)
             {
                 vif = Vifs[i];

@@ -84,7 +84,7 @@ namespace XenAdminTests.SearchTests
                 XmlElement resultElement = doc.CreateElement("IXenObject");
                 parent.AppendChild(resultElement);
                 XmlAttribute uuidAttr = doc.CreateAttribute("opaqueref");
-                uuidAttr.Value = (String)o.opaque_ref;
+                uuidAttr.Value = o.opaque_ref;
                 resultElement.Attributes.Append(uuidAttr);
 
                 return new XmlResultsAdapter(doc, resultElement);

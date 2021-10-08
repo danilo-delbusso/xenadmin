@@ -212,12 +212,12 @@ namespace XenAdmin.Commands
             warningDialog.AddWarningMessage(
                 Messages.MESSAGEBOX_DETACH_SYSTEMVD_TITLE,
                 Messages.MESSAGEBOX_DETACH_SYSTEMVD,
-                sysDisks.ConvertAll<IXenObject>(delegate(VDI v) { return (IXenObject)v; }));
+                sysDisks.ConvertAll<IXenObject>(delegate(VDI v) { return v; }));
 
             warningDialog.AddWarningMessage(
                 Messages.MESSAGEBOX_DETACH_VD_TITLE,
                 Messages.MESSAGEBOX_DETACH_VD,
-                regularDisks.ConvertAll<IXenObject>(delegate(VDI v) { return (IXenObject)v; }));
+                regularDisks.ConvertAll<IXenObject>(delegate(VDI v) { return v; }));
 
             return warningDialog.ShowDialog(MainWindowCommandInterface.Form) == System.Windows.Forms.DialogResult.Yes;
         }

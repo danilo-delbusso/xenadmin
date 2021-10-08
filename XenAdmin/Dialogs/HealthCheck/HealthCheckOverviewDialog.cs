@@ -152,7 +152,7 @@ namespace XenAdmin.Dialogs.HealthCheck
         {
             if (poolsDataGridView.SelectedRows.Count == 1 && poolsDataGridView.SelectedRows[0] is PoolRow)
             {
-                currentSelected = (Pool)((PoolRow)poolsDataGridView.SelectedRows[0]).Pool;
+                currentSelected = ((PoolRow)poolsDataGridView.SelectedRows[0]).Pool;
             }
             else
             {

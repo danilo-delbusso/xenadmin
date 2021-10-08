@@ -697,7 +697,7 @@ namespace XenCenterLib
             public int delta;
         }
 
-        public const int S_OK = unchecked((int)0x00000000);
+        public const int S_OK = unchecked(0x00000000);
         public const int E_ACCESSDENIED = unchecked((int)0x80070005);
         public const int INET_E_DEFAULT_ACTION = unchecked((int)0x800C0011);
 

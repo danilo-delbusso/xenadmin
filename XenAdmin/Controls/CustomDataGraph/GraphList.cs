@@ -755,7 +755,7 @@ namespace XenAdmin.Controls.CustomDataGraph
             DataPlot dataPlot = GetDataPlotAtPoint(point);
             if (dataPlot != null)
             {
-                int index = Plots.IndexOf((DataPlot) dataPlot);
+                int index = Plots.IndexOf(dataPlot);
                 Point dataPlotPoint = dataPlot.PointToClient(screenPoint);
                 if (dataPlotPoint.X > dataPlot.ClientRectangle.Right)
                 {

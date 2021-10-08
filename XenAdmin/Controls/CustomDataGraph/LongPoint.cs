@@ -108,7 +108,7 @@ namespace XenAdmin.Controls.CustomDataGraph
             double x = xrange.Min + (xrange.Delta * (rectangle.Right - screenpoint.X)) / (double)rectangle.Width;
             
             // work out y
-            double y = yrange.Min + (yrange.Delta * (rectangle.Bottom - screenpoint.Y)) / (double)rectangle.Height;
+            double y = yrange.Min + (yrange.Delta * (rectangle.Bottom - screenpoint.Y)) / rectangle.Height;
             
             return new LongPoint((long)x, (long)y);
         }

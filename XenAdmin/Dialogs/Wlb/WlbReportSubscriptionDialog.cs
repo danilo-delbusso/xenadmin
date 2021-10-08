@@ -164,7 +164,7 @@ namespace XenAdmin.Dialogs.Wlb
             this.emailReplyTextBox.Text = this._subscription.EmailReplyTo;
             this.emailSubjectTextBox.Text = this._subscription.EmailSubject;
             this.emailCommentRichTextBox.Text = this._subscription.EmailComment;
-            this.rpRenderComboBox.SelectedIndex = (int)this._subscription.ReportRenderFormat;
+            this.rpRenderComboBox.SelectedIndex = this._subscription.ReportRenderFormat;
 
             // convert utc days of week and utc run time to local days of week and local run time
             DateTime localRunTime;

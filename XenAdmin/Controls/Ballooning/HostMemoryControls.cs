@@ -92,7 +92,7 @@ namespace XenAdmin.Controls.Ballooning
             long dom0 = host.dom0_memory();
 
             long overcommit = total > 0
-                ? (long)Math.Round((double)tot_dyn_max / (double)total * 100.0)
+                ? (long)Math.Round(tot_dyn_max / (double)total * 100.0)
                 : 0;
 
             // Initialize the shiny bar

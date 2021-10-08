@@ -150,8 +150,8 @@ namespace CommandLib
         private string unmarshal_string(byte[] buffer)
         {
             Decoder decoder = Encoding.UTF8.GetDecoder();
-            char[] chars = new char[decoder.GetCharCount(buffer, 0, (int)buffer.Length)];
-            decoder.GetChars(buffer, 0, (int)buffer.Length, chars, 0);
+            char[] chars = new char[decoder.GetCharCount(buffer, 0, buffer.Length)];
+            decoder.GetChars(buffer, 0, buffer.Length, chars, 0);
             return trim_trailing_stuff(new string(chars));
         }
 
