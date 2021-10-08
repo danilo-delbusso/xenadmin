@@ -56,10 +56,6 @@ namespace XenAdmin.Controls
         /// </summary>
         internal bool AutoSelectAffinity = true;
 
-        public event EventHandler SelectedAffinityChanged = new EventHandler(OnSelectedAffinityChanged);
-
-        private static void OnSelectedAffinityChanged(object obj, EventArgs e) { }
-
         public AffinityPicker()
         {
             InitializeComponent();
@@ -74,7 +70,6 @@ namespace XenAdmin.Controls
             LoadServers();
             _UpdateControl();
             SelectRadioButtons();
-            SelectedAffinityChanged(SelectedAffinity, new EventArgs());
         }
 
         private void LoadServers()
@@ -90,8 +85,6 @@ namespace XenAdmin.Controls
         private void UpdateControl()
         {
             _UpdateControl();
-
-            SelectedAffinityChanged(SelectedAffinity, new EventArgs());
         }
 
         /// <summary>
@@ -191,11 +184,6 @@ namespace XenAdmin.Controls
         public bool ValidState()
         {
             return SelectedAffinity != null || DynamicRadioButton.Checked;
-        }
-
-        private void affinityListBox_SelectedValueChanged(object sender, EventArgs e)
-        {
-            UpdateControl();
         }
 
         // we dont need to bother firing events if the other radio button gets checked or unchecked
