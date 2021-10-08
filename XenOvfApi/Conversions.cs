@@ -486,8 +486,9 @@ namespace XenOvf
             try
             {
                 searcher = new ManagementObjectSearcher(@"select * from Win32_ComputerSystem");
-                foreach (ManagementObject mgtobj in searcher.Get())
+                foreach (var o in searcher.Get())
                 {
+                    var mgtobj = (ManagementObject) o;
                     Win32_ComputerSystem = mgtobj; // only want one.
                     break;
                 }
@@ -511,8 +512,9 @@ namespace XenOvf
             try
             {
                 searcher = new ManagementObjectSearcher(@"select * from Win32_Processor");
-                foreach (ManagementObject mgtobj in searcher.Get())
+                foreach (var o in searcher.Get())
                 {
+                    var mgtobj = (ManagementObject) o;
                     Win32_Processor.Add(mgtobj); // only want one.
                     break;
                 }
@@ -536,8 +538,9 @@ namespace XenOvf
             try
             {
                 searcher = new ManagementObjectSearcher(@"select * from Win32_CDROMDrive");
-                foreach (ManagementObject mgtobj in searcher.Get())
+                foreach (var o in searcher.Get())
                 {
+                    var mgtobj = (ManagementObject) o;
                     Win32_CDROMDrive.Add(mgtobj);
                 }
                 log.DebugFormat("OVF.CollectionInformation Win32_CDROMDrive.{0}", Win32_CDROMDrive.Count);
@@ -560,8 +563,9 @@ namespace XenOvf
             try
             {
                 searcher = new ManagementObjectSearcher(@"select * from Win32_DiskDrive");
-                foreach (ManagementObject mgtobj in searcher.Get())
+                foreach (var o in searcher.Get())
                 {
+                    var mgtobj = (ManagementObject) o;
                     Win32_DiskDrive.Add(mgtobj);
                 }
                 log.DebugFormat("OVF.CollectionInformation Win32_DiskDrive.{0}", Win32_DiskDrive.Count);
@@ -584,8 +588,9 @@ namespace XenOvf
             try
             {
                 searcher = new ManagementObjectSearcher(@"select * from Win32_NetworkAdapter");
-                foreach (ManagementObject mgtobj in searcher.Get())
+                foreach (var o in searcher.Get())
                 {
+                    var mgtobj = (ManagementObject) o;
                     Win32_NetworkAdapter.Add(mgtobj);
                 }
                 log.DebugFormat("OVF.CollectionInformation Win32_NetworkAdapter.{0}", Win32_NetworkAdapter.Count);
@@ -608,8 +613,9 @@ namespace XenOvf
             try
             {
                 searcher = new ManagementObjectSearcher(@"select * from Win32_IDEController");
-                foreach (ManagementObject mgtobj in searcher.Get())
+                foreach (var o in searcher.Get())
                 {
+                    var mgtobj = (ManagementObject) o;
                     Win32_IDEController.Add(mgtobj);
                 }
                 log.DebugFormat("OVF.CollectionInformation Win32_IDEController.{0}", Win32_IDEController.Count);
@@ -632,8 +638,9 @@ namespace XenOvf
             try
             {
                 searcher = new ManagementObjectSearcher(@"select * from Win32_SCSIController");
-                foreach (ManagementObject mgtobj in searcher.Get())
+                foreach (var o in searcher.Get())
                 {
+                    var mgtobj = (ManagementObject) o;
                     Win32_SCSIController.Add(mgtobj);
                 }
                 log.DebugFormat("OVF.CollectionInformation Win32_SCSIController.{0}", Win32_SCSIController.Count);
@@ -656,8 +663,9 @@ namespace XenOvf
             try
             {
                 searcher = new ManagementObjectSearcher(@"select * from Win32_DiskPartition");
-                foreach (ManagementObject mgtobj in searcher.Get())
+                foreach (var o in searcher.Get())
                 {
+                    var mgtobj = (ManagementObject) o;
                     Win32_DiskPartition.Add(mgtobj);
                 }
                 log.DebugFormat("OVF.CollectionInformation Win32_DiskPartition.{0}", Win32_DiskPartition.Count);
@@ -680,8 +688,9 @@ namespace XenOvf
             try
             {
                 searcher = new ManagementObjectSearcher(@"select * from Win32_DiskDriveToDiskPartition");
-                foreach (ManagementObject mgtobj in searcher.Get())
+                foreach (var o in searcher.Get())
                 {
+                    var mgtobj = (ManagementObject) o;
                     Win32_DiskDriveToDiskPartition.Add(mgtobj);
                 }
                 log.DebugFormat("OVF.CollectionInformation Win32_DiskDriveToDiskPartition.{0}", Win32_DiskDriveToDiskPartition.Count);

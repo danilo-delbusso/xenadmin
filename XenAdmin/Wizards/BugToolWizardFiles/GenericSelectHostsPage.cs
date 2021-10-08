@@ -136,8 +136,9 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             get
             {
                 List<Host> hosts = new List<Host>();
-                foreach (HostCustomTreeNode node in HostListTreeView.CheckedItems())
+                foreach (var customTreeNode in HostListTreeView.CheckedItems())
                 {
+                    var node = (HostCustomTreeNode) customTreeNode;
                     IXenConnection c = node.Tag as IXenConnection;
                     if (c != null)
                     {

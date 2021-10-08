@@ -278,8 +278,9 @@ namespace XenAdmin.Controls.XenSearch
 
             // Show appropriate columns
             int i = 0;
-            foreach (GridHeaderItem item in HeaderRow.Items.Values)
+            foreach (var gridItemBase in HeaderRow.Items.Values)
             {
+                var item = (GridHeaderItem) gridItemBase;
                 if (!item.Immovable)
                     break;
 

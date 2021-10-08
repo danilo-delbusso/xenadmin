@@ -180,8 +180,11 @@ namespace XenAdmin.Wizards.NewVMWizard
 
             TemplatesGridView.Rows.Clear();
 
-            foreach (TemplatesGridViewItem item in rows)
+            foreach (var dataGridViewRow in rows)
+            {
+                var item = (TemplatesGridViewItem) dataGridViewRow;
                 item.Visible = searchTextBox1.Matches(item.Template.Name());
+            }
 
             TemplatesGridView.Rows.AddRange(rows.ToArray());
             RowsChanged();

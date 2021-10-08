@@ -213,8 +213,9 @@ namespace XenAdmin.Controls.CustomGridView
             if (Sort == SortOrder.None)  // removing sorting from this column
             {
                 SortPriority = -1;
-                foreach (GridHeaderItem other in ghr.Items.Values)
+                foreach (var gridItemBase in ghr.Items.Values)
                 {
+                    var other = (GridHeaderItem) gridItemBase;
                     if (other != this && other.SortPriority > oldPriority)
                         other.SortPriority--;
                 }
@@ -222,8 +223,9 @@ namespace XenAdmin.Controls.CustomGridView
             else if (oldSort == SortOrder.None)  // starting to apply sorting to this column
             {
                 SortPriority = 0;
-                foreach (GridHeaderItem other in ghr.Items.Values)
+                foreach (var gridItemBase in ghr.Items.Values)
                 {
+                    var other = (GridHeaderItem) gridItemBase;
                     if (other != this && other.SortPriority > -1)
                         other.SortPriority++;
                 }

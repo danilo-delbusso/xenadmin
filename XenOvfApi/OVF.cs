@@ -3607,8 +3607,9 @@ namespace XenOvf
                 ((VirtualSystemCollection_Type)ovfEnv.Item).Content = new Content_Type[] { vstemp };
             }
 
-            foreach (VirtualSystem_Type vSystem in ((VirtualSystemCollection_Type)ovfEnv.Item).Content)
+            foreach (var contentType in ((VirtualSystemCollection_Type)ovfEnv.Item).Content)
             {
+                var vSystem = (VirtualSystem_Type) contentType;
                 systemIds.Add(vSystem.id);
             }
             log.DebugFormat("OVF.FindSystemIds completed, {0} found", systemIds.Count);

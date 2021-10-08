@@ -44,8 +44,9 @@ namespace XenAdmin
             {
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_Battery");
 
-                foreach (ManagementObject queryObj in searcher.Get())
+                foreach (var o in searcher.Get())
                 {
+                    var queryObj = (ManagementObject) o;
                     Debug.WriteLine("-----------------------------------");
                     Debug.WriteLine("Win32_Battery instance");
                     Debug.WriteLine("-----------------------------------");
