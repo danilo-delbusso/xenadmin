@@ -29,7 +29,6 @@
  * SUCH DAMAGE.
  */
 
-using System;
 using System.Xml;
 using XenAdmin.XenSearch;
 using XenAPI;

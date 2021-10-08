@@ -45,7 +45,6 @@ using System.Linq;
 using XenAdmin.Core;
 using XenAdmin.Network;
 using XenAdmin.Dialogs;
-using XenAdmin.Help;
 using XenAdmin.XenSearch;
 using XenAPI;
 using XenCenterLib;
