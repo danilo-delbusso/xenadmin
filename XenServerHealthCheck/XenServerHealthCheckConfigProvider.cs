@@ -153,10 +153,12 @@ namespace XenServerHealthCheck
 
         public void ShowObject(string newVMRef)
         {
+            // ignore
         }
 
         public void HideObject(string newVMRef)
         {
+            // ignore
         }
 
         public bool ObjectIsHidden(string opaqueRef)
@@ -171,10 +173,12 @@ namespace XenServerHealthCheck
 
         public void UpdateServerHistory(string hostnameWithPort)
         {
+            // ignore
         }
 
         public void SaveSettingsIfRequired()
         {
+            // ignore
         }
 
         private static AsyncAction.SudoElevationResult GetElevatedSession(List<Role> roles, IXenConnection connection, string actionTitle)

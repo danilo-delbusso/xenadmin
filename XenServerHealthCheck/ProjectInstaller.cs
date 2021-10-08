@@ -48,12 +48,12 @@ namespace XenServerHealthCheck
 
         private void XenServerHealthCheckInstaller_AfterInstall(object sender, InstallEventArgs e)
         {
-
+            // ignore
         }
 
         private void XenServerHealthCheckProcessInstaller_AfterInstall(object sender, InstallEventArgs e)
         {
-
+            // ignore
         }
     }
 }

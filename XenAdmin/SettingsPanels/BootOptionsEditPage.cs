@@ -57,23 +57,29 @@ namespace XenAdmin.SettingsPanels
 
 		public bool ValidToSave { get { return true; } }
 
-		/// <summary>
-		/// Show local validation balloon tooltips
-		/// </summary>
-		public void ShowLocalValidationMessages()
-		{ }
+        /// <summary>
+        /// Show local validation balloon tooltips
+        /// </summary>
+        public void ShowLocalValidationMessages()
+        {
+			// ignore
+        }
 
-		/// <summary>
-		/// Hide local validation balloon tooltips
-		/// </summary>
-		public void HideLocalValidationMessages()
-        { }
+        /// <summary>
+        /// Hide local validation balloon tooltips
+        /// </summary>
+        public void HideLocalValidationMessages()
+        {
+			// ignore
+        }
 
-		/// <summary>
-		/// Unregister listeners, dispose balloon tooltips, etc.
-		/// </summary>
-		public void Cleanup()
-		{ }
+        /// <summary>
+        /// Unregister listeners, dispose balloon tooltips, etc.
+        /// </summary>
+        public void Cleanup()
+        {
+			// ignore
+        }
 
 		public bool HasChanged
 		{

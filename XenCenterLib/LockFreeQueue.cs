@@ -167,6 +167,7 @@ namespace XenCenterLib
 
             public void Dispose()
             {
+                // ignore
             }
 
             #endregion

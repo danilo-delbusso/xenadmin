@@ -43,8 +43,8 @@ namespace XenAdmin.Controls
     {
         public object EditingControlFormattedValue
         {
-            get { return SelectedItem; }
-            set { SelectedItem = value; }
+            get => SelectedItem;
+            set => SelectedItem = value;
         }
 
         public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts context)
@@ -77,21 +77,18 @@ namespace XenAdmin.Controls
             }
         }
 
-        public void PrepareEditingControlForEdit(bool selectAll){}
-
-        public bool RepositionEditingControlOnValueChange
+        public void PrepareEditingControlForEdit(bool selectAll)
         {
-            get { return false; }
+            // ignore
         }
+
+        public bool RepositionEditingControlOnValueChange => false;
 
         public DataGridView EditingControlDataGridView { get; set; }
 
         public bool EditingControlValueChanged { get; set; }
 
-        public Cursor EditingPanelCursor
-        {
-            get { return base.Cursor; }
-        }
+        public Cursor EditingPanelCursor => base.Cursor;
 
         protected override void OnSelectedValueChanged(EventArgs e)
         {

@@ -438,12 +438,21 @@ namespace XenAdmin.SettingsPanels
         }
 
         /** Show local validation balloon tooltips */
-        public void ShowLocalValidationMessages() { }
+        public void ShowLocalValidationMessages()
+        {
+            // ignore
+        }
 
-        public void HideLocalValidationMessages() { }
+        public void HideLocalValidationMessages()
+        {
+            // ignore
+        }
 
         /** Unregister listeners, dispose balloon tooltips, etc. */
-        public void Cleanup() { }
+        public void Cleanup()
+        {
+            // ignore
+        }
 
         /// <summary>
         /// Shows the warning dialog about vCPUs > pCPUs.

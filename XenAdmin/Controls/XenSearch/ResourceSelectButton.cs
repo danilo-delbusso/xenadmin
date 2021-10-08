@@ -134,6 +134,7 @@ namespace XenAdmin.Controls.XenSearch
 
         public void FinishedInThisGroup(bool defaultExpand)
         {
+            // ignore
         }
 
         public void Populate(Search search)

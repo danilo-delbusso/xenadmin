@@ -122,6 +122,7 @@ namespace XenCenterLib
 
             public void Dispose()
             {
+                // ignore
             }
 
             public bool MoveNext()

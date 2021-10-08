@@ -174,6 +174,7 @@ namespace XenAdmin.Controls
 
             public void Dispose()
             {
+                // ignore
             }
 
             #endregion

@@ -51,6 +51,7 @@ namespace XenAdmin.Controls
 
         protected override void OnPaintBackground(PaintEventArgs e)
         {
+            // ignore
         }
     }
 }

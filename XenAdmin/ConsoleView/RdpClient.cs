@@ -429,14 +429,17 @@ namespace XenAdmin.ConsoleView
 
         public void Pause()
         {
+            // ignore
         }
 
         public void Unpause()
         {
+            // ignore
         }
 
         public void SendCAD()
         {
+            // ignore
         }
 
         public Image Snapshot()

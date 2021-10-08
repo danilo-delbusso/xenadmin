@@ -523,10 +523,12 @@ namespace XenAdmin.SettingsPanels
 
         public void ShowLocalValidationMessages()
         {
+            // ignore
         }
 
         public void HideLocalValidationMessages()
         {
+            // ignore
         }
 
         public void Cleanup()

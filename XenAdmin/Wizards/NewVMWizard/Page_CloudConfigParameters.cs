@@ -235,13 +235,17 @@ namespace XenAdmin.Wizards.NewVMWizard
 
         public void ShowLocalValidationMessages()
         {
+            // ignore
         }
 
         public void HideLocalValidationMessages()
-        { }
+        {
+            // ignore
+        }
 
         public void Cleanup()
         {
+            // ignore
         }
 
         public bool HasChanged

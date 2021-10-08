@@ -115,7 +115,7 @@ namespace XenAdmin.SettingsPanels
 
         public void Cleanup()
         {
-            
+            // ignore
         }
 
         public bool HasChanged

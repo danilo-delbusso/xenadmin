@@ -560,6 +560,7 @@ namespace XenAdmin.Controls.XenSearch
 
             public void FinishedInThisGroup(bool defaultExpand)
             {
+                // ignore
             }
         }
 
@@ -751,6 +752,7 @@ namespace XenAdmin.Controls.XenSearch
 
         public void FinishedInThisGroup(bool defaultExpand)
         {
+            // ignore
         }
     }
 }

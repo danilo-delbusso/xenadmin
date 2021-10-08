@@ -314,6 +314,7 @@ namespace XenAdmin
 
             public void FinishedInThisGroup(bool defaultExpand)
             {
+                // ignore
             }
 
             public IAcceptGroups Add(Grouping grouping, Object group, int indent)

@@ -573,6 +573,7 @@ namespace XenAdmin.ConsoleView
 
         public void ClientBell()
         {
+            // ignore
         }
 
         private String clipboardStash = "";

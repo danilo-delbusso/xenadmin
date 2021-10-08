@@ -40,7 +40,6 @@ using XenAdmin.Controls;
 using XenAdmin.Controls.DataGridViewEx;
 using XenAdmin.Core;
 using XenAdmin.Dialogs;
-using XenAdmin.Network;
 using XenAPI;
 
 
@@ -98,14 +97,17 @@ namespace XenAdmin.SettingsPanels
 
         public void ShowLocalValidationMessages()
         {
+            // ignore
         }
 
         public void HideLocalValidationMessages()
         {
+            // ignore
         }
 
         public void Cleanup()
         {
+            // ignore
         }
 
         public bool HasChanged => !VGpus.SequenceEqual(currentGpus);

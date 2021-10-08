@@ -87,13 +87,19 @@ namespace XenAdmin.SettingsPanels
         public bool ValidToSave => true;
 
         public void ShowLocalValidationMessages()
-        { }
+        {
+            // ignore
+        }
 
         public void HideLocalValidationMessages()
-        { }
+        {
+            // ignore
+        }
 
         public void Cleanup()
-        { }
+        {
+            // ignore
+        }
 
         public bool HasChanged => radioButtonSSL.Checked != pool.ssl_legacy();
 

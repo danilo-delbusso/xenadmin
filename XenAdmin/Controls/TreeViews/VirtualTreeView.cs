@@ -193,10 +193,12 @@ namespace XenAdmin.Controls
 
         void IHaveNodes.Expand()
         {
+            // ignore
         }
 
         void IHaveNodes.Collapse()
         {
+            // ignore
         }
 
         #endregion

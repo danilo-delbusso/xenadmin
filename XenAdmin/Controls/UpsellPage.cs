@@ -84,20 +84,24 @@ namespace XenAdmin.Controls
 
         public void SetXenObjects(IXenObject orig, IXenObject clone)
         {
+            // ignore
         }
 
         public bool ValidToSave => true;
 
         public void ShowLocalValidationMessages()
         {
+            // ignore
         }
 
         public void HideLocalValidationMessages()
         {
+            // ignore
         }
 
         public void Cleanup()
         {
+            // ignore
         }
 
         public bool HasChanged => false;

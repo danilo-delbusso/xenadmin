@@ -85,10 +85,14 @@ namespace XenAdmin.Wizards.NewPolicyWizard
         public bool ValidToSave => true;
 
         public void ShowLocalValidationMessages()
-        { }
+        {
+            // ignore
+        }
 
         public void HideLocalValidationMessages()
-        { }
+        {
+            // ignore
+        }
 
         public void Cleanup()
         {

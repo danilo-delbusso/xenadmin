@@ -232,7 +232,10 @@ namespace XenAdmin.Controls.ConsoleTab
 
     public class CustomToolStripSystemRenderer : ToolStripSystemRenderer
     {
-        protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e) { }
+        protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
+        {
+            // ignore
+        }
 
         protected override void OnRenderToolStripBackground(ToolStripRenderEventArgs e)
         {

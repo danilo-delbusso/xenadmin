@@ -249,10 +249,12 @@ namespace XenAdmin.Dialogs.OptionsPages
 
         public void ShowValidationMessages()
         {
+            // ignore
         }
 
         public void HideValidationMessages()
         {
+            // ignore
         }
 
         public void Save()
