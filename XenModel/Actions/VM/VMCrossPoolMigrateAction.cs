@@ -156,15 +156,17 @@ namespace XenAdmin.Actions.VMActions
 
             // Add mapping of snap VIFs
             var snapVIFs = VM.get_snapshots(Connection.Session, vm.opaque_ref)
-                .Select(Connection.Resolve).SelectMany(snap => snap.VIFs).ToList();
+                .Select(Connection.Resolve)
+                .SelectMany(snap => snap.VIFs).ToList();
             foreach (var snapVIF in snapVIFs)
             {
-                if (map.ContainsKey(snapVIF)) 
-                    continue;
-                var originNetwork = Connection.Resolve(snapVIF).network;
-                if (vmMap.Networks.ContainsKey(originNetwork))
+                if (!map.ContainsKey(snapVIF))
                 {
-                    map.Add(snapVIF, new XenRef<XenAPI.Network>(vmMap.Networks[originNetwork]));
+                    var originNetwork = Connection.Resolve(snapVIF).network;
+                    if (vmMap.Networks.ContainsKey(originNetwork))
+                    {
+                        map.Add(snapVIF, new XenRef<XenAPI.Network>(vmMap.Networks[originNetwork]));
+                    }
                 }
             }
             return map;
