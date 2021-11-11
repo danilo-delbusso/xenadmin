@@ -43,6 +43,7 @@ using XenAdmin.Commands;
 using XenAdmin.Dialogs;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using XenAdmin.Controls.ConsoleTab;
 using XenAdmin.Controls.GradientPanel;
 
@@ -1487,19 +1488,62 @@ namespace XenAdmin.ConsoleView
         {
             if (IsSSHConsoleSupported && CanStartSSHConsole)
             {
-                var puttyPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "putty.exe");
+                var defaultPaths = new[]
+                {
+                    Path.Combine(Environment.SystemDirectory, "OpenSSH/ssh.exe"),
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "PuTTY/putty.exe"),
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "PuTTY/putty.exe"),
+                };
+
+                var clientPath = defaultPaths.Where(File.Exists).FirstOrDefault();
+
+                if (clientPath == null)
+                {
+                    var configureSshClientButton = new ThreeButtonDialog.TBDButton("Configure SSH Client", DialogResult.Yes,
+                        ThreeButtonDialog.ButtonType.NONE);
+
+                    var buttons = new[] { configureSshClientButton, ThreeButtonDialog.ButtonOK };
+                    using (var dlg = new WarningDialog("Your external SSH client could not be found. Please check that you have selected a valid executable.", buttons))
+                    {
+                        var result = dlg.ShowDialog(Parent);
+                        if (result == DialogResult.Yes)
+                        {
+                            using (var optionsDialog = new OptionsDialog(null))
+                            {
+                                optionsDialog.ShowDialog();
+                                optionsDialog.SelectExternalToolsPage();
+                            }
+                        }
+                    }
+
+                    return;
+                }
 
                 try
                 {
-                    var startInfo = new ProcessStartInfo(puttyPath, source.IPAddressForSSH());
+                    var startInfo = new ProcessStartInfo(clientPath, $"root@{source.IPAddressForSSH()}");
                     Process.Start(startInfo);
                 }
                 catch (Exception ex)
                 {
                     log.Error("Error starting PuTTY.", ex);
+                    var configureSshClientButton = new ThreeButtonDialog.TBDButton("Configure SSH Client", DialogResult.Yes,
+                        ThreeButtonDialog.ButtonType.NONE);
 
-                    using (var dlg = new ErrorDialog(Messages.ERROR_PUTTY_LAUNCHING))
-                        dlg.ShowDialog(Parent);
+                    var buttons = new[] { configureSshClientButton, ThreeButtonDialog.ButtonOK};
+                    using (var dlg = new ErrorDialog("Your external SSH client could not be launched. Please check that you have selected a valid executable.", buttons))
+                    {
+                       var result = dlg.ShowDialog(Parent);
+                       if (result == DialogResult.Yes)
+                       {
+                           using (var optionsDialog = new OptionsDialog(null))
+                           {
+                               optionsDialog.ShowDialog();
+                               optionsDialog.SelectExternalToolsPage();
+                           }
+                       }
+                    }
+                       
                 }
             }
         }
