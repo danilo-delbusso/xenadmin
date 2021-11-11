@@ -42,11 +42,10 @@ namespace XenAdmin.Dialogs.OptionsPages
         public ExternalToolsOptionsPage() 
         {
             InitializeComponent();
-            titleLabel.Text = string.Format(titleLabel.Text, BrandManager.BrandConsole);
             sshClientInfoLabel.Text = string.Format(sshClientInfoLabel.Text, BrandManager.BrandConsole);
 
-            sshClientCustomLocationRadioButton.Checked = false;
-            sshClientDefaultLocationRadioButton.Checked = true;
+            radioButtonOpenSsh.Checked = false;
+            radioButtonPutty.Checked = true;
         }
 
         #region IOptionsPage Members
@@ -89,14 +88,14 @@ namespace XenAdmin.Dialogs.OptionsPages
         private void ToggleCheckBoxes(object sender, System.EventArgs e)
         {
             // disable event to avoid it calling itself
-            sshClientDefaultLocationRadioButton.CheckedChanged -= ToggleCheckBoxes;
+            radioButtonPutty.CheckedChanged -= ToggleCheckBoxes;
 
-            var selectedCustomLocation = sshClientCustomLocationRadioButton.Checked;
-            sshClientDefaultLocationRadioButton.Checked = !selectedCustomLocation;
+            var selectedCustomLocation = radioButtonOpenSsh.Checked;
+            radioButtonPutty.Checked = !selectedCustomLocation;
 
-            sshClientDefaultLocationRadioButton.CheckedChanged += ToggleCheckBoxes;
+            radioButtonPutty.CheckedChanged += ToggleCheckBoxes;
 
-            sshClientBrowseButton.Enabled = sshClientLocationTextBox.Enabled = selectedCustomLocation;
+            buttonBrowseSsh.Enabled = textBoxOpenSsh.Enabled = selectedCustomLocation;
         }
 
 
