@@ -36,8 +36,10 @@ using XenCenterLib.Archive;
 
 namespace XenAdmin.Actions
 {
-    public class ZipStatusReportAction : StatusReportAction
+    public class ZipStatusReportAction : StatusReportAction, IDataTransferStatusReportAction
     {
+        public long DataTransferred { get; private set; }
+
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         /// <summary>
@@ -72,7 +74,7 @@ namespace XenAdmin.Actions
 
         protected override void Run()
         {
-            Status = ReportStatus.compiling;
+            Status = ReportStatus.packaging;
             do
             {
                 _extractTempDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
@@ -130,6 +132,7 @@ namespace XenAdmin.Actions
                     }
 
                     bytesExtracted += new FileInfo(inputFile).Length;
+                    DataTransferred += bytesExtracted;
                     File.Delete(inputFile);
                     PercentComplete = (int)(50.0 * bytesExtracted / bytesToExtract);
                     CheckCancellation();
@@ -237,5 +240,6 @@ namespace XenAdmin.Actions
         protected override void CancelRelatedTask()
         {
         }
+
     }
 }
