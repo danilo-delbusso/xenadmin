@@ -36,7 +36,7 @@ using XenCenterLib.Archive;
 
 namespace XenAdmin.Actions
 {
-    public class ZipStatusReportAction : AsyncAction
+    public class ZipStatusReportAction : StatusReportAction
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -61,9 +61,10 @@ namespace XenAdmin.Actions
         /// </summary>
         /// <param name="tempFolder">Temporary folder to store the downloaded logs</param>
         /// <param name="destFile">The target file to store the compressed result</param>
+        /// <param name="timeString">Time string used when running action as <see cref="StatusReportAction"/>. Can be omitted otherwise.</param>
         /// <param name="suppressHistory">Whether to suppress history in the Events TabPage</param>
-        public ZipStatusReportAction(string tempFolder, string destFile, bool suppressHistory=true)
-            : base(null, Messages.BUGTOOL_SAVING, Messages.BUGTOOL_SAVING, suppressHistory)
+        public ZipStatusReportAction(string tempFolder, string destFile, string timeString = null, bool suppressHistory = true)
+            : base(null, Messages.BUGTOOL_SAVING, Messages.BUGTOOL_SAVING, timeString, suppressHistory)
         {
             _inputTempFolder = tempFolder;
             _destFile = destFile;
@@ -71,6 +72,7 @@ namespace XenAdmin.Actions
 
         protected override void Run()
         {
+            Status = ReportStatus.compiling;
             do
             {
                 _extractTempDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
@@ -99,7 +101,7 @@ namespace XenAdmin.Actions
                             outFilename = Path.GetRandomFileName();
                         string outputDir = Path.Combine(_extractTempDir, Path.GetFileName(outFilename));
 
-                        string sanitizedTar = Path.GetTempFileName();
+                        string sanitizedTar = Path.GetRandomFileName();
                         TarSanitization.SanitizeTarForWindows(inputFile, sanitizedTar, CheckCancellation);
 
                         using (FileStream fs = File.OpenRead(sanitizedTar))
@@ -144,6 +146,9 @@ namespace XenAdmin.Actions
             catch (CancelledException)
             {
                 CleanupFiles(true);
+                log.Info("Packaging system status cancelled");
+                Tick(100, Messages.ACTION_PACKAGE_STAUS_REPORT_CANCELLED);
+                Status = ReportStatus.cancelled;
                 throw;
             }
             catch (Exception exn)
@@ -156,16 +161,24 @@ namespace XenAdmin.Actions
                 }
                 catch(CancelledException)
                 {
+                    log.Info("Packaging system status cancelled");
+                    Tick(100, Messages.ACTION_PACKAGE_STAUS_REPORT_CANCELLED);
+                    Status = ReportStatus.cancelled;
                     CleanupFiles(true);
                     throw;
                 }
-                catch
+                catch(Exception exception)
                 {
-                    log.Debug("Failed to package raw downloaded server files.");
+                    log.Error("Failed to package raw downloaded server files.", exception);
                 }
 
+                Tick(100, Messages.ACTION_PACKAGE_STATUS_REPORT_FAILED);
+                Status = ReportStatus.failed;
                 throw new Exception(Messages.STATUS_REPORT_ZIP_FAILED);
             }
+
+            Tick(100, Messages.COMPLETED);
+            Status = ReportStatus.succeeded;
         }
 
         private void CheckCancellation()
