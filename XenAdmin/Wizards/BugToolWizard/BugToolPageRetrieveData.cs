@@ -39,7 +39,6 @@ using XenAdmin.Controls;
 using XenAdmin.Dialogs;
 using XenAPI;
 using XenAdmin.Core;
-using XenAdmin.Wizards.BugToolWizard.StatusReportRows;
 
 
 namespace XenAdmin.Wizards.BugToolWizard
