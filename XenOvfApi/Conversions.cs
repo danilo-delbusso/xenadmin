@@ -33,10 +33,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Management;
-using System.Reflection;
 using XenOvf.Definitions;
-using XenOvf.Definitions.VMC;
-using XenOvf.Utilities;
 using XenCenterLib.Compression;
 using XenCenterLib.Archive;
 

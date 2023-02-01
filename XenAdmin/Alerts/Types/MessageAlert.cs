@@ -33,7 +33,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using XenAPI;
-using XenAdmin.Actions;
 using XenAdmin.Core;
 using XenAdmin.Help;
 using System.Text.RegularExpressions;

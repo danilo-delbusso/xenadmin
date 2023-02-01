@@ -31,7 +31,6 @@
 
 using System;
 using System.ComponentModel;
-using System.Configuration;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;

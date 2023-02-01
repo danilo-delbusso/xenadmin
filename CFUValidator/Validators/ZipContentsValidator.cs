@@ -33,7 +33,6 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.IO;
-using XenAdmin;
 using XenAdmin.Actions;
 using XenAdmin.Alerts;
 using XenAdmin.Core;
