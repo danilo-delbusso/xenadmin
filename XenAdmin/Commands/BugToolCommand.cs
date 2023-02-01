@@ -30,7 +30,7 @@
  */
 
 using XenAdmin.Network;
-using XenAdmin.Wizards.BugToolWizardFiles;
+using XenAdmin.Wizards.BugToolWizard;
 using XenAPI;
 
 namespace XenAdmin.Commands
