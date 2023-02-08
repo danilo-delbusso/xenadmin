@@ -71,7 +71,7 @@ namespace XenAdmin.Actions
         protected override void Run()
         {
             Description = string.Format(Messages.ACTION_SYSTEM_STATUS_COMPILING, Helpers.GetName(host));
-            Status = ReportStatus.compiling;
+            Status = ReportStatus.inProgress;
 
             string hostname = Helpers.GetName(host);
             hostname = TarSanitization.SanitizeTarPathMember(hostname);
@@ -140,7 +140,7 @@ namespace XenAdmin.Actions
 
         private void dataRxDelegate(long rxd)
         {
-            Status = ReportStatus.downloading;
+            Status = ReportStatus.inProgress;
             DataTransferred = rxd;
 
             if (Cancelling)
