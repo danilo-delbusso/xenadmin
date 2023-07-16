@@ -16383,7 +16383,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your Customer Success Services (CSS) agreement has expired. This server will not receive any updates, including security updates.
+        ///   Looks up a localized string similar to Your Customer Success Services (CSS) agreement has expired. This server will not receive any updates, including security updates..
         /// </summary>
         public static string EXPIRED_CSS_UPSELLING_MESSAGE_HOST {
             get {
@@ -36297,7 +36297,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unlicensed servers will not receive any updates, including security updates.
+        ///   Looks up a localized string similar to Unlicensed servers will not receive any updates, including security updates..
         /// </summary>
         public static string TRIAL_EDITION_UPSELLING_MESSAGE {
             get {
